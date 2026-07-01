@@ -38,31 +38,39 @@
   const fmtDate = (x) => { if (!x) return null; const b = x.split('-'); return `${+b[2]} ${MON[+b[1] - 1]} ${b[0]}`; };
   const fmtRange = (a) => { const s = fmtDate(a.startDate), e = fmtDate(a.endDate) || fmtDate(a.goLive); return s && e ? `${s} – ${e}` : (s || e || ''); };
 
-  function tooltip(a) {
-    const r = fmtRange(a);
+  // Pin tooltip + popup content — Title, Channel, Audience, Status, Activated.
+  function content(a) {
+    const row = (k, v) => `<div class="tip-row"><span>${k}</span><b>${v || '—'}</b></div>`;
     return `<div class="tip-t">${a.title || 'Untitled'}${a.keyActivity ? ' <span style="color:#f4ad44">★</span>' : ''}</div>
-      <div class="tip-m">${[a.affiliate, a.channel].filter(Boolean).join(' · ') || '—'}</div>
-      <div class="tip-r">${[a.region, a.subRegion].filter(Boolean).join(' · ') || '—'}</div>
-      <div class="tip-f"><span class="tip-badge" style="background:${colorFor(a.status)}"></span>${a.status || 'Planned'}${r ? ` · <span class="ds-num">${r}</span>` : ''}</div>
-      ${a.lead ? `<div class="tip-l">${a.lead}</div>` : ''}`;
+      ${row('Channel', a.channel)}
+      ${row('Audience', a.audience)}
+      ${row('Status', a.status || 'Planned')}
+      ${row('Activated', fmtDate(a.goLive))}`;
   }
 
-  const layer = L.layerGroup().addTo(map);
+  // Cluster group: numbered clusters when activities share a market; zooming
+  // in (or clicking a cluster) uncluster/spiderfies to the individual pins.
+  const layer = L.markerClusterGroup({
+    maxClusterRadius: 46, showCoverageOnHover: false, spiderfyOnMaxZoom: true,
+    disableClusteringAtZoom: 7, chunkedLoading: true,
+    iconCreateFunction: (c) => L.divIcon({ html: `<div class="ds-cluster">${c.getChildCount()}</div>`, className: 'ds-cluster-wrap', iconSize: [38, 38] }),
+  }).addTo(map);
   let markers = [];
 
   function buildMarkers(acts) {
     const idx = {};
     markers = acts.map((a) => {
       const base = REGION[a.region] || REGION.Global;
-      const i = idx[a.region] || 0; idx[a.region] = i + 1;       // per-region spread
+      const i = idx[a.region] || 0; idx[a.region] = i + 1;       // small per-market spread (uncluster on zoom)
       let lat = base[0], lng = base[1];
-      if (i) { const ang = i * 2.39996, rad = 1.15 * Math.sqrt(i); lat += rad * Math.cos(ang); lng += rad * Math.sin(ang) * 1.5; }
+      if (i) { const ang = i * 2.39996, rad = 0.42 * Math.sqrt(i); lat += rad * Math.cos(ang); lng += rad * Math.sin(ang) * 1.4; }
       const color = colorFor(a.status), key = !!a.keyActivity;
       const dot = key ? 13 : 9, ring = key ? 26 : 18;
       const html = `<span class="ring" style="--c:${color};width:${ring}px;height:${ring}px;margin:${-ring/2}px 0 0 ${-ring/2}px"></span>`
         + `<span class="dot" style="--c:${color};width:${dot}px;height:${dot}px"></span>`;
       const m = L.marker([lat, lng], { icon: L.divIcon({ className: 'ds-pin', iconSize: [dot, dot], iconAnchor: [dot/2, dot/2], html }) });
-      m.bindTooltip(tooltip(a), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m.bindTooltip(content(a), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m.bindPopup(content(a), { className: 'ds-pop', closeButton: false, offset: [0, -6] });   // clickable
       m._a = a;
       return m;
     });
@@ -70,11 +78,7 @@
 
   function applyFilters() {
     layer.clearLayers();
-    markers.forEach((m) => {
-      const a = m._a;
-      const ok = ['brand', 'channel', 'strategy'].every((k) => state[k] === 'all' || a[FIELD[k]] === state[k]);
-      if (ok) layer.addLayer(m);
-    });
+    layer.addLayers(markers.filter((m) => ['brand', 'channel', 'strategy'].every((k) => state[k] === 'all' || m._a[FIELD[k]] === state[k])));
   }
 
   /* ---- Custom zoom / recenter stack ------------------------------------ */

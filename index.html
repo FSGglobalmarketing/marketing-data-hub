@@ -6,8 +6,10 @@
   <title>Marketing Data Hub — First Sentier Group</title>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="design-system/tokens.css?v=11">
+  <link rel="stylesheet" href="design-system/tokens.css?v=12">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <style>
     html, body { height: 100%; }
     #frame { position: relative; width: 100vw; height: 100vh; overflow: hidden;
@@ -26,17 +28,21 @@
     body { animation: dh-fadein .3s ease both; }
     @keyframes dh-fadein { from { opacity: 0 } to { opacity: 1 } }
     body.dh-fadeout { opacity: 0 !important; transition: opacity .24s ease; }
-    /* activity pin tooltips (hover) */
+    /* activity pin tooltip (hover) + popup (click) share the tip-* content */
     .leaflet-tooltip.ds-tip { background: var(--ds-glass-fill-strong); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(255,255,255,.16); border-radius: 11px; color: var(--ds-ink-1); box-shadow: var(--ds-shadow-pop);
-      padding: 9px 12px; max-width: 250px; white-space: normal; font-family: var(--ds-font-sans); }
+      padding: 10px 13px; min-width: 200px; max-width: 260px; white-space: normal; font-family: var(--ds-font-sans); }
     .leaflet-tooltip.ds-tip::before { display: none; }
-    .ds-tip .tip-t { font-size: 12.5px; font-weight: 600; color: var(--ds-ink-1); }
-    .ds-tip .tip-m { font-size: 10.5px; color: var(--ds-ink-3); margin-top: 3px; }
-    .ds-tip .tip-r { font-size: 10px; color: var(--ds-ink-5); margin-top: 1px; }
-    .ds-tip .tip-f { font-size: 10.5px; color: var(--ds-ink-2); margin-top: 7px; display: flex; align-items: center; gap: 6px; }
-    .ds-tip .tip-badge { width: 8px; height: 8px; border-radius: 50%; box-shadow: 0 0 6px currentColor; }
-    .ds-tip .tip-l { font-size: 10px; color: var(--ds-ink-5); margin-top: 5px; }
+    .ds-pop .leaflet-popup-content { min-width: 196px; }
+    .tip-t { font-size: 12.5px; font-weight: 600; color: var(--ds-ink-1); margin-bottom: 7px; }
+    .tip-row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; font-size: 11px; padding: 2.5px 0; }
+    .tip-row span { color: var(--ds-ink-5); }
+    .tip-row b { color: var(--ds-ink-1); font-weight: 600; text-align: right; }
+    /* numbered cluster pin */
+    .ds-cluster-wrap { background: transparent; border: 0; }
+    .ds-cluster { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-family: var(--ds-font-sans); font-weight: 600; font-size: 13px; color: #0c1f39; background: var(--ds-accent);
+      box-shadow: 0 0 0 6px rgba(244,173,68,.22), 0 2px 10px rgba(0,0,0,.45); }
   </style>
 </head>
 <body>
@@ -156,7 +162,7 @@
     </div>
   </div>
 
-  <script src="assets/data.js?v=11"></script>
-  <script src="assets/app.js?v=11"></script>
+  <script src="assets/data.js?v=12"></script>
+  <script src="assets/app.js?v=12"></script>
 </body>
 </html>
