@@ -38,7 +38,7 @@
   let subject, activeTab, competitorOn = false, countries, slides = [];
 
   if (pageType === 'campaign') {
-    const c = D.campaignDetails[qs.get('id')] || D.campaignDetails['greater-china'];
+    const c = D.campaignDetails[qs.get('id')] || D.campaignDetails['rqi-asia-ph2'];
     subject = c;
     activeTab = qs.get('tab') || c.defaultTab || D.funnelTabs[0].id;
     countries = c.countries;
@@ -144,7 +144,7 @@
       <div class="dh-hero-body">
         <div class="dh-hero-eyebrow">${eyebrow}</div>
         <div class="dh-title">${title}${badge}</div>
-        <div class="dh-summary">${subject.summary}</div>
+        <div class="dh-summary">${subject.takeaway || subject.summary}</div>
         <div class="dh-hero-actions">
           <span class="dh-iconbtn dh-glass" title="Save">${svg('star', 15)}</span>
           <span class="dh-iconbtn dh-glass" title="Share">${svg('share', 15)}</span>
@@ -177,6 +177,7 @@
         <ul>${subject.goals.map((g) => `<li>${g}</li>`).join('')}</ul>
         <div class="lbl">Objectives</div>
         <ul>${subject.objectives.map((o) => `<li>${o}</li>`).join('')}</ul>
+        ${subject.activities ? `<div class="lbl">Activities</div><ul>${subject.activities.map((a) => `<li>${a}</li>`).join('')}</ul>` : ''}
         <div class="dh-brief-foot">
           <span class="dh-brief-ask">Ask about this campaign…</span>
           <span class="dh-mic">${svg('mic', 16)}</span>

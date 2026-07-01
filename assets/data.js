@@ -75,10 +75,10 @@ window.HUB_DATA = (function () {
 
   /* ---- Bottom rail: featured campaign + channel cards ------------------- */
   const featured = {
-    name: 'Greater China — thematic equity',
-    channel: 'LinkedIn', brand: 'FSSA', status: 'ACTIVE',
-    reach: '486.5k',
-    description: 'Paid thematic campaign across Greater China positioning FSSA quality-growth research against regional peers.',
+    name: 'RQI Asia Campaign — Phase II',
+    channel: 'Out-of-home + digital', brand: 'RQI Investors', status: 'ACTIVE',
+    reach: '2.0M',
+    description: 'Full tram wraps, advertorials and location-targeted digital across Hong Kong, supporting the fund launch with DBS and Hang Seng Bank.',
   };
 
   const channelCards = [
@@ -280,6 +280,43 @@ window.HUB_DATA = (function () {
 
   /* Campaign detail records (hero imagery, summary, goals, objectives). */
   const campaignDetails = {
+    'rqi-asia-ph2': {
+      id: 'rqi-asia-ph2',
+      name: 'RQI Asia Campaign — Phase II',
+      brand: 'RQI Investors', channel: 'Out-of-home + digital', status: 'COMPLETE',
+      dateRange: '1 Jan – 28 Feb 2026',
+      defaultTab: 'display',
+      countries: [
+        { code: 'ALL', name: 'All markets' },
+        { code: 'HK', name: 'Hong Kong' }, { code: 'SG', name: 'Singapore' },
+      ],
+      heroImages: [
+        'assets/img/rqi/tram-1.png',
+        'assets/img/rqi/billboard.jpg',
+        'assets/img/rqi/bus1.jpg',
+        'assets/img/rqi/tram-2.png',
+        'assets/img/rqi/bus2.jpg',
+      ],
+      takeaway: 'Phase II continued to support the fund launch with DBS and Hang Seng Bank in Hong Kong — over 2 million impressions across outdoor and digital, and more than 14,000 website visitors.',
+      summary: 'Phase II focused on driving awareness of the RQI brand and the Value Strategy, specifically targeting gatekeepers in the Asian wholesale market. Messaging centred on the systematic approach — how a data-driven alpha model and AI capabilities enhance risk-return profiles and build resilient portfolios. A mix of outdoor placements and targeted digital media was deployed to maximise reach.',
+      goals: [
+        'Continue building brand awareness and increasing brand recall',
+        'Educate the market on quantitative equities and RQI Investors’ proposition and investment philosophy',
+        'Target gatekeepers with key strategy messages',
+      ],
+      objectives: [
+        '2M+ impressions across outdoor & digital',
+        '14,000+ website visitors',
+        'Reach gatekeepers at DBS & Hang Seng branches (HK)',
+      ],
+      activities: [
+        'Full tram wraps — Hong Kong, from 1 Jan 2026 (one month)',
+        'Sponsored advertorials (Chinese) — HKET & iMoney',
+        'Location-targeted programmatic — DBS & Hang Seng branches',
+        'Banner ads on financial websites',
+        'Always-on search (SEM)',
+      ],
+    },
     'greater-china': {
       id: 'greater-china',
       name: 'Greater China — thematic equity',

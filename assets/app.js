@@ -230,7 +230,7 @@
   // --- Row 1: featured campaign + 3 channel cards ---
   const f = D.featured;
   const featuredCard =
-    `<div class="ds-glass ds-card" data-href="campaign.html?id=greater-china" style="cursor:pointer;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
+    `<div class="ds-glass ds-card" data-href="campaign.html?id=rqi-asia-ph2" style="cursor:pointer;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
        <div style="display:flex;align-items:flex-start;justify-content:space-between">
          <div>
            <div style="display:flex;align-items:center;gap:8px">
