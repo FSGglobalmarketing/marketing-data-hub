@@ -4,7 +4,19 @@
    ========================================================================= */
 window.HUB_CHARTS = (function () {
 
-  const drill = `<svg class="ds-drill" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M7 17L17 7M9 7h8v8"/></svg>`;
+  /* icons for the dark circular badge on each widget (per kind) */
+  const ICONS = {
+    kpis:'<path d="M13 2L4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5z"/>',
+    bars:'<path d="M4 20V10M10 20V4M16 20v-7M2 20h20"/>',
+    lines:'<path d="M3 17l6-6 4 4 8-8M15 7h6v6"/>',
+    funnel:'<path d="M3 5h18l-7 8v6l-4 2v-8z"/>',
+    list:'<path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/>',
+    gauges:'<path d="M4 19a8 8 0 1116 0"/><path d="M12 14l3.5-3.5"/>',
+    peers:'<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0M16 5.5a3 3 0 010 5M21.5 20a6.2 6.2 0 00-4-5.5"/>',
+  };
+  const expand = '<path d="M15 3h6v6M9 21H3v-6M21 3l-8 8M3 21l8-8"/>';
+  const icon = (paths, w = 15, sw = 1.7) =>
+    `<svg width="${w}" height="${w}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
 
   function bars(data) {
     const n = data.bars.length, step = 100 / n, bw = step * 0.62, max = Math.max(...data.bars);
@@ -44,7 +56,7 @@ window.HUB_CHARTS = (function () {
     const stroke = g.tone === 'accent' ? 'var(--ds-accent)' : 'var(--ds-cyan)';
     return `<div style="display:flex;align-items:center;gap:9px">
               <svg width="34" height="34" viewBox="0 0 42 42">
-                <circle cx="21" cy="21" r="16" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="4"/>
+                <circle cx="21" cy="21" r="16" fill="none" stroke="var(--ds-chart-bar)" stroke-width="4"/>
                 <circle cx="21" cy="21" r="16" fill="none" stroke="${stroke}" stroke-width="4"
                         stroke-dasharray="${g.pct} ${100 - g.pct}" stroke-dashoffset="25" transform="rotate(-90 21 21)"/>
               </svg>
@@ -63,7 +75,7 @@ window.HUB_CHARTS = (function () {
     return `<div style="display:flex;flex-direction:column;gap:8px;margin-top:2px">` + data.peers.map((p) =>
       `<div style="display:flex;align-items:center;gap:9px">
          <span style="font-size:11px;color:var(--ds-ink-4);width:52px">${p.name}</span>
-         <span style="flex:1;height:8px;border-radius:5px;background:rgba(255,255,255,.08);overflow:hidden">
+         <span style="flex:1;height:8px;border-radius:5px;background:var(--ds-chart-bar);overflow:hidden">
            <span style="display:block;height:100%;width:${Math.min(100, p.pct * 2.6)}%;border-radius:5px;background:${p.self ? 'var(--ds-accent)' : 'var(--ds-chart-bar)'}"></span></span>
          <span class="ds-num" style="font-size:11px;color:var(--ds-ink-4);width:30px;text-align:right">${p.pct}%</span>
        </div>`).join('') + `</div>`;
@@ -90,20 +102,22 @@ window.HUB_CHARTS = (function () {
 
   const renderers = { bars, funnel, lines, gauges, peers, kpis, list };
 
-  // A widget = glass card with title/subtitle + drill arrow + body chart.
+  // A widget = white card with a dark circular icon badge, titles, expand ↗.
   function widget(w) {
     const body = (renderers[w.kind] || (() => ''))(w);
-    return `<div class="ds-glass ds-card dh-widget" style="padding:15px 17px;display:flex;flex-direction:column">
-              <div style="display:flex;align-items:flex-start;justify-content:space-between">
-                <div>
-                  <div style="font-size:var(--ds-fs-title);font-weight:600;color:var(--ds-ink-1)">${w.title}</div>
-                  ${w.subtitle ? `<div style="font-size:var(--ds-fs-nano);color:var(--ds-ink-5);letter-spacing:.02em;margin-top:2px">${w.subtitle}</div>` : ''}
-                </div>${drill}
+    return `<div class="dh-widget">
+              <div class="dh-w-head">
+                <span class="dh-w-badge">${icon(ICONS[w.kind] || ICONS.kpis, 15)}</span>
+                <div class="dh-w-titles">
+                  <div class="t">${w.title}</div>
+                  ${w.subtitle ? `<div class="s">${w.subtitle}</div>` : ''}
+                </div>
+                <span class="dh-drill">${icon(expand, 14)}</span>
               </div>
-              <div style="margin:14px 0 10px">${body}</div>
-              ${w.footer ? `<div class="ds-num" style="font-size:10.5px;color:var(--ds-ink-4);margin-top:auto">${w.footer}</div>` : ''}
+              <div style="margin:15px 0 10px">${body}</div>
+              ${w.footer ? `<div class="dh-w-foot ds-num">${w.footer}</div>` : ''}
             </div>`;
   }
 
-  return { widget, drill };
+  return { widget };
 })();
