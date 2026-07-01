@@ -15,3 +15,6 @@ dist/
 # Local env
 .env
 .env.local
+
+# Local preview / tooling config (points at scratch paths)
+.claude/
