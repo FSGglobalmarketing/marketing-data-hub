@@ -75,7 +75,7 @@ body {
 /* ---- Hero -------------------------------------------------------------- */
 .dh-hero {
   position: relative; border-radius: 22px; overflow: hidden;
-  height: 400px; box-shadow: var(--dh-shadow);
+  height: 480px; box-shadow: var(--dh-shadow);
   background: #cfd6da;
 }
 .dh-slide { position: absolute; inset: 0; background-size: cover; background-position: center right;
@@ -94,14 +94,15 @@ body {
     radial-gradient(50% 70% at 82% 20%, rgba(255,255,255,.18), transparent 70%),
     linear-gradient(180deg, rgba(20,40,52,.08), rgba(16,32,44,.40));
 }
-.dh-hero-body { position: absolute; left: 30px; bottom: 150px; right: 40%; z-index: 2; }
+.dh-hero-body { position: absolute; left: 40px; right: 40px; top: 44%; transform: translateY(-50%);
+  z-index: 2; text-align: center; }
 .dh-hero-eyebrow { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600;
-  color: rgba(255,255,255,.82); margin-bottom: 12px; }
-.dh-title { font-size: 52px; font-weight: 300; letter-spacing: -.02em; color: #fff; line-height: 1.02;
+  color: rgba(255,255,255,.85); margin-bottom: 14px; }
+.dh-title { font-size: 56px; font-weight: 300; letter-spacing: -.02em; color: #fff; line-height: 1.02;
   text-shadow: 0 2px 26px rgba(0,0,0,.32); }
 .dh-title .ds-badge { font-size: 9px; vertical-align: middle; margin-left: 12px;
   background: rgba(255,255,255,.22); color: #fff; }
-.dh-summary { font-size: 13.5px; color: rgba(255,255,255,.9); max-width: 440px; margin-top: 12px; line-height: 1.55;
+.dh-summary { font-size: 13.5px; color: rgba(255,255,255,.92); max-width: 560px; margin: 14px auto 0; line-height: 1.55;
   text-shadow: 0 1px 12px rgba(0,0,0,.28); }
 
 /* frosted glass control used across the hero (pills / buttons) */
@@ -109,7 +110,7 @@ body {
   border: 1px solid rgba(255,255,255,.28); color: #fff; }
 .dh-glass:hover { background: rgba(255,255,255,.24); }
 
-.dh-eyebrow-row { position: absolute; top: 22px; left: 30px; right: 26px; z-index: 3;
+.dh-eyebrow-row { position: absolute; top: 22px; left: 30px; right: 26px; z-index: 5;
   display: flex; align-items: flex-start; justify-content: space-between; }
 .dh-country { position: relative; }
 .dh-country-btn { display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px;
@@ -119,18 +120,18 @@ body {
   box-shadow: var(--dh-shadow); color: var(--ds-ink-2); }
 .dh-country-menu .ds-row:hover { background: #f2f3f5; }
 
-.dh-hero-actions { position: absolute; left: 30px; bottom: 108px; z-index: 3; display: flex; gap: 8px; }
+.dh-hero-actions { display: flex; gap: 8px; justify-content: center; margin-top: 20px; }
 .dh-iconbtn { width: 36px; height: 36px; border-radius: 11px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 
-/* thumbnail cluster (top-right) */
-.dh-thumbs { display: flex; align-items: center; }
-.dh-thumbs img { width: 46px; height: 34px; border-radius: 9px; object-fit: cover; margin-left: -12px;
-  border: 2px solid rgba(255,255,255,.6); box-shadow: 0 6px 16px rgba(0,0,0,.28); }
-.dh-thumbs .more { height: 34px; padding: 0 9px; border-radius: 9px; margin-left: -12px; display: flex;
+/* thumbnail cluster (top-right) — square, spaced, not overlapping */
+.dh-thumbs { display: flex; align-items: center; gap: 7px; }
+.dh-thumbs img { width: 44px; height: 44px; border-radius: 11px; object-fit: cover;
+  border: 2px solid rgba(255,255,255,.55); box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+.dh-thumbs .more { width: 44px; height: 44px; border-radius: 11px; display: flex;
   align-items: center; justify-content: center; font-size: 11px; font-weight: 600; }
 
-/* competitor toggle (bottom-right of hero) */
-.dh-compbar { position: absolute; right: 26px; bottom: 30px; z-index: 3;
+/* competitor toggle — sits on the frosted bottom bar, right side */
+.dh-compbar { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); z-index: 3;
   display: flex; align-items: center; gap: 10px; height: 38px; padding: 0 8px 0 15px; border-radius: var(--ds-r-pill); }
 .dh-switch { width: 36px; height: 20px; border-radius: 20px; position: relative; cursor: pointer;
   background: rgba(255,255,255,.25); border: 1px solid rgba(255,255,255,.4); transition: background .2s ease; }
@@ -139,22 +140,17 @@ body {
 .dh-switch.is-on { background: var(--dh-dark); border-color: var(--dh-dark); }
 .dh-switch.is-on .knob { left: 18px; background: var(--dh-logo); }
 
-/* slide dots — tucked bottom-right, above the competitor toggle */
-.dh-dots { position: absolute; right: 26px; bottom: 82px; z-index: 3; display: flex; gap: 6px; }
-.dh-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); cursor: pointer;
-  transition: background .2s ease, width .2s ease; }
-.dh-dot.is-active { background: #fff; width: 20px; border-radius: 4px; }
-
-/* ---- Tab bar (funnel channels) — frosted, overlaying the hero --------- */
-.dh-tabs { position: absolute; z-index: 4; left: 340px; bottom: 26px; display: flex; gap: 3px; padding: 5px;
-  border-radius: 15px; max-width: calc(100% - 380px); overflow-x: auto;
-  background: rgba(255,255,255,.16); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,.26); box-shadow: 0 10px 30px -12px rgba(0,0,0,.3); }
-.dh-tab { display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 15px; border-radius: 11px;
-  font-size: 12.5px; font-weight: 500; color: rgba(255,255,255,.9); cursor: pointer; white-space: nowrap;
+/* ---- Frosted bottom bar with centered funnel tabs -------------------- */
+.dh-herobar { position: absolute; left: 0; right: 0; bottom: 0; height: 62px; z-index: 4;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255,255,255,.24); }
+.dh-tabs { display: flex; gap: 4px; max-width: 72%; overflow-x: auto; }
+.dh-tab { display: flex; align-items: center; gap: 7px; height: 36px; padding: 0 16px; border-radius: 11px;
+  font-size: 12.5px; font-weight: 500; color: rgba(255,255,255,.92); cursor: pointer; white-space: nowrap;
   transition: background .2s ease, color .2s ease; }
 .dh-tab:hover { background: rgba(255,255,255,.14); }
-.dh-tab.is-active { background: #fff; color: var(--ds-ink-1); box-shadow: 0 2px 8px rgba(0,0,0,.14); }
+.dh-tab.is-active { background: #fff; color: var(--ds-ink-1); box-shadow: 0 2px 8px rgba(0,0,0,.18); }
 
 /* ---- Content: brief (overlaps hero) + widget grid --------------------- */
 .dh-content { display: grid; grid-template-columns: 300px 1fr; gap: 14px; align-items: start; margin-top: 14px; }
@@ -186,12 +182,12 @@ body {
 .dh-mic { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--dh-dark); color: #fff;
   display: flex; align-items: center; justify-content: center; cursor: pointer; }
 
-.dh-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.dh-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
 
 /* ---- Widget card — white with a dark circular icon badge -------------- */
 .dh-widget {
-  background: var(--dh-card); border: 1px solid rgba(20,26,34,.06); border-radius: 18px;
-  padding: 16px 17px; box-shadow: var(--dh-shadow-sm); min-height: 150px;
+  background: var(--dh-card); border: 1px solid rgba(20,26,34,.06); border-radius: 20px;
+  padding: 20px 22px; box-shadow: var(--dh-shadow-sm); min-height: 232px;
   display: flex; flex-direction: column; transition: box-shadow .2s ease, transform .2s ease;
 }
 .dh-widget:hover { box-shadow: var(--dh-shadow); }
@@ -210,6 +206,5 @@ body {
 @media (max-width: 940px) {
   .dh-content { grid-template-columns: 1fr; }
   .dh-brief { margin-top: 14px; }
-  .dh-tabs { left: 30px; max-width: calc(100% - 60px); }
-  .dh-hero-body { right: 30px; }
+  .dh-tabs { max-width: 100%; }
 }

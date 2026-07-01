@@ -115,9 +115,6 @@
     const thumbs = isCampaign && slides.length ?
       `<div class="dh-thumbs">${slides.slice(0, 3).map((s) => `<img src="${s}" alt="">`).join('')}${slides.length > 3 ? `<span class="more dh-glass">+${slides.length - 3}</span>` : ''}</div>` : '';
 
-    const dots = isCampaign && slides.length > 1 ?
-      `<div class="dh-dots">${slides.map((_, i) => `<span class="dh-dot ${i === 0 ? 'is-active' : ''}" data-dot="${i}"></span>`).join('')}</div>` : '';
-
     const badge = (isCampaign && subject.status) ? `<span class="ds-badge">${subject.status}</span>` : '';
     const eyebrow = isCampaign ? `${subject.brand} · ${subject.channel}` : 'All campaigns · aggregate';
     const title = isCampaign ? subject.name : subject.subject;
@@ -148,20 +145,19 @@
         <div class="dh-hero-eyebrow">${eyebrow}</div>
         <div class="dh-title">${title}${badge}</div>
         <div class="dh-summary">${subject.summary}</div>
+        <div class="dh-hero-actions">
+          <span class="dh-iconbtn dh-glass" title="Save">${svg('star', 15)}</span>
+          <span class="dh-iconbtn dh-glass" title="Share">${svg('share', 15)}</span>
+        </div>
       </div>
 
-      <div class="dh-hero-actions">
-        <span class="dh-iconbtn dh-glass" title="Save">${svg('star', 15)}</span>
-        <span class="dh-iconbtn dh-glass" title="Share">${svg('share', 15)}</span>
+      <div class="dh-herobar">
+        <div class="dh-tabs">${tabs}</div>
+        <div class="dh-compbar dh-glass">
+          <span style="font-size:12px">Competitors</span>
+          <span id="comp-switch" class="dh-switch"><span class="knob"></span></span>
+        </div>
       </div>
-
-      ${dots}
-      <div class="dh-compbar dh-glass">
-        <span style="font-size:12px">Competitors</span>
-        <span id="comp-switch" class="dh-switch"><span class="knob"></span></span>
-      </div>
-
-      <div class="dh-tabs">${tabs}</div>
     </div>`;
   }
 

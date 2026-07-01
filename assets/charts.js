@@ -26,7 +26,7 @@ window.HUB_CHARTS = (function () {
       const fill = i >= from ? 'var(--ds-accent)' : 'var(--ds-chart-bar)';
       return `<rect x="${x}" y="${y}" width="${bw}" height="${h}" rx="1.3" fill="${fill}"/>`;
     }).join('');
-    return `<svg viewBox="0 0 100 46" preserveAspectRatio="none" style="width:100%;height:64px">${rects}</svg>`;
+    return `<svg viewBox="0 0 100 46" preserveAspectRatio="none" style="width:100%;height:96px">${rects}</svg>`;
   }
 
   function funnel(data) {
@@ -39,7 +39,7 @@ window.HUB_CHARTS = (function () {
     }).join('');
     const ty = 44 - (data.threshold / 100) * 40;
     const line = `<line x1="0" y1="${ty}" x2="100" y2="${ty}" stroke="var(--ds-accent)" stroke-width="0.6" stroke-dasharray="2 2" opacity=".8"/>`;
-    return `<svg viewBox="0 0 100 48" preserveAspectRatio="none" style="width:100%;height:70px">${line}${rects}</svg>`;
+    return `<svg viewBox="0 0 100 48" preserveAspectRatio="none" style="width:100%;height:104px">${line}${rects}</svg>`;
   }
 
   function lines(data) {
@@ -49,13 +49,13 @@ window.HUB_CHARTS = (function () {
     let svg = '';
     if (data.secondary) svg += `<polyline points="${pts(data.secondary)}" fill="none" stroke="var(--ds-cyan)" stroke-width="1.4" opacity=".8" vector-effect="non-scaling-stroke"/>`;
     svg += `<polyline points="${pts(data.primary)}" fill="none" stroke="var(--ds-accent)" stroke-width="1.7" vector-effect="non-scaling-stroke"/>`;
-    return `<svg viewBox="0 0 100 46" preserveAspectRatio="none" style="width:100%;height:64px">${svg}</svg>`;
+    return `<svg viewBox="0 0 100 46" preserveAspectRatio="none" style="width:100%;height:96px">${svg}</svg>`;
   }
 
   function ring(g) {
     const stroke = g.tone === 'accent' ? 'var(--ds-accent)' : 'var(--ds-cyan)';
     return `<div style="display:flex;align-items:center;gap:9px">
-              <svg width="34" height="34" viewBox="0 0 42 42">
+              <svg width="42" height="42" viewBox="0 0 42 42">
                 <circle cx="21" cy="21" r="16" fill="none" stroke="var(--ds-chart-bar)" stroke-width="4"/>
                 <circle cx="21" cy="21" r="16" fill="none" stroke="${stroke}" stroke-width="4"
                         stroke-dasharray="${g.pct} ${100 - g.pct}" stroke-dashoffset="25" transform="rotate(-90 21 21)"/>
@@ -85,8 +85,8 @@ window.HUB_CHARTS = (function () {
     return `<div style="display:flex;gap:26px;flex-wrap:wrap">` + data.items.map((k) =>
       `<div>
          <div style="font-size:10.5px;color:var(--ds-ink-5)">${k.label}</div>
-         <div style="display:flex;align-items:baseline;gap:7px;margin-top:4px">
-           <span class="ds-num" style="font-size:24px;font-weight:300">${k.value}</span>
+         <div style="display:flex;align-items:baseline;gap:7px;margin-top:5px">
+           <span class="ds-num" style="font-size:30px;font-weight:300">${k.value}</span>
            ${k.delta ? `<span style="font-size:11.5px;color:var(--ds-positive)">${k.delta}</span>` : ''}
          </div>
        </div>`).join('') + `</div>`;
