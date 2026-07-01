@@ -6,7 +6,7 @@
   <title>Marketing Data Hub — First Sentier Group</title>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="design-system/tokens.css?v=10">
+  <link rel="stylesheet" href="design-system/tokens.css?v=11">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     html, body { height: 100%; }
@@ -26,6 +26,17 @@
     body { animation: dh-fadein .3s ease both; }
     @keyframes dh-fadein { from { opacity: 0 } to { opacity: 1 } }
     body.dh-fadeout { opacity: 0 !important; transition: opacity .24s ease; }
+    /* activity pin tooltips (hover) */
+    .leaflet-tooltip.ds-tip { background: var(--ds-glass-fill-strong); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,.16); border-radius: 11px; color: var(--ds-ink-1); box-shadow: var(--ds-shadow-pop);
+      padding: 9px 12px; max-width: 250px; white-space: normal; font-family: var(--ds-font-sans); }
+    .leaflet-tooltip.ds-tip::before { display: none; }
+    .ds-tip .tip-t { font-size: 12.5px; font-weight: 600; color: var(--ds-ink-1); }
+    .ds-tip .tip-m { font-size: 10.5px; color: var(--ds-ink-3); margin-top: 3px; }
+    .ds-tip .tip-r { font-size: 10px; color: var(--ds-ink-5); margin-top: 1px; }
+    .ds-tip .tip-f { font-size: 10.5px; color: var(--ds-ink-2); margin-top: 7px; display: flex; align-items: center; gap: 6px; }
+    .ds-tip .tip-badge { width: 8px; height: 8px; border-radius: 50%; box-shadow: 0 0 6px currentColor; }
+    .ds-tip .tip-l { font-size: 10px; color: var(--ds-ink-5); margin-top: 5px; }
   </style>
 </head>
 <body>
@@ -145,7 +156,7 @@
     </div>
   </div>
 
-  <script src="assets/data.js?v=10"></script>
-  <script src="assets/app.js?v=10"></script>
+  <script src="assets/data.js?v=11"></script>
+  <script src="assets/app.js?v=11"></script>
 </body>
 </html>

@@ -9,6 +9,8 @@
 
   /* ---- Filter state ----------------------------------------------------- */
   const state = { brand: 'all', channel: 'all', strategy: 'all', openMenu: null };
+  let ACTS = [];                       // Channel tracker activities (DataHub feed)
+  const FIELD = { brand: 'affiliate', channel: 'channel', strategy: 'status' };
 
   /* ======================================================================
      MAP
@@ -28,57 +30,51 @@
     .addAttribution('Imagery © Esri, Maxar, Earthstar Geographics')
     .addTo(map);
 
-  /* ---- Markers ---------------------------------------------------------- */
-  const markers = D.campaigns.map((c) => {
-    const featured = !!c.big;
-    const dot = featured ? 13 : 9;
-    const ring = featured ? 26 : 18;
-    const html =
-      `<span class="ring" style="--c:${c.color};width:${ring}px;height:${ring}px;margin:${-ring/2}px 0 0 ${-ring/2}px"></span>` +
-      `<span class="dot" style="--c:${c.color};width:${dot}px;height:${dot}px"></span>`;
-    const icon = L.divIcon({ className: 'ds-pin', iconSize: [dot, dot], iconAnchor: [dot/2, dot/2], html });
-    const marker = L.marker([c.lat, c.lng], { icon });
+  /* ---- Activity → map marker mapping (Channel tracker feed) ------------ */
+  const REGION = { ANZ: [-33.87, 151.21], UK: [51.51, -0.13], EMEA: [50.11, 8.68], US: [40.71, -74.01], Global: [22, 6] };
+  const COLOR  = { 'Live': '#f4ad44', 'In progress': '#5ec8e6', 'Complete': '#7fdca0', 'Draft': '#9db2cc' };
+  const colorFor = (s) => COLOR[s] || '#7e93ac';
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const fmtDate = (x) => { if (!x) return null; const b = x.split('-'); return `${+b[2]} ${MON[+b[1] - 1]} ${b[0]}`; };
+  const fmtRange = (a) => { const s = fmtDate(a.startDate), e = fmtDate(a.endDate) || fmtDate(a.goLive); return s && e ? `${s} – ${e}` : (s || e || ''); };
 
-    if (featured && c.popup) {
-      const p = c.popup;
-      marker.bindPopup(
-        `<div style="min-width:150px">
-           <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px">
-             <span style="font-size:12.5px;font-weight:600;color:var(--ds-ink-1)">${c.city}</span>
-             <span class="ds-badge ds-badge--active">${p.badge}</span>
-           </div>
-           <div style="font-size:10px;color:var(--ds-ink-5);margin-bottom:7px">${p.meta}</div>
-           <div style="display:flex;align-items:baseline;gap:7px">
-             <span class="ds-num" style="font-size:23px;font-weight:300;color:var(--ds-ink-1)">${p.value}</span>
-             <span style="font-size:11px;color:var(--ds-positive)">${p.delta}</span>
-           </div>
-           <div style="font-size:9.5px;color:var(--ds-ink-6);margin-top:2px">${p.unit}</div>
-         </div>`,
-        { closeButton: false, autoClose: false, closeOnClick: false, autoPan: false, className: 'ds-pop', offset: [8, -2] }
-      );
-    }
-    marker._c = c;
-    return marker;
-  });
+  function tooltip(a) {
+    const r = fmtRange(a);
+    return `<div class="tip-t">${a.title || 'Untitled'}${a.keyActivity ? ' <span style="color:#f4ad44">★</span>' : ''}</div>
+      <div class="tip-m">${[a.affiliate, a.channel].filter(Boolean).join(' · ') || '—'}</div>
+      <div class="tip-r">${[a.region, a.subRegion].filter(Boolean).join(' · ') || '—'}</div>
+      <div class="tip-f"><span class="tip-badge" style="background:${colorFor(a.status)}"></span>${a.status || 'Planned'}${r ? ` · <span class="ds-num">${r}</span>` : ''}</div>
+      ${a.lead ? `<div class="tip-l">${a.lead}</div>` : ''}`;
+  }
 
   const layer = L.layerGroup().addTo(map);
+  let markers = [];
+
+  function buildMarkers(acts) {
+    const idx = {};
+    markers = acts.map((a) => {
+      const base = REGION[a.region] || REGION.Global;
+      const i = idx[a.region] || 0; idx[a.region] = i + 1;       // per-region spread
+      let lat = base[0], lng = base[1];
+      if (i) { const ang = i * 2.39996, rad = 1.15 * Math.sqrt(i); lat += rad * Math.cos(ang); lng += rad * Math.sin(ang) * 1.5; }
+      const color = colorFor(a.status), key = !!a.keyActivity;
+      const dot = key ? 13 : 9, ring = key ? 26 : 18;
+      const html = `<span class="ring" style="--c:${color};width:${ring}px;height:${ring}px;margin:${-ring/2}px 0 0 ${-ring/2}px"></span>`
+        + `<span class="dot" style="--c:${color};width:${dot}px;height:${dot}px"></span>`;
+      const m = L.marker([lat, lng], { icon: L.divIcon({ className: 'ds-pin', iconSize: [dot, dot], iconAnchor: [dot/2, dot/2], html }) });
+      m.bindTooltip(tooltip(a), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m._a = a;
+      return m;
+    });
+  }
 
   function applyFilters() {
     layer.clearLayers();
-    let shownFeatured = null;
     markers.forEach((m) => {
-      const c = m._c;
-      const isPeer = c.brand === 'peer';
-      // peer markers only under "all" brand, and hidden unless strategy is all/competitor
-      const brandOk    = state.brand === 'all' ? true : (!isPeer && c.brand === state.brand);
-      const channelOk  = state.channel === 'all' ? true : c.channel === state.channel;
-      const strategyOk = state.strategy === 'all' ? true : c.strategy === state.strategy;
-      if (brandOk && channelOk && strategyOk) {
-        layer.addLayer(m);
-        if (c.big && !shownFeatured) shownFeatured = m;
-      }
+      const a = m._a;
+      const ok = ['brand', 'channel', 'strategy'].every((k) => state[k] === 'all' || a[FIELD[k]] === state[k]);
+      if (ok) layer.addLayer(m);
     });
-    if (shownFeatured) setTimeout(() => shownFeatured.openPopup(), 60);
   }
 
   /* ---- Custom zoom / recenter stack ------------------------------------ */
@@ -92,14 +88,24 @@
   const flyout = document.getElementById('flyout');
 
   const dims = {
-    brand:    { data: D.brands,     key: 'brand',    title: 'Filter by brand'    },
-    channel:  { data: D.channels,   key: 'channel',  title: 'Filter by channel'  },
-    strategy: { data: D.strategies, key: 'strategy', title: 'Filter by strategy' },
+    brand:    { key: 'brand',    title: 'Filter by brand',   data: [] },
+    channel:  { key: 'channel',  title: 'Filter by channel', data: [] },
+    strategy: { key: 'strategy', title: 'Filter by status',  data: [] },
   };
+  const BRAND_TILE = { Igneo: 'IG', FSI: 'FSI', FSSA: 'FS', FSG: 'FSG', All: 'ALL' };
+  const tileFor = (k, v) => (k === 'brand' ? (BRAND_TILE[v] || v.slice(0, 3).toUpperCase()) : v.replace(/[^A-Za-z]/g, '').slice(0, 2).toUpperCase());
+
+  function buildDims(acts) {
+    ['brand', 'channel', 'strategy'].forEach((k) => {
+      const vals = Array.from(new Set(acts.map((a) => a[FIELD[k]]).filter(Boolean))).sort();
+      const allLabel = k === 'strategy' ? 'All statuses' : (k === 'channel' ? 'All channels' : 'All brands');
+      dims[k].data = [{ id: 'all', label: allLabel, tile: '∗' }].concat(vals.map((v) => ({ id: v, label: v, tile: tileFor(k, v) })));
+    });
+  }
 
   function count(dimKey, id) {
-    if (id === 'all') return D.campaigns.filter((c) => c.brand !== 'peer').length;
-    return D.campaigns.filter((c) => c[dimKey] === id).length;
+    const field = FIELD[dimKey];
+    return id === 'all' ? ACTS.length : ACTS.filter((a) => a[field] === id).length;
   }
 
   function renderFlyout(dimId) {
@@ -150,9 +156,11 @@
               <span class="ds-eyebrow">Map layers</span>
               <span class="ds-tbtn" id="flyout-close" style="width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px">✕</span>
             </div>
-            ${item(D.colors.active,  'Active campaign')}
-            ${item(D.colors.growing, 'Share of voice growing')}
-            ${item(D.colors.peer,    'Competitor / peer')}`;
+            ${item('#f4ad44', 'Live')}
+            ${item('#5ec8e6', 'In progress')}
+            ${item('#9db2cc', 'Draft')}
+            ${item('#7fdca0', 'Complete')}
+            ${item('#7e93ac', 'Planned')}`;
   }
 
   function openMenu(id) {
@@ -345,13 +353,39 @@
     el.addEventListener('click', () => navTo(el.dataset.href));
   });
 
-  /* ---- Boot ------------------------------------------------------------- */
-  // Apply an incoming filter from the URL (e.g. arriving from a detail page's rail)
+  /* ---- Boot: load the Channel tracker feed and drive the map ----------- */
+  function updateKpis(acts) {
+    const el = document.getElementById('kpis'); if (!el) return;
+    const active = acts.filter((a) => a.status === 'Live' || a.status === 'In progress').length;
+    const markets = new Set(acts.map((a) => a.region).filter(Boolean)).size;
+    const keyN = acts.filter((a) => a.keyActivity).length;
+    const chip = (label, val, sub, tone) => `<div class="ds-glass" style="border-radius:var(--ds-r-lg);padding:11px 15px;min-width:116px">
+        <div style="font-size:var(--ds-fs-micro);color:var(--ds-ink-4)">${label}</div>
+        <div style="display:flex;align-items:baseline;gap:6px;margin-top:5px">
+          <span class="ds-num" style="font-size:var(--ds-fs-kpi);font-weight:300">${val}</span>
+          ${sub ? `<span style="font-size:var(--ds-fs-small);color:${tone || 'var(--ds-ink-5)'}">${sub}</span>` : ''}
+        </div></div>`;
+    el.innerHTML = chip('Active activities', active, `of ${acts.length}`, 'var(--ds-positive)')
+      + chip('Markets', markets, 'regions')
+      + chip('Key activities', keyN, '', 'var(--ds-accent)');
+  }
+
   const params = new URLSearchParams(location.search);
-  ['brand', 'channel', 'strategy'].forEach((k) => { const v = params.get(k); if (v) state[k] = v; });
-  applyFilters();
-  syncRailDots();
-  const incoming = ['brand', 'channel', 'strategy'].find((k) => state[k] !== 'all');
-  if (incoming) openMenu(incoming);   // surface the applied filter's flyout
+  fetch('assets/data/channel-tracker.json?v=10').then((r) => r.json()).then((acts) => {
+    ACTS = acts;
+    buildDims(acts);
+    buildMarkers(acts);
+    updateKpis(acts);
+    // incoming filter from a detail page's rail (case-insensitive: ?brand=igneo → 'Igneo')
+    ['brand', 'channel', 'strategy'].forEach((k) => {
+      const v = params.get(k); if (!v) return;
+      const match = acts.map((a) => a[FIELD[k]]).find((x) => x && x.toLowerCase() === v.toLowerCase());
+      state[k] = match || v;
+    });
+    applyFilters();
+    syncRailDots();
+    const incoming = ['brand', 'channel', 'strategy'].find((k) => state[k] !== 'all');
+    if (incoming) openMenu(incoming);
+  }).catch((e) => console.error('channel tracker feed failed', e));
   window.addEventListener('resize', () => map.invalidateSize());
 })();
