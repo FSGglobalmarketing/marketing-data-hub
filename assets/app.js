@@ -230,7 +230,7 @@
   // --- Row 1: featured campaign + 3 channel cards ---
   const f = D.featured;
   const featuredCard =
-    `<div class="ds-glass ds-card" style="padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
+    `<div class="ds-glass ds-card" data-href="campaign.html?id=greater-china" style="cursor:pointer;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
        <div style="display:flex;align-items:flex-start;justify-content:space-between">
          <div>
            <div style="display:flex;align-items:center;gap:8px">
@@ -254,8 +254,9 @@
        </div>
      </div>`;
 
+  const chTab = { search: 'search', website: 'website', email: 'leads' };
   const channelCards = D.channelCards.map((c) =>
-    `<div class="ds-glass ds-card" style="padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
+    `<div class="ds-glass ds-card" data-href="channel.html?tab=${chTab[c.id] || 'website'}" style="cursor:pointer;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
        <div style="display:flex;align-items:flex-start;justify-content:space-between">
          <div style="display:flex;align-items:center;gap:7px">
            <span style="font-size:var(--ds-fs-title);font-weight:600;color:var(--ds-ink-1)">${c.title}</span>
@@ -272,8 +273,8 @@
   document.getElementById('rail-row1').innerHTML = featuredCard + channelCards;
 
   // --- Row 2: analytics widgets ---
-  function widgetShell(w, chart, footer) {
-    return `<div class="ds-glass ds-card" style="padding:14px 16px;display:flex;flex-direction:column">
+  function widgetShell(w, chart, footer, href) {
+    return `<div class="ds-glass ds-card" data-href="${href}" style="cursor:pointer;padding:14px 16px;display:flex;flex-direction:column">
               <div style="display:flex;align-items:flex-start;justify-content:space-between">
                 <div>
                   <div style="font-size:var(--ds-fs-title);font-weight:600;color:var(--ds-ink-1)">${w.title}</div>
@@ -333,10 +334,15 @@
 
   const W = D.widgets;
   document.getElementById('rail-row2').innerHTML =
-    widgetShell(W.reachAnalysis, barsChart(W.reachAnalysis), W.reachAnalysis.footer) +
-    widgetShell(W.funnelHealth, funnelChart(W.funnelHealth), W.funnelHealth.footer) +
-    widgetShell(W.costPerLead, linesChart(W.costPerLead), W.costPerLead.footer) +
-    widgetShell(W.shareOfVoice, peerChart(W.shareOfVoice), W.shareOfVoice.footer);
+    widgetShell(W.reachAnalysis, barsChart(W.reachAnalysis), W.reachAnalysis.footer, 'channel.html?tab=display') +
+    widgetShell(W.funnelHealth, funnelChart(W.funnelHealth), W.funnelHealth.footer, 'channel.html?tab=website') +
+    widgetShell(W.costPerLead, linesChart(W.costPerLead), W.costPerLead.footer, 'channel.html?tab=leads') +
+    widgetShell(W.shareOfVoice, peerChart(W.shareOfVoice), W.shareOfVoice.footer, 'channel.html?tab=search');
+
+  // Card navigation (drill-in ↗ opens a detail screen)
+  document.querySelectorAll('[data-href]').forEach((el) => {
+    el.addEventListener('click', () => { location.href = el.dataset.href; });
+  });
 
   /* ---- Boot ------------------------------------------------------------- */
   applyFilters();
