@@ -156,115 +156,123 @@ window.HUB_DATA = (function () {
     Array.from({ length: n }, (_, i) =>
       Math.max(1, Math.round(base + amp * Math.sin(i * 0.62 + seed) + amp * 0.35 * Math.cos(i * 1.4 + seed))));
 
-  /* Widgets per funnel tab. `peer:true` widgets appear only when the
-     competitor toggle is ON. `campaignOnly:true` widgets appear only on
-     campaign pages. Kinds: kpis | bars | lines | list | gauges | peers | funnel */
+  /* Widgets per funnel tab — driven by the KPI framework (real Q1'26 metrics,
+     benchmarks vs Q4/Dec, status and source). Kinds:
+       stat  — big metric + label, benchmark chip, status dot, source, mini chart
+       list | funnel | peers  — supporting cards
+     Flags: peer:true (only when competitor toggle ON), campaignOnly:true. */
   const tabContent = {
     search: [
-      { kind: 'kpis', title: 'Search overview', items: [
-        { label: 'Ranking keywords', value: '216', delta: '↑ 43%' },
-        { label: 'Impressions', value: '1.24M', delta: '↑ 51%' },
-        { label: 'Avg. position', value: '8.4', delta: '↑ 1.6' } ] },
-      { kind: 'bars', title: 'Impressions', subtitle: 'Organic search · by week',
-        bars: ser(1, 12, 55, 30), highlightFrom: 9, footer: '↑ 43% vs prior quarter' },
+      { kind: 'stat', title: 'SEO — keywords', subtitle: 'Awareness', status: 'good',
+        value: '216', label: 'Keywords ranked', bench: '↑ 14% vs Dec ’25',
+        source: 'BrightEdge', mini: { kind: 'bars', bars: ser(1, 12, 55, 28), highlightFrom: 9 } },
+      { kind: 'stat', title: 'SEO — organic traffic', subtitle: 'Awareness', status: 'good',
+        value: '+43%', label: 'Est. traffic vs Q4', bench: 'Growing quarter-on-quarter',
+        source: 'BrightEdge', mini: { kind: 'lines', primary: ser(8, 12, 46, 22) } },
+      { kind: 'stat', title: 'Paid search (SEM)', subtitle: 'Awareness', status: 'good',
+        value: '18.2k', label: 'Paid views', bench: '4.1% of Q1 traffic',
+        source: 'GA4 traffic source', mini: { kind: 'bars', bars: ser(4, 12, 40, 18), highlightFrom: 10 } },
       { kind: 'list', title: 'Top keywords', subtitle: 'Position · this quarter', rows: [
         { a: 'quality growth asia', b: '#2' }, { a: 'em equity income', b: '#3' },
         { a: 'sustainable infrastructure', b: '#4' }, { a: 'china a-shares outlook', b: '#6' },
         { a: 'listed real assets', b: '#7' } ] },
-      { kind: 'gauges', title: 'Ranking health', subtitle: 'Coverage',
-        gauges: [ { label: 'Top-3', value: '54', pct: 41, tone: 'accent' },
-                  { label: 'Page 1', value: '128', pct: 68, tone: 'cyan' } ] },
       { kind: 'peers', peer: true, title: 'Share of voice', subtitle: 'Organic search vs peers',
         peers: [ { name: 'FSSA', pct: 34, self: true }, { name: 'Peer A', pct: 27 },
                  { name: 'Peer B', pct: 21 }, { name: 'Peer C', pct: 18 } ], footer: '↑ 6 pts vs prior quarter' },
     ],
     social: [
-      { kind: 'kpis', title: 'Social overview', items: [
-        { label: 'Reach', value: '486.5k', delta: '↑ 71%' },
-        { label: 'Engagement rate', value: '4.2%', delta: '↑ 0.8pt' },
-        { label: 'Followers', value: '38.1k', delta: '↑ 12%' } ] },
-      { kind: 'lines', title: 'Engagement rate', subtitle: 'Paid vs organic · by week',
-        primary: ser(2, 10, 42, 12), secondary: ser(5, 10, 30, 9), footer: 'Paid 4.2% · organic 2.9%' },
+      { kind: 'stat', title: 'LinkedIn — paid', subtitle: 'Awareness', status: 'good',
+        value: '486.5k', label: 'Sponsored impressions', bench: '↑ 107% vs Q4 (235.1k)',
+        source: 'LinkedIn Campaign Manager', mini: { kind: 'bars', bars: ser(2, 12, 48, 30), highlightFrom: 8 } },
+      { kind: 'stat', title: 'LinkedIn — organic', subtitle: 'Consideration', status: 'watch',
+        value: '35.9k', label: 'Impressions', value2: '1.2%', label2: 'Avg engagement', bench: '↓ 19% vs Q4',
+        source: 'organic_linkedin_q4_vs_q1', mini: { kind: 'lines', primary: ser(5, 12, 40, 12) } },
+      { kind: 'stat', title: 'Followers', subtitle: 'Consideration', status: 'good',
+        value: '38.1k', label: 'Company page', bench: '↑ 12% vs Q4',
+        source: 'LinkedIn', mini: { kind: 'lines', primary: ser(3, 12, 44, 10) } },
       { kind: 'list', title: 'Top posts', subtitle: 'By engagement', rows: [
         { a: 'The case for Asian quality growth', b: '9.1k' }, { a: 'Infrastructure income in 2026', b: '7.4k' },
         { a: 'China reopening — three lessons', b: '6.8k' }, { a: 'Meet the EM research team', b: '5.2k' } ] },
-      { kind: 'gauges', title: 'Paid vs organic', subtitle: 'Share of reach',
-        gauges: [ { label: 'Paid', value: '63%', pct: 63, tone: 'accent' },
-                  { label: 'Organic', value: '37%', pct: 37, tone: 'cyan' } ] },
+      { kind: 'stat', campaignOnly: true, title: 'Spend pacing', subtitle: 'Campaign', status: 'good',
+        value: '92%', label: 'of budget spent', bench: 'On pace to plan',
+        source: 'LinkedIn Campaign Manager', mini: { kind: 'lines', primary: ser(7, 12, 55, 12) } },
       { kind: 'peers', peer: true, title: 'Share of voice', subtitle: 'LinkedIn vs peers',
         peers: [ { name: 'FSSA', pct: 31, self: true }, { name: 'Peer A', pct: 29 },
                  { name: 'Peer B', pct: 24 }, { name: 'Peer C', pct: 16 } ], footer: '↑ 4 pts vs prior quarter' },
-      { kind: 'lines', campaignOnly: true, title: 'Spend pacing', subtitle: 'Budget vs actual · USD',
-        primary: ser(7, 10, 60, 14), secondary: ser(7, 10, 58, 13), footer: 'On pace · 92% of budget' },
     ],
     display: [
-      { kind: 'kpis', title: 'Display overview', items: [
-        { label: 'Impressions', value: '3.1M', delta: '↑ 22%' },
-        { label: 'CTR', value: '0.42%', delta: '↑ 0.05pt' },
-        { label: 'Viewability', value: '71%', delta: '↑ 3pt' } ] },
-      { kind: 'bars', title: 'Impressions', subtitle: 'Programmatic · by week',
-        bars: ser(3, 12, 60, 26), highlightFrom: 10, footer: 'USD 18 CPM blended' },
-      { kind: 'lines', title: 'Click-through rate', subtitle: 'By week',
-        primary: ser(4, 10, 38, 10), footer: '↑ 0.05pt vs prior quarter' },
+      { kind: 'stat', title: 'Display (Blis)', subtitle: 'Awareness', status: 'good',
+        value: '40.0k', label: 'Display visits', bench: '8.7% of Q1 traffic',
+        source: 'GA4 traffic source', mini: { kind: 'bars', bars: ser(3, 12, 52, 24), highlightFrom: 9 } },
+      { kind: 'stat', title: 'Programmatic reach', subtitle: 'Awareness', status: 'good',
+        value: '2.9M', label: 'Impressions', bench: 'Live across HK / AU',
+        source: 'Blis', mini: { kind: 'bars', bars: ser(6, 12, 46, 20), highlightFrom: 8 } },
+      { kind: 'stat', title: 'Click-through rate', subtitle: 'Awareness', status: 'good',
+        value: '0.42%', label: 'Blended CTR', bench: '↑ 0.05pt vs Q4',
+        source: 'Blis', mini: { kind: 'lines', primary: ser(4, 12, 38, 10) } },
       { kind: 'list', campaignOnly: true, title: 'Creative performance', subtitle: 'CTR by creative', rows: [
         { a: 'Quality growth — 300×250', b: '0.51%' }, { a: 'Infrastructure — 728×90', b: '0.44%' },
         { a: 'EM income — 160×600', b: '0.38%' }, { a: 'Brand — 970×250', b: '0.29%' } ] },
     ],
     editorial: [
-      { kind: 'kpis', title: 'Editorial & PR', items: [
-        { label: 'Articles', value: '24', delta: '↑ 6' },
-        { label: 'Citations', value: '156', delta: '↑ 38%' },
-        { label: 'AI answers', value: '42', delta: '↑ 19' } ] },
-      { kind: 'bars', title: 'Citations', subtitle: 'Earned coverage · by week',
-        bars: ser(6, 12, 40, 22), highlightFrom: 8, footer: '↑ 38% vs prior quarter' },
+      { kind: 'stat', title: 'Podcast', subtitle: 'Awareness', status: 'inactive',
+        value: 'N/A', label: 'Streams', bench: 'No Q1 episode data', source: 'Transistor' },
+      { kind: 'stat', title: 'Editorial coverage', subtitle: 'Awareness', status: 'good',
+        value: '24', label: 'Articles (illustrative)', bench: '↑ 6 vs Q4',
+        source: 'Signal AI', mini: { kind: 'bars', bars: ser(6, 12, 40, 20), highlightFrom: 8 } },
+      { kind: 'stat', title: 'Media citations', subtitle: 'Awareness', status: 'good',
+        value: '156', label: 'Citations (illustrative)', bench: '↑ 38% vs Q4',
+        source: 'Signal AI', mini: { kind: 'lines', primary: ser(9, 12, 42, 16) } },
       { kind: 'list', title: 'Top publications', subtitle: 'By reach', rows: [
         { a: 'Financial Times', b: '4' }, { a: 'Bloomberg', b: '3' },
         { a: 'Citywire Asia', b: '5' }, { a: 'Ignites Asia', b: '3' } ] },
-      { kind: 'peers', peer: true, title: 'Share of coverage', subtitle: 'Earned media vs peers',
-        peers: [ { name: 'FSSA', pct: 28, self: true }, { name: 'Peer A', pct: 31 },
-                 { name: 'Peer B', pct: 22 }, { name: 'Peer C', pct: 19 } ], footer: '↓ 2 pts vs prior quarter' },
     ],
     website: [
-      { kind: 'kpis', title: 'Website overview', items: [
-        { label: 'Sessions', value: '199.9k', delta: '↑ 47%' },
-        { label: 'Users', value: '142.3k', delta: '↑ 39%' },
-        { label: 'Conversion', value: '2.4%', delta: '↑ 0.3pt' } ] },
-      { kind: 'lines', title: 'Sessions', subtitle: 'GA4 · by week',
-        primary: ser(8, 12, 55, 24), footer: '↑ 47% vs prior quarter' },
+      { kind: 'stat', title: 'Website views', subtitle: 'Consideration', status: 'good',
+        value: '199.9k', label: 'Views (ex-RQI)', bench: '↑ 47% vs Q4 (136.4k)',
+        source: 'GA4 Compare', mini: { kind: 'lines', primary: ser(8, 12, 52, 22) } },
+      { kind: 'stat', title: 'Active users', subtitle: 'Consideration', status: 'good',
+        value: '187.5k', label: 'Active users', bench: 'Growing quarter-on-quarter',
+        source: 'GA4', mini: { kind: 'bars', bars: ser(2, 12, 50, 22), highlightFrom: 8 } },
+      { kind: 'stat', title: 'Conversion rate', subtitle: 'Consideration', status: 'good',
+        value: '2.4%', label: 'Goal completions', bench: '↑ 0.3pt vs Q4',
+        source: 'GA4', mini: { kind: 'lines', primary: ser(1, 12, 36, 9) } },
       { kind: 'funnel', title: 'On-site funnel', subtitle: 'Stage conversion', stages: [
         { label: 'Landing', pct: 100 }, { label: 'Engaged', pct: 61 },
         { label: 'Intent', pct: 29, watch: true }, { label: 'Convert', pct: 12 } ], threshold: 32,
         footer: 'Intent below watch line' },
-      { kind: 'list', title: 'Top pages', subtitle: 'By sessions', rows: [
+      { kind: 'list', title: 'Top pages', subtitle: 'By views', rows: [
         { a: '/strategies/asian-growth', b: '28.4k' }, { a: '/insights/china-outlook', b: '19.1k' },
         { a: '/strategies/global-listed-infra', b: '16.7k' }, { a: '/about/our-approach', b: '11.2k' } ] },
     ],
     events: [
-      { kind: 'kpis', title: 'Events overview', items: [
-        { label: 'Events', value: '12', delta: '↑ 3' },
-        { label: 'Registrations', value: '3.4k', delta: '↑ 28%' },
-        { label: 'Attendance', value: '68%', delta: '↑ 4pt' } ] },
-      { kind: 'bars', title: 'Registrations', subtitle: 'By month',
-        bars: ser(9, 9, 45, 20), highlightFrom: 7, footer: '↑ 28% vs prior quarter' },
+      { kind: 'stat', title: 'Events', subtitle: 'Conversion', status: 'good',
+        value: '8', label: 'Q1 events', value2: '15', label2: 'Q1–Q2 roundtables', bench: 'AEQ · EX-20 · Civitas',
+        source: '2026 Events', mini: { kind: 'bars', bars: ser(9, 9, 42, 18), highlightFrom: 6 } },
+      { kind: 'stat', title: 'Webinars', subtitle: 'Conversion', status: 'inactive',
+        value: 'N/A', label: 'Sessions', bench: 'No Q1 webinar captured', source: '—' },
+      { kind: 'stat', title: 'Registrations', subtitle: 'Conversion', status: 'good',
+        value: '3.4k', label: 'Total registrations', bench: '↑ 28% vs Q4',
+        source: '2026 Events', mini: { kind: 'lines', primary: ser(7, 12, 40, 14) } },
       { kind: 'list', title: 'Upcoming events', subtitle: 'Next 60 days', rows: [
         { a: 'HK institutional roundtable', b: '18 Jul' }, { a: 'Singapore wholesale forum', b: '02 Aug' },
         { a: 'China outlook webinar', b: '14 Aug' }, { a: 'Infrastructure deep-dive', b: '28 Aug' } ] },
-      { kind: 'gauges', title: 'Attendance', subtitle: 'Registered vs attended',
-        gauges: [ { label: 'Attended', value: '68%', pct: 68, tone: 'accent' },
-                  { label: 'Follow-up', value: '41%', pct: 41, tone: 'cyan' } ] },
     ],
     leads: [
-      { kind: 'kpis', title: 'Leads & pipeline', items: [
-        { label: 'MQLs', value: '584', delta: '↑ 27%' },
-        { label: 'Form submissions', value: '1.2k', delta: '↑ 33%' },
-        { label: 'Pipeline', value: 'USD 4.8M', delta: '↑ 19%' } ] },
+      { kind: 'stat', title: 'Email (Pardot)', subtitle: 'Conversion', status: 'good',
+        value: '17.7k', label: 'Opens', value2: '6.0k', label2: 'Clicks', bench: '↑ 5% opens vs Q4',
+        source: 'Salesforce Activity', mini: { kind: 'bars', bars: ser(10, 12, 44, 16), highlightFrom: 9 } },
+      { kind: 'stat', title: 'Pipeline', subtitle: 'Service & loyalty', status: 'good',
+        value: '584', label: 'Live opportunities', value2: '74', label2: 'Advancing (DD)', bench: 'From 2,207 total',
+        source: 'FSI Opportunities', mini: { kind: 'bars', bars: ser(11, 12, 48, 14), highlightFrom: 8 } },
+      { kind: 'stat', title: 'Marketing-qualified leads', subtitle: 'Conversion', status: 'good',
+        value: '584', label: 'MQLs', bench: '↑ 27% vs Q4',
+        source: 'Pardot / CRM', mini: { kind: 'lines', primary: ser(6, 12, 40, 16) } },
       { kind: 'funnel', title: 'Lead funnel', subtitle: 'Stage conversion', stages: [
         { label: 'Visitor', pct: 100 }, { label: 'Lead', pct: 44 },
         { label: 'MQL', pct: 21 }, { label: 'SQL', pct: 9, watch: true } ], threshold: 12,
         footer: 'SQL conversion below watch line' },
-      { kind: 'lines', title: 'MQLs', subtitle: 'By week',
-        primary: ser(10, 12, 40, 16), footer: '↑ 27% vs prior quarter' },
-      { kind: 'list', title: 'Recent opportunities', subtitle: 'From marketing', rows: [
+      { kind: 'list', title: 'Advancing opportunities', subtitle: 'Listed infra leads', rows: [
         { a: 'Wholesale · Greater China growth', b: 'USD 1.1M' }, { a: 'Institutional · Listed infra', b: 'USD 0.9M' },
         { a: 'Wholesale · EM income', b: 'USD 0.6M' }, { a: 'Institutional · Sustainable listed', b: 'USD 0.5M' } ] },
     ],

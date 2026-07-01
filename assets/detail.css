@@ -75,7 +75,7 @@ body {
 /* ---- Hero -------------------------------------------------------------- */
 .dh-hero {
   position: relative; border-radius: 22px; overflow: hidden;
-  height: 480px; box-shadow: var(--dh-shadow);
+  height: 58vh; min-height: 500px; box-shadow: var(--dh-shadow);
   background: #cfd6da;
 }
 .dh-slide { position: absolute; inset: 0; background-size: cover; background-position: center right;
@@ -182,12 +182,12 @@ body {
 .dh-mic { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--dh-dark); color: #fff;
   display: flex; align-items: center; justify-content: center; cursor: pointer; }
 
-.dh-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.dh-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
 /* ---- Widget card — white with a dark circular icon badge -------------- */
 .dh-widget {
   background: var(--dh-card); border: 1px solid rgba(20,26,34,.06); border-radius: 20px;
-  padding: 20px 22px; box-shadow: var(--dh-shadow-sm); min-height: 232px;
+  padding: 22px 24px; box-shadow: var(--dh-shadow-sm); min-height: 264px;
   display: flex; flex-direction: column; transition: box-shadow .2s ease, transform .2s ease;
 }
 .dh-widget:hover { box-shadow: var(--dh-shadow); }
@@ -203,8 +203,10 @@ body {
 
 .ds-num { font-variant-numeric: tabular-nums; }
 
+@media (max-width: 1160px) { .dh-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 940px) {
   .dh-content { grid-template-columns: 1fr; }
   .dh-brief { margin-top: 14px; }
   .dh-tabs { max-width: 100%; }
 }
+@media (max-width: 680px) { .dh-grid { grid-template-columns: 1fr; } }

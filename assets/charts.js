@@ -13,6 +13,7 @@ window.HUB_CHARTS = (function () {
     list:'<path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/>',
     gauges:'<path d="M4 19a8 8 0 1116 0"/><path d="M12 14l3.5-3.5"/>',
     peers:'<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0M16 5.5a3 3 0 010 5M21.5 20a6.2 6.2 0 00-4-5.5"/>',
+    stat:'<path d="M3 12h3.5l2.5-7 4 14 2.5-7H21"/>',
   };
   const expand = '<path d="M15 3h6v6M9 21H3v-6M21 3l-8 8M3 21l8-8"/>';
   const icon = (paths, w = 15, sw = 1.7) =>
@@ -100,22 +101,43 @@ window.HUB_CHARTS = (function () {
        </div>`).join('') + `</div>`;
   }
 
-  const renderers = { bars, funnel, lines, gauges, peers, kpis, list };
+  const statusColor = (s) => ({ good: 'var(--ds-positive)', watch: 'var(--ds-accent)', inactive: 'var(--ds-neutral)' }[s] || 'var(--ds-ink-5)');
+  const statusSoft = (s) => ({ good: 'rgba(47,190,111,.13)', watch: 'rgba(244,173,68,.16)', inactive: 'rgba(154,160,168,.15)' }[s] || 'rgba(154,160,168,.15)');
+
+  // big-number KPI card body: metric + label, benchmark chip, mini chart
+  function stat(w) {
+    const bench = w.bench
+      ? `<div style="display:inline-flex;align-items:center;margin-top:14px;padding:5px 12px;border-radius:20px;background:${statusSoft(w.status)};font-size:11px;font-weight:600;color:${statusColor(w.status)}">${w.bench}</div>`
+      : '';
+    const second = w.value2
+      ? `<div style="margin-top:9px;font-size:12.5px;color:var(--ds-ink-4)"><span class="ds-num" style="font-weight:600;color:var(--ds-ink-2)">${w.value2}</span> ${w.label2 || ''}</div>`
+      : '';
+    const mini = w.mini && renderers[w.mini.kind] ? `<div style="margin-top:16px">${renderers[w.mini.kind](w.mini)}</div>` : '';
+    return `<div style="display:flex;align-items:baseline"><span class="ds-num" style="font-size:38px;font-weight:300;color:var(--ds-ink-1);line-height:1">${w.value}</span></div>
+            <div style="font-size:11.5px;color:var(--ds-ink-5);margin-top:6px">${w.label || ''}</div>
+            ${second}${bench}${mini}`;
+  }
+
+  const renderers = { bars, funnel, lines, gauges, peers, kpis, list, stat };
 
   // A widget = white card with a dark circular icon badge, titles, expand ↗.
   function widget(w) {
     const body = (renderers[w.kind] || (() => ''))(w);
+    const dot = w.status
+      ? `<span style="display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:7px;vertical-align:middle;background:${statusColor(w.status)}"></span>`
+      : '';
+    const foot = w.source ? `Source: ${w.source}` : w.footer;
     return `<div class="dh-widget">
               <div class="dh-w-head">
-                <span class="dh-w-badge">${icon(ICONS[w.kind] || ICONS.kpis, 15)}</span>
+                <span class="dh-w-badge">${icon(ICONS[w.kind] || ICONS.stat, 15)}</span>
                 <div class="dh-w-titles">
-                  <div class="t">${w.title}</div>
+                  <div class="t">${w.title}${dot}</div>
                   ${w.subtitle ? `<div class="s">${w.subtitle}</div>` : ''}
                 </div>
                 <span class="dh-drill">${icon(expand, 14)}</span>
               </div>
-              <div style="margin:15px 0 10px">${body}</div>
-              ${w.footer ? `<div class="dh-w-foot ds-num">${w.footer}</div>` : ''}
+              <div style="margin:16px 0 10px">${body}</div>
+              ${foot ? `<div class="dh-w-foot">${foot}</div>` : ''}
             </div>`;
   }
 
