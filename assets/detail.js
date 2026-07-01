@@ -91,17 +91,17 @@
   }
 
   function rail() {
-    const tile = (name, menu, active) =>
-      `<a href="index.html" class="rail-tbtn ${active ? 'is-active' : ''}" title="${menu}">${svg(name)}</a>`;
+    const btn = (name, menu, label) => `<div class="rail-tbtn" data-menu="${menu}" title="${label}">${svg(name)}</div>`;
     return `<div class="dh-rail">
-      ${tile('home', 'Map view', true)}
+      <div class="rail-tbtn is-active" data-nav="map" title="Map view">${svg('home')}</div>
       <div class="hairline"></div>
-      ${tile('brand', 'Filter by brand')}
-      ${tile('channel', 'Filter by channel')}
-      ${tile('strategy', 'Filter by strategy')}
+      ${btn('brand', 'brand', 'Brands')}
+      ${btn('channel', 'channel', 'Channels')}
+      ${btn('strategy', 'strategy', 'Strategy')}
       <div class="hairline"></div>
-      ${tile('layers', 'Map layers')}
-    </div>`;
+      ${btn('layers', 'layers', 'Map layers')}
+    </div>
+    <div id="dh-flyout" class="dh-flyout"></div>`;
   }
 
   /* ======================================================================
@@ -232,6 +232,40 @@
       renderGrid();
     };
   });
+
+  // Left rail — open a flyout menu; selecting an option fades to the filtered map
+  function navTo(url) { document.body.classList.add('dh-fadeout'); setTimeout(() => { location.href = url; }, 240); }
+  const flyout = document.getElementById('dh-flyout');
+  const navDims = { brand: D.brands, channel: D.channels, strategy: D.strategies };
+  const navTitle = { brand: 'Go to brand', channel: 'Go to channel', strategy: 'Go to strategy' };
+
+  function openRailMenu(key) {
+    if (key === 'layers') {
+      flyout.innerHTML = `<div class="dh-fly-h">Map layers</div>`
+        + [['var(--ds-accent)', 'Active campaign'], ['var(--ds-positive)', 'Share of voice growing'], ['var(--ds-peer)', 'Competitor / peer']]
+          .map(([c, l]) => `<div class="dh-fly-row"><span style="width:11px;height:11px;border-radius:50%;background:${c};box-shadow:0 0 7px ${c}"></span>${l}</div>`).join('');
+    } else {
+      const dim = navDims[key];
+      flyout.innerHTML = `<div class="dh-fly-h">${navTitle[key]}</div>` + dim.map((o) =>
+        `<div class="dh-fly-row" data-key="${key}" data-id="${o.id}"><span class="tile">${o.tile}</span>${o.label}</div>`).join('');
+      flyout.querySelectorAll('.dh-fly-row').forEach((r) => r.onclick = () => {
+        navTo('index.html' + (r.dataset.id === 'all' ? '' : `?${r.dataset.key}=${r.dataset.id}`));
+      });
+    }
+    flyout.classList.add('open');
+  }
+  function closeRail() { flyout.classList.remove('open'); document.querySelectorAll('.rail-tbtn').forEach((x) => x.classList.remove('menu-open')); }
+
+  document.querySelectorAll('.rail-tbtn[data-menu]').forEach((b) => {
+    b.onclick = (e) => {
+      e.stopPropagation();
+      const wasOpen = b.classList.contains('menu-open');
+      closeRail();
+      if (!wasOpen) { b.classList.add('menu-open'); openRailMenu(b.dataset.menu); }
+    };
+  });
+  document.querySelector('.rail-tbtn[data-nav="map"]').onclick = () => navTo('index.html');
+  document.addEventListener('click', (e) => { if (!e.target.closest('.dh-rail') && !e.target.closest('#dh-flyout')) closeRail(); });
 
   // Competitor toggle
   const sw = document.getElementById('comp-switch');

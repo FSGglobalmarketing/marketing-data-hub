@@ -6,7 +6,7 @@
   <title>Marketing Data Hub — First Sentier Group</title>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="design-system/tokens.css?v=8">
+  <link rel="stylesheet" href="design-system/tokens.css?v=9">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     html, body { height: 100%; }
@@ -22,7 +22,10 @@
     #rail-row1 { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 11px; }
     #rail-row2 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; }
     #rail-row1 > div, #rail-row2 > div { min-height: 0; }
-    /* Slightly stronger scrim under the title so 44px display reads over imagery */
+    /* page fade transition */
+    body { animation: dh-fadein .3s ease both; }
+    @keyframes dh-fadein { from { opacity: 0 } to { opacity: 1 } }
+    body.dh-fadeout { opacity: 0 !important; transition: opacity .24s ease; }
   </style>
 </head>
 <body>
@@ -142,7 +145,7 @@
     </div>
   </div>
 
-  <script src="assets/data.js?v=8"></script>
-  <script src="assets/app.js?v=8"></script>
+  <script src="assets/data.js?v=9"></script>
+  <script src="assets/app.js?v=9"></script>
 </body>
 </html>

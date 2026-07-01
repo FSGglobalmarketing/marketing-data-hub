@@ -339,13 +339,19 @@
     widgetShell(W.costPerLead, linesChart(W.costPerLead), W.costPerLead.footer, 'channel.html?tab=leads') +
     widgetShell(W.shareOfVoice, peerChart(W.shareOfVoice), W.shareOfVoice.footer, 'channel.html?tab=search');
 
-  // Card navigation (drill-in ↗ opens a detail screen)
+  // Card navigation (drill-in ↗ opens a detail screen) — with a fade
+  function navTo(url) { document.body.classList.add('dh-fadeout'); setTimeout(() => { location.href = url; }, 240); }
   document.querySelectorAll('[data-href]').forEach((el) => {
-    el.addEventListener('click', () => { location.href = el.dataset.href; });
+    el.addEventListener('click', () => navTo(el.dataset.href));
   });
 
   /* ---- Boot ------------------------------------------------------------- */
+  // Apply an incoming filter from the URL (e.g. arriving from a detail page's rail)
+  const params = new URLSearchParams(location.search);
+  ['brand', 'channel', 'strategy'].forEach((k) => { const v = params.get(k); if (v) state[k] = v; });
   applyFilters();
   syncRailDots();
+  const incoming = ['brand', 'channel', 'strategy'].find((k) => state[k] !== 'all');
+  if (incoming) openMenu(incoming);   // surface the applied filter's flyout
   window.addEventListener('resize', () => map.invalidateSize());
 })();
