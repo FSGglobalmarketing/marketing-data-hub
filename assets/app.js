@@ -12,6 +12,16 @@
   let ACTS = [];                       // Channel tracker activities (DataHub feed)
   const FIELD = { brand: 'affiliate', channel: 'channel', strategy: 'status' };
 
+  // Date-range presets (today = 2026-07-01). Filters on Go Live → End dates.
+  const RANGES = {
+    q:     { start: '2026-07-01', end: '2026-09-30', label: '1 Jul – 30 Sep 2026' },
+    lastq: { start: '2026-04-01', end: '2026-06-30', label: '1 Apr – 30 Jun 2026' },
+    ytd:   { start: '2026-01-01', end: '2026-07-01', label: '1 Jan – 1 Jul 2026' },
+    '12m': { start: '2025-07-01', end: '2026-07-01', label: 'Jul 2025 – Jul 2026' },
+    year:  { start: '2026-01-01', end: '2026-12-31', label: '1 Jan – 31 Dec 2026' },
+  };
+  state.dateRange = RANGES.year;       // default: full year 2026
+
   /* ======================================================================
      MAP
      ====================================================================== */
@@ -38,21 +48,19 @@
   const fmtDate = (x) => { if (!x) return null; const b = x.split('-'); return `${+b[2]} ${MON[+b[1] - 1]} ${b[0]}`; };
   const fmtRange = (a) => { const s = fmtDate(a.startDate), e = fmtDate(a.endDate) || fmtDate(a.goLive); return s && e ? `${s} – ${e}` : (s || e || ''); };
 
-  // Pin tooltip + popup content — Title, Channel, Audience, Status, Activated.
-  function content(a) {
+  // Pin info — Title, Channel, Audience, Status, Activated + a drill ↗ (mock).
+  const ARROW = `<a class="tip-go" data-href="campaign.html?id=rqi-asia-ph2" title="Open activity"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M7 17L17 7M9 7h8v8"/></svg></a>`;
+  function infoHtml(a, withArrow) {
     const row = (k, v) => `<div class="tip-row"><span>${k}</span><b>${v || '—'}</b></div>`;
-    return `<div class="tip-t">${a.title || 'Untitled'}${a.keyActivity ? ' <span style="color:#f4ad44">★</span>' : ''}</div>
-      ${row('Channel', a.channel)}
-      ${row('Audience', a.audience)}
-      ${row('Status', a.status || 'Planned')}
-      ${row('Activated', fmtDate(a.goLive))}`;
+    return `<div class="tip-head"><div class="tip-t">${a.title || 'Untitled'}${a.keyActivity ? ' <span style="color:#f4ad44">★</span>' : ''}</div>${withArrow ? ARROW : ''}</div>
+      ${row('Channel', a.channel)}${row('Audience', a.audience)}${row('Status', a.status || 'Planned')}${row('Activated', fmtDate(a.goLive))}`;
   }
 
-  // Cluster group: numbered clusters when activities share a market; zooming
-  // in (or clicking a cluster) uncluster/spiderfies to the individual pins.
+  // Cluster when activities share a market; zooming in unclusters. Clicking a
+  // cluster opens a scrollable glass grid of every activity in that market.
   const layer = L.markerClusterGroup({
-    maxClusterRadius: 46, showCoverageOnHover: false, spiderfyOnMaxZoom: true,
-    disableClusteringAtZoom: 7, chunkedLoading: true,
+    maxClusterRadius: 46, showCoverageOnHover: false, spiderfyOnMaxZoom: false,
+    zoomToBoundsOnClick: false, disableClusteringAtZoom: 7, chunkedLoading: true,
     iconCreateFunction: (c) => L.divIcon({ html: `<div class="ds-cluster">${c.getChildCount()}</div>`, className: 'ds-cluster-wrap', iconSize: [38, 38] }),
   }).addTo(map);
   let markers = [];
@@ -69,16 +77,36 @@
       const html = `<span class="ring" style="--c:${color};width:${ring}px;height:${ring}px;margin:${-ring/2}px 0 0 ${-ring/2}px"></span>`
         + `<span class="dot" style="--c:${color};width:${dot}px;height:${dot}px"></span>`;
       const m = L.marker([lat, lng], { icon: L.divIcon({ className: 'ds-pin', iconSize: [dot, dot], iconAnchor: [dot/2, dot/2], html }) });
-      m.bindTooltip(content(a), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
-      m.bindPopup(content(a), { className: 'ds-pop', closeButton: false, offset: [0, -6] });   // clickable
+      m.bindTooltip(infoHtml(a, false), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m.bindPopup(infoHtml(a, true), { className: 'ds-pop', closeButton: false, offset: [0, -6] });  // click → stays open, has ↗
       m._a = a;
       return m;
     });
   }
 
+  layer.on('clusterclick', (e) => {
+    const kids = e.layer.getAllChildMarkers();
+    const grid = `<div class="cluster-grid">${kids.map((m) => `<div class="tip-card">${infoHtml(m._a, true)}</div>`).join('')}</div>`;
+    L.popup({ className: 'ds-cluster-pop', autoClose: true, offset: [0, -4], maxWidth: 340 })
+      .setLatLng(e.latlng).setContent(grid).openOn(map);
+  });
+
+  // drill ↗ inside any popup / cluster card → open the activity (mock target)
+  document.addEventListener('click', (e) => {
+    const go = e.target.closest ? e.target.closest('.tip-go') : null;
+    if (go) { e.preventDefault(); navTo(go.dataset.href); }
+  });
+
+  function inRange(a) {
+    if (!state.dateRange) return true;
+    const s = a.goLive || a.startDate, e = a.endDate || a.goLive || a.startDate;
+    if (!s && !e) return true;                          // undated activities always show
+    return (s || e) <= state.dateRange.end && (e || s) >= state.dateRange.start;   // span ∩ range
+  }
+
   function applyFilters() {
     layer.clearLayers();
-    layer.addLayers(markers.filter((m) => ['brand', 'channel', 'strategy'].every((k) => state[k] === 'all' || m._a[FIELD[k]] === state[k])));
+    layer.addLayers(markers.filter((m) => inRange(m._a) && ['brand', 'channel', 'strategy'].every((k) => state[k] === 'all' || m._a[FIELD[k]] === state[k])));
   }
 
   /* ---- Custom zoom / recenter stack ------------------------------------ */
@@ -203,6 +231,16 @@
     dateBtn.onclick = (e) => { e.stopPropagation(); datePop.style.display = datePop.style.display === 'block' ? 'none' : 'block'; };
     document.addEventListener('click', (e) => {
       if (!datePop.contains(e.target) && !dateBtn.contains(e.target)) datePop.style.display = 'none';
+    });
+    // presets → filter activities on Go Live → End dates
+    datePop.querySelectorAll('.ds-row[data-range]').forEach((r) => {
+      r.onclick = () => {
+        state.dateRange = RANGES[r.dataset.range];
+        const lbl = document.getElementById('date-label'); if (lbl) lbl.textContent = state.dateRange.label;
+        datePop.querySelectorAll('.ds-row').forEach((x) => x.classList.toggle('ds-row--active', x === r));
+        applyFilters();
+        datePop.style.display = 'none';
+      };
     });
   }
 

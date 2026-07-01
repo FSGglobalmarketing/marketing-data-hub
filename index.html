@@ -6,7 +6,7 @@
   <title>Marketing Data Hub — First Sentier Group</title>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="design-system/tokens.css?v=13">
+  <link rel="stylesheet" href="design-system/tokens.css?v=14">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -38,6 +38,21 @@
     .tip-row { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; font-size: 12.5px; padding: 5px 0; line-height: 1.4; }
     .tip-row span { color: var(--ds-ink-5); white-space: nowrap; }
     .tip-row b { color: var(--ds-ink-1); font-weight: 600; text-align: right; }
+    .tip-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .tip-head .tip-t { margin-bottom: 12px; }
+    .tip-go { flex: none; display: flex; color: var(--ds-ink-5); cursor: pointer; transition: color .15s ease; }
+    .tip-go:hover { color: var(--ds-accent); }
+    /* cluster → scrollable glass grid of activity cards */
+    .ds-cluster-pop .leaflet-popup-content-wrapper { background: var(--ds-glass-fill-strong); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,.16); border-radius: 14px; box-shadow: var(--ds-shadow-pop); color: var(--ds-ink-1); }
+    .ds-cluster-pop .leaflet-popup-content { width: 300px !important; margin: 15px; }
+    .ds-cluster-pop .leaflet-popup-tip { background: var(--ds-glass-fill-strong); border: 1px solid rgba(255,255,255,.16); }
+    .ds-cluster-pop a.leaflet-popup-close-button { color: var(--ds-ink-4); }
+    .cluster-grid { max-height: 300px; overflow-y: auto; display: grid; gap: 15px; padding-right: 4px; }
+    .cluster-grid::-webkit-scrollbar { width: 7px; }
+    .cluster-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,.18); border-radius: 4px; }
+    .tip-card { background: rgba(255,255,255,.05); border: 1px solid var(--ds-hairline); border-radius: 11px; padding: 12px 13px; }
+    .tip-card .tip-t { margin-bottom: 9px; }
     /* numbered cluster pin */
     .ds-cluster-wrap { background: transparent; border: 0; }
     .ds-cluster { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -82,7 +97,7 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
             <div style="display:flex;flex-direction:column;line-height:1.15">
               <span class="ds-eyebrow" style="font-size:9px">Date range</span>
-              <span style="font-size:12px;font-weight:500;color:var(--ds-ink-1)">1 Jan – 31 Mar 2026</span>
+              <span id="date-label" style="font-size:12px;font-weight:500;color:var(--ds-ink-1)">1 Jan – 31 Dec 2026</span>
             </div>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
@@ -90,11 +105,11 @@
           <div id="date-pop" class="ds-glass-strong" style="display:none;position:absolute;top:46px;right:0;width:230px;
                border-radius:var(--ds-r-2xl);padding:12px;box-shadow:var(--ds-shadow-menu);z-index:30">
             <div class="ds-eyebrow" style="padding:0 4px 8px">Date range</div>
-            <div class="ds-row ds-row--active" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-1)">This quarter</div>
-            <div class="ds-row" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-2)">Last quarter</div>
-            <div class="ds-row" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-2)">Year to date</div>
-            <div class="ds-row" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-2)">Last 12 months</div>
-            <div class="ds-row" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-2)">Custom range…</div>
+            <div class="ds-row" data-range="q" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-2)">This quarter</div>
+            <div class="ds-row" data-range="lastq" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-2)">Last quarter</div>
+            <div class="ds-row" data-range="ytd" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-2)">Year to date</div>
+            <div class="ds-row" data-range="12m" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-2)">Last 12 months</div>
+            <div class="ds-row ds-row--active" data-range="year" style="padding:7px 9px;font-size:12px;color:var(--ds-ink-1)">Full year 2026</div>
             <div style="display:flex;align-items:center;gap:8px;padding:9px 4px 2px;border-top:1px solid var(--ds-hairline);margin-top:6px">
               <span style="font-size:11px;color:var(--ds-ink-4)">Compare: prior period</span>
               <span style="margin-left:auto;width:30px;height:17px;border-radius:20px;background:var(--ds-accent-soft);border:1px solid var(--ds-accent-border);position:relative">
@@ -162,7 +177,7 @@
     </div>
   </div>
 
-  <script src="assets/data.js?v=13"></script>
-  <script src="assets/app.js?v=13"></script>
+  <script src="assets/data.js?v=14"></script>
+  <script src="assets/app.js?v=14"></script>
 </body>
 </html>
