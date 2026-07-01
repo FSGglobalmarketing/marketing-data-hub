@@ -8,38 +8,43 @@
    ========================================================================= */
 html, body { height: 100%; }
 body {
-  /* ---- Light palette (token overrides scoped to detail pages) ---- */
-  --ds-ink:    #10131a;
-  --ds-ink-1:  #171a21;   /* headings */
-  --ds-ink-2:  #3c424c;   /* body */
-  --ds-ink-3:  #5c626d;   /* secondary */
-  --ds-ink-4:  #767d88;   /* icon idle / muted */
-  --ds-ink-5:  #8b929c;   /* meta */
-  --ds-ink-6:  #a2a8b1;   /* axis / faint */
+  /* ---- FSG brand palette (light theme, scoped to detail pages) ----
+     Dark Blue #022B56 · Green #60BEB3 · Tan #CCB296 · Orange #EF785B ·
+     Teal #00727D · Mustard #D5B700 · Light Blue #3FBAD5 */
+  --ds-ink:    #022b56;
+  --ds-ink-1:  #022b56;   /* headings — Dark Blue */
+  --ds-ink-2:  #35435a;   /* body */
+  --ds-ink-3:  #56637a;   /* secondary */
+  --ds-ink-4:  #74839a;   /* icon idle / muted */
+  --ds-ink-5:  #8b98ad;   /* meta */
+  --ds-ink-6:  #a6b1c2;   /* axis / faint */
   --ds-glass-fill:        rgba(255,255,255,.70);
-  --ds-glass-fill-strong: rgba(255,255,255,.90);
+  --ds-glass-fill-strong: rgba(255,255,255,.92);
   --ds-glass-fill-hover:  #ffffff;
-  --ds-glass-border:       rgba(20,26,34,.09);
-  --ds-glass-border-hover: rgba(20,26,34,.16);
-  --ds-hairline:           rgba(20,26,34,.08);
-  --ds-accent:        #2fbe6f;   /* green — charts / positive / active accents */
+  --ds-glass-border:       rgba(2,43,86,.10);
+  --ds-glass-border-hover: rgba(2,43,86,.18);
+  --ds-hairline:           rgba(2,43,86,.09);
+  --ds-accent:        #00727d;   /* Teal — primary charts / active */
   --ds-accent-ink:    #ffffff;
-  --ds-accent-soft:   rgba(47,190,111,.14);
-  --ds-accent-border: rgba(47,190,111,.34);
-  --ds-cyan:          #37a0c9;
-  --ds-positive:      #2aab63;
-  --ds-neutral:       #aab0b8;
-  --ds-chart-bar:     #e3e7ec;
+  --ds-accent-soft:   rgba(0,114,125,.14);
+  --ds-accent-border: rgba(0,114,125,.34);
+  --ds-cyan:          #3fbad5;   /* Light Blue — secondary series */
+  --ds-positive:      #60beb3;   /* Green — good / positive */
+  --ds-neutral:       #9aa6b5;   /* inactive */
+  --ds-chart-bar:     #e4e9ef;   /* muted bars / tracks */
+  --ds-watch:         #d5b700;   /* Mustard — watch / underperforming */
+  --ds-peer:          #ccb296;   /* Tan — competitor / peer */
 
   /* ---- Detail-only tokens ---- */
-  --dh-desk:   #e8eaed;
+  --dh-desk:   #e9ebee;
   --dh-card:   #ffffff;
-  --dh-dark:   #1b1d21;                 /* near-black circular badges / mic */
-  --dh-yellow-1: #eef776;               /* brief card gradient (bright) */
-  --dh-yellow-2: #f8fbdd;               /* brief card gradient (pale) */
-  --dh-logo:   #dcf34a;                 /* lime logo tile */
-  --dh-shadow: 0 10px 30px -12px rgba(23,30,45,.22), 0 2px 6px rgba(23,30,45,.06);
-  --dh-shadow-sm: 0 4px 14px -6px rgba(23,30,45,.18);
+  --dh-dark:   #022b56;                 /* Dark Blue — badges / mic / logo / rail */
+  --dh-yellow-1: #efe6a3;               /* brief card gradient (soft mustard) */
+  --dh-yellow-2: #faf7e6;
+  --dh-logo:   #022b56;                 /* logo tile — Dark Blue */
+  --dh-bench:  rgba(2,43,86,.32);       /* faint dashed benchmark line */
+  --dh-shadow: 0 10px 30px -12px rgba(2,25,52,.22), 0 2px 6px rgba(2,25,52,.07);
+  --dh-shadow-sm: 0 4px 14px -6px rgba(2,25,52,.16);
 
   margin: 0; min-height: 100vh;
   background: var(--dh-desk);
@@ -202,6 +207,24 @@ body {
 .dh-w-foot { font-size: 10.5px; color: var(--ds-ink-4); margin-top: auto; padding-top: 8px; }
 
 .ds-num { font-variant-numeric: tabular-nums; }
+
+/* ---- Chart hover: benchmark pins, guide line, tooltip ----------------- */
+.hub-chart { cursor: crosshair; }
+.hub-guide { position: absolute; top: 4px; bottom: 4px; width: 0; border-left: 1px dashed rgba(2,43,86,.4);
+  display: none; pointer-events: none; }
+.hub-dot { position: absolute; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; border-radius: 50%;
+  background: var(--ds-accent); border: 2px solid #fff; box-shadow: 0 1px 4px rgba(2,25,52,.35);
+  display: none; pointer-events: none; }
+.hub-dot-b { background: var(--ds-cyan); }
+.hub-tip { position: fixed; z-index: 60; display: none; pointer-events: none;
+  background: var(--dh-dark); color: #fff; border-radius: 9px; padding: 7px 10px;
+  font-family: var(--ds-font-sans); font-size: 11px; line-height: 1.5; white-space: nowrap;
+  box-shadow: 0 8px 24px -8px rgba(0,0,0,.5); }
+.hub-tip .k { display: block; font-size: 9.5px; letter-spacing: .04em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+.hub-tip .v { font-weight: 600; font-variant-numeric: tabular-nums; }
+.hub-tip .v2 { font-weight: 600; color: var(--ds-cyan); margin-left: 8px; font-variant-numeric: tabular-nums; }
+.hub-listrow { transition: background .15s ease; }
+.hub-listrow:hover { background: rgba(2,43,86,.05); }
 
 @media (max-width: 1160px) { .dh-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 940px) {

@@ -63,7 +63,7 @@
     return `<div class="dh-topbar">
       <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
         <div style="width:28px;height:28px;border-radius:8px;background:var(--dh-logo);display:flex;align-items:center;justify-content:center">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="#1b1d21"><path d="M5 3h14v4h-9v4h7v4h-7v6H5z"/></svg></div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M5 3h14v4h-9v4h7v4h-7v6H5z"/></svg></div>
         <div style="line-height:1.15">
           <div style="font-size:12.5px;font-weight:600;color:var(--ds-ink-1)">First Sentier Group</div>
           <div style="font-size:9.5px;color:var(--ds-ink-5)">Marketing intelligence</div></div>
@@ -211,6 +211,7 @@
     const list = widgetsFor(activeTab);
     grid.innerHTML = list.length ? list.map(HUB_CHARTS.widget).join('')
       : `<div class="ds-glass" style="padding:20px;border-radius:var(--ds-r-xl);color:var(--ds-ink-5);font-size:12.5px">No widgets configured for this channel yet.</div>`;
+    HUB_CHARTS.initInteractions(grid);
   }
 
   /* ======================================================================
