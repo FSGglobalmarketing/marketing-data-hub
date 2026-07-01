@@ -139,8 +139,8 @@ body {
 .dh-switch.is-on { background: var(--dh-dark); border-color: var(--dh-dark); }
 .dh-switch.is-on .knob { left: 18px; background: var(--dh-logo); }
 
-/* slide dots — above the tab bar, right of the brief overlap */
-.dh-dots { position: absolute; left: 340px; bottom: 74px; z-index: 3; display: flex; gap: 6px; }
+/* slide dots — tucked bottom-right, above the competitor toggle */
+.dh-dots { position: absolute; right: 26px; bottom: 82px; z-index: 3; display: flex; gap: 6px; }
 .dh-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); cursor: pointer;
   transition: background .2s ease, width .2s ease; }
 .dh-dot.is-active { background: #fff; width: 20px; border-radius: 4px; }
@@ -180,6 +180,11 @@ body {
 .dh-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
 .dh-chip { font-size: 11.5px; color: #2f333a; background: rgba(255,255,255,.6); border: 1px solid rgba(120,130,40,.18);
   border-radius: var(--ds-r-pill); padding: 6px 12px; }
+.dh-brief-foot { display: flex; align-items: center; gap: 9px; margin-top: 20px; }
+.dh-brief-ask { flex: 1; height: 38px; display: flex; align-items: center; padding: 0 13px; border-radius: 12px;
+  background: rgba(255,255,255,.55); border: 1px solid rgba(120,130,40,.20); font-size: 11.5px; color: #61653f; }
+.dh-mic { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--dh-dark); color: #fff;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; }
 
 .dh-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
 
@@ -191,7 +196,7 @@ body {
 }
 .dh-widget:hover { box-shadow: var(--dh-shadow); }
 .dh-w-head { display: flex; align-items: flex-start; gap: 11px; }
-.dh-w-badge { flex: none; width: 30px; height: 30px; border-radius: 10px; background: var(--dh-dark); color: #fff;
+.dh-w-badge { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--dh-dark); color: #fff;
   display: flex; align-items: center; justify-content: center; }
 .dh-w-titles { flex: 1; min-width: 0; }
 .dh-w-titles .t { font-size: 13px; font-weight: 600; color: var(--ds-ink-1); }

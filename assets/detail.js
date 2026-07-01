@@ -181,6 +181,10 @@
         <ul>${subject.goals.map((g) => `<li>${g}</li>`).join('')}</ul>
         <div class="lbl">Objectives</div>
         <ul>${subject.objectives.map((o) => `<li>${o}</li>`).join('')}</ul>
+        <div class="dh-brief-foot">
+          <span class="dh-brief-ask">Ask about this campaign…</span>
+          <span class="dh-mic">${svg('mic', 16)}</span>
+        </div>
       </div>`;
     }
     return `<div class="dh-brief">
@@ -191,6 +195,10 @@
       <h3>${subject.summary}</h3>
       <div class="lbl">What's measured</div>
       <ul>${subject.measures.map((m) => `<li>${m}</li>`).join('')}</ul>
+      <div class="dh-brief-foot">
+        <span class="dh-brief-ask">Ask about this channel…</span>
+        <span class="dh-mic">${svg('mic', 16)}</span>
+      </div>
     </div>`;
   }
 
