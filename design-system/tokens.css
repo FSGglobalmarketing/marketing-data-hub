@@ -1,0 +1,241 @@
+/* =========================================================================
+   FSG DATA HUB — DESIGN TOKENS
+   A dark, cinematic "command-center" aesthetic for the First Sentier Group
+   Marketing Data Hub. Glassmorphic panels floating over a live satellite map.
+   Accent: warm amber. Data hues: cyan / green / neutral.
+   Typeface: Urbanist (UI) + JetBrains Mono (numeric).
+   ---------------------------------------------------------------------------
+   Load order (in <head>):
+     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+     <link rel="stylesheet" href="tokens.css">
+   ========================================================================= */
+
+:root {
+  /* ---- Typography ---- */
+  --ds-font-sans: 'Urbanist', system-ui, -apple-system, sans-serif;
+  --ds-font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* Type scale (px). Weights lean LIGHT for display, 600 for labels/values.  */
+  --ds-fs-display: 44px;   /* screen title "Data Hub"        weight 300      */
+  --ds-fs-kpi:     23px;   /* big KPI numbers                weight 300      */
+  --ds-fs-value:   14px;   /* widget stat values             weight 600      */
+  --ds-fs-title:   13px;   /* widget / card titles           weight 600      */
+  --ds-fs-body:  13.5px;   /* search text, body              weight 400      */
+  --ds-fs-caption: 12px;   /* labels, meta                   weight 400/500  */
+  --ds-fs-small: 11.5px;   /* chips, table                                   */
+  --ds-fs-micro:  10.5px;  /* muted meta                                     */
+  --ds-fs-nano:    9px;    /* eyebrow / unit                 letter-spaced   */
+  --ds-ls-eyebrow: .12em;  /* letter-spacing for ALL-CAPS eyebrows           */
+
+  /* ---- Core surfaces ---- */
+  --ds-bg-page:   #0a1220;                 /* outermost desk / body          */
+  --ds-bg-frame:  #0a1424;                 /* app frame fallback under map   */
+  --ds-navy-1:    #143257;
+  --ds-navy-2:    #0c1f39;
+  --ds-navy-3:    #081427;
+  /* Signature vignette used behind the map / on solid dark screens          */
+  --ds-bg-gradient: radial-gradient(120% 90% at 50% 0%, #143257 0%, #0c1f39 45%, #081427 100%);
+
+  /* ---- Glass (the core panel material) ---- */
+  --ds-glass-fill:         rgba(10, 24, 42, .50);
+  --ds-glass-fill-strong:  rgba(9, 22, 40, .78);   /* popups / dense panels  */
+  --ds-glass-fill-hover:   rgba(14, 32, 56, .62);
+  --ds-glass-border:       rgba(255, 255, 255, .12);
+  --ds-glass-border-hover: rgba(244, 173, 68, .50);
+  --ds-hairline:           rgba(255, 255, 255, .10); /* dividers inside glass */
+  --ds-blur: 14px;                                   /* backdrop-filter blur  */
+  --ds-blur-strong: 16px;
+
+  /* ---- Accent + data palette ---- */
+  --ds-accent:        #f4ad44;   /* AMBER — primary accent, active, CTAs      */
+  --ds-accent-ink:    #0c1f39;   /* text/icon ON amber                        */
+  --ds-accent-soft:   rgba(242, 163, 68, .16);  /* amber wash (badges/hover)  */
+  --ds-accent-border: rgba(242, 163, 68, .35);
+  --ds-cyan:          #5ec8e6;   /* secondary data / "share of voice growing" */
+  --ds-cyan-soft:     rgba(70, 183, 216, .16);
+  --ds-positive:      #7fdca0;   /* deltas up / good                          */
+  --ds-neutral:       #9db2cc;   /* competitor / peer / inactive marker       */
+  --ds-chart-bar:     #3a5c82;   /* muted bars & non-highlighted series       */
+
+  /* ---- Text ramp (on dark) ---- */
+  --ds-ink:    #ffffff;   /* max                                             */
+  --ds-ink-1:  #e6edf4;   /* headings / strong values                        */
+  --ds-ink-2:  #cdd9e6;   /* primary body on glass                           */
+  --ds-ink-3:  #aebfd2;   /* body / search placeholder                       */
+  --ds-ink-4:  #9fb3cc;   /* secondary / icon idle                           */
+  --ds-ink-5:  #8ba1bd;   /* meta                                            */
+  --ds-ink-6:  #7e93ac;   /* muted / units / axis                            */
+
+  /* ---- Radii (flat-leaning, never pill-y except badges) ---- */
+  --ds-r-sm:   7px;    /* mono tiles, small controls                         */
+  --ds-r-md:   9px;    /* buttons, icon buttons, status chips                */
+  --ds-r-lg:  11px;    /* search bar, KPI chips                              */
+  --ds-r-xl:  14px;    /* widget cards                                       */
+  --ds-r-2xl: 15px;    /* side panels / flyouts                              */
+  --ds-r-frame: 18px;  /* whole app frame                                    */
+  --ds-r-pill: 20px;   /* badges & status pills                              */
+
+  /* ---- Elevation (soft, wide, dark) ---- */
+  --ds-shadow-panel: 0 20px 50px -18px rgba(0, 0, 0, .60);
+  --ds-shadow-pop:   0 18px 44px -14px rgba(0, 0, 0, .65);
+  --ds-shadow-menu:  0 24px 60px -20px rgba(0, 0, 0, .65);
+  --ds-shadow-frame: 0 40px 100px -30px rgba(0, 0, 0, .70);
+  --ds-shadow-cta:   0 20px 50px -14px rgba(0, 0, 0, .60);
+
+  /* ---- Spacing (4pt base; common gaps) ---- */
+  --ds-sp-1: 4px;  --ds-sp-2: 6px;  --ds-sp-3: 8px;  --ds-sp-4: 11px;
+  --ds-sp-5: 14px; --ds-sp-6: 16px; --ds-sp-7: 18px; --ds-sp-8: 22px;
+
+  /* ---- Motion ---- */
+  --ds-dur: .2s;
+  --ds-ease: ease;               /* hover/color transitions                  */
+  --ds-pulse-dur: 2.6s;          /* map pin ring pulse                       */
+}
+
+/* =========================================================================
+   BASE
+   ========================================================================= */
+body {
+  margin: 0;
+  background: var(--ds-bg-page);
+  color: var(--ds-ink);
+  font-family: var(--ds-font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+
+/* Numeric values should always use tabular figures */
+.ds-num { font-variant-numeric: tabular-nums; }
+.ds-mono { font-family: var(--ds-font-mono); font-variant-numeric: tabular-nums; }
+
+/* =========================================================================
+   GLASS — the panel material. Apply to every floating surface.
+   ========================================================================= */
+.ds-glass {
+  background: var(--ds-glass-fill);
+  backdrop-filter: blur(var(--ds-blur));
+  -webkit-backdrop-filter: blur(var(--ds-blur));
+  border: 1px solid var(--ds-glass-border);
+}
+.ds-glass-strong {
+  background: var(--ds-glass-fill-strong);
+  backdrop-filter: blur(var(--ds-blur-strong));
+  -webkit-backdrop-filter: blur(var(--ds-blur-strong));
+  border: 1px solid rgba(255, 255, 255, .16);
+}
+
+/* Widget / data card: glass + hover lift (border warms to amber). */
+.ds-card {
+  border-radius: var(--ds-r-xl);
+  transition: border-color var(--ds-dur) var(--ds-ease),
+              background var(--ds-dur) var(--ds-ease);
+}
+.ds-card:hover { border-color: var(--ds-glass-border-hover); background: var(--ds-glass-fill-hover); }
+.ds-card:hover .ds-drill { color: var(--ds-accent); }
+
+/* =========================================================================
+   CONTROLS
+   ========================================================================= */
+/* Icon button / toolbar tile */
+.ds-tbtn {
+  transition: background var(--ds-dur) var(--ds-ease),
+              color var(--ds-dur) var(--ds-ease),
+              border-color var(--ds-dur) var(--ds-ease);
+  color: var(--ds-ink-4);
+  cursor: pointer;
+}
+.ds-tbtn:hover { background: rgba(255, 255, 255, .08); color: var(--ds-ink); }
+
+/* Active nav/filter icon (menu open) */
+.ds-tbtn--active {
+  background: var(--ds-accent-soft);
+  border: 1px solid var(--ds-accent-border);
+  color: var(--ds-accent);
+}
+
+/* List row inside a flyout / menu */
+.ds-row { transition: background .15s var(--ds-ease); border-radius: 10px; cursor: pointer; }
+.ds-row:hover { background: rgba(255, 255, 255, .06); }
+.ds-row--active { background: var(--ds-accent-soft); }
+
+/* Primary CTA (amber) */
+.ds-cta {
+  background: var(--ds-accent);
+  color: var(--ds-accent-ink);
+  border: 0;
+  border-radius: var(--ds-r-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Status / filter badge */
+.ds-badge {
+  border-radius: var(--ds-r-pill);
+  padding: 2px 8px;
+  font-size: var(--ds-fs-nano);
+  letter-spacing: .06em;
+}
+.ds-badge--active  { color: var(--ds-accent);  background: var(--ds-accent-soft); }
+.ds-badge--growing { color: var(--ds-cyan);    background: var(--ds-cyan-soft); }
+
+/* NE drill-in affordance (opens a detail screen) */
+.ds-drill { color: var(--ds-ink-6); cursor: pointer; transition: color var(--ds-dur) var(--ds-ease); }
+.ds-drill:hover { color: var(--ds-accent); }
+
+/* Eyebrow / section label */
+.ds-eyebrow {
+  font-size: var(--ds-fs-nano);
+  letter-spacing: var(--ds-ls-eyebrow);
+  color: var(--ds-ink-6);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* =========================================================================
+   MAP — Leaflet satellite basemap treatment
+   ========================================================================= */
+.leaflet-container { background: var(--ds-bg-frame); font-family: var(--ds-font-sans); }
+/* Cinematic dark grade applied to the raster tiles */
+.leaflet-tile-pane { filter: brightness(.6) contrast(1.06) saturate(.82); }
+
+/* Glowing map pin (use as a Leaflet divIcon; set --c per marker) */
+.ds-pin { position: relative; }
+.ds-pin .dot {
+  position: relative; display: block; border-radius: 50%;
+  background: var(--c); box-shadow: 0 0 10px 2px var(--c);
+}
+.ds-pin .ring {
+  position: absolute; left: 50%; top: 50%; border-radius: 50%;
+  background: var(--c); opacity: .5;
+  animation: ds-pulse var(--ds-pulse-dur) ease-out infinite;
+}
+@keyframes ds-pulse {
+  0%   { transform: scale(.5); opacity: .7; }
+  80%,100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* Glass popup skin for Leaflet */
+.ds-pop .leaflet-popup-content-wrapper {
+  background: var(--ds-glass-fill-strong);
+  backdrop-filter: blur(var(--ds-blur-strong));
+  -webkit-backdrop-filter: blur(var(--ds-blur-strong));
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 12px; color: var(--ds-ink);
+  box-shadow: var(--ds-shadow-pop);
+}
+.ds-pop .leaflet-popup-content { margin: 11px 14px; font-family: var(--ds-font-sans); }
+.ds-pop .leaflet-popup-tip { background: var(--ds-glass-fill-strong); border: 1px solid rgba(255,255,255,.16); }
+.ds-pop a.leaflet-popup-close-button { display: none; }
+
+/* Vignette overlay to sit BETWEEN the map and the floating UI (pointer-events:none).
+   Darkens top (behind top bar) & bottom (behind widget rail) for legibility,
+   and adds the amber + cyan ambient glows. */
+.ds-map-scrim {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(44% 42% at 70% 30%, rgba(242,163,60,.13), transparent 70%),
+    radial-gradient(42% 40% at 25% 36%, rgba(70,183,216,.11), transparent 70%),
+    linear-gradient(180deg, rgba(8,20,39,.62) 0%, rgba(8,20,39,.12) 26%,
+                            rgba(8,20,39,.30) 70%, rgba(8,20,39,.78) 100%);
+}

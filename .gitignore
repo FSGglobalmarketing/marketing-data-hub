@@ -1,0 +1,17 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# OneDrive sync artifacts
+~$*
+
+# Node (only if a build step is added later)
+node_modules/
+dist/
+.cache/
+
+# Local env
+.env
+.env.local
