@@ -41,7 +41,9 @@
     .addTo(map);
 
   /* ---- Activity → map marker mapping (Channel tracker feed) ------------ */
-  const REGION = { ANZ: [-33.87, 151.21], UK: [51.51, -0.13], EMEA: [50.11, 8.68], US: [40.71, -74.01], Global: [22, 6] };
+  const REGION = { ANZ: [-33.87, 151.21], UK: [51.51, -0.13], EMEA: [50.11, 8.68], US: [40.71, -74.01], Global: [22, 6], HK: [22.32, 114.17] };
+  const PEER_C = '#9db2cc';                                  // competitor / peer marker colour
+  const BRAND_REGION = { igneo: 'EMEA', fsi: 'ANZ', fssa: 'HK', rqi: 'Global', stewart: 'UK' };
   const COLOR  = { 'Live': '#f4ad44', 'In progress': '#5ec8e6', 'Complete': '#7fdca0', 'Draft': '#9db2cc' };
   const colorFor = (s) => COLOR[s] || '#7e93ac';
   const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -64,6 +66,7 @@
     iconCreateFunction: (c) => L.divIcon({ html: `<div class="ds-cluster">${c.getChildCount()}</div>`, className: 'ds-cluster-wrap', iconSize: [38, 38] }),
   }).addTo(map);
   let markers = [];
+  let compMarkers = [];                                      // competitor-ad pins (Google Transparency)
 
   function buildMarkers(acts) {
     const idx = {};
@@ -80,6 +83,32 @@
       m.bindTooltip(infoHtml(a, false), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
       m.bindPopup(infoHtml(a, true), { className: 'ds-pop', closeButton: false, offset: [0, -6] });  // click → stays open, has ↗
       m._a = a;
+      return m;
+    });
+  }
+
+  // Competitor ads (Google Transparency) as neutral peer pins, placed near the
+  // region of the FSG brand they're a peer of (spread), sized by ad volume.
+  function buildCompMarkers() {
+    compMarkers = [];
+    if (!LIVE || !LIVE.competitor || !LIVE.competitor.byCompetitor) return;
+    const idx = {};
+    compMarkers = LIVE.competitor.byCompetitor.filter((c) => (c.ads || 0) > 0).map((c) => {
+      const rk = BRAND_REGION[c.brand] || 'Global', base = REGION[rk] || REGION.Global;
+      const i = idx[rk] || 0; idx[rk] = i + 1;
+      const ang = i * 2.39996, rad = 0.8 * Math.sqrt(i + 1);
+      const lat = base[0] + 2.4 + rad * Math.cos(ang), lng = base[1] + 2.4 + rad * Math.sin(ang) * 1.4;
+      const sz = Math.max(7, Math.min(16, 6 + Math.log10(c.ads + 1) * 4));
+      const html = `<span class="ring" style="--c:${PEER_C};width:${sz * 2}px;height:${sz * 2}px;margin:${-sz}px 0 0 ${-sz}px;opacity:.45"></span>`
+        + `<span class="dot" style="--c:${PEER_C};width:${sz}px;height:${sz}px"></span>`;
+      const m = L.marker([lat, lng], { icon: L.divIcon({ className: 'ds-pin', iconSize: [sz, sz], iconAnchor: [sz / 2, sz / 2], html }) });
+      const tip = `<div class="tip-head"><div class="tip-t">${c.competitor} <span style="color:${PEER_C}">◆</span></div></div>`
+        + `<div class="tip-row"><span>Type</span><b>Competitor · Google ads</b></div>`
+        + `<div class="tip-row"><span>Peer of</span><b>${(c.brand || '').toUpperCase()}</b></div>`
+        + `<div class="tip-row"><span>Ads live</span><b>${c.ads}</b></div>`;
+      m.bindTooltip(tip, { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m.bindPopup(tip, { className: 'ds-pop', closeButton: false, offset: [0, -6] });
+      m._c = c;
       return m;
     });
   }
@@ -107,6 +136,9 @@
   function applyFilters() {
     layer.clearLayers();
     layer.addLayers(markers.filter((m) => inRange(m._a) && ['brand', 'channel', 'strategy'].every((k) => state[k] === 'all' || m._a[FIELD[k]] === state[k])));
+    // Competitor pins follow the brand filter only (no channel/status/date breakdown).
+    const cid = brandIdFor(state.brand);
+    layer.addLayers(compMarkers.filter((m) => !cid || m._c.brand === cid));
   }
 
   // Activities passing the current filters (brand ∧ channel ∧ status ∧ date).
@@ -202,9 +234,10 @@
             </div>
             ${item('#f4ad44', 'Live')}
             ${item('#5ec8e6', 'In progress')}
-            ${item('#9db2cc', 'Draft')}
+            ${item('#c9d4e2', 'Draft')}
             ${item('#7fdca0', 'Complete')}
-            ${item('#7e93ac', 'Planned')}`;
+            ${item('#7e93ac', 'Planned')}
+            ${item(PEER_C, 'Competitor ad (Google)')}`;
   }
 
   function openMenu(id) {
@@ -472,7 +505,11 @@
     }
   }
 
-  if (window.HUB_LIVE) window.HUB_LIVE.ready.then((feeds) => { LIVE = feeds; renderLive(); });
+  if (window.HUB_LIVE) window.HUB_LIVE.ready.then((feeds) => {
+    LIVE = feeds;
+    buildCompMarkers();     // competitor ad pins onto the map
+    refresh();              // re-render map + KPIs + live cards with feeds present
+  });
 
   // Card navigation (drill-in ↗ opens a detail screen) — with a fade
   function navTo(url) { document.body.classList.add('dh-fadeout'); setTimeout(() => { location.href = url; }, 240); }
