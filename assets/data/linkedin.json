@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-03T14:31:52Z",
+ "generatedAt": "2026-07-03T14:40:05Z",
  "source": "LinkedIn Ads",
  "byBrand": [
   {
@@ -55,5 +55,446 @@
    "ctr": 0.0221
   }
  ],
- "topCreatives": []
+ "topCreatives": [
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:766623184",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "Discover Igneo’s mid-market infrastructure strategy, focused on essential, asset-heavy businesses that form the backbone of our economy.\nWatch the video to learn more.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/766623184.jpg",
+   "impressions": 189401
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:766682084",
+   "headline": "Middle-market. Maximum impact.​",
+   "copy": "North America’s infrastructure market is bursting with opportunity, especially in the middle market. Watch the video to see how we are tapping into this dynamic landscape to build  platforms and deliver long-term value.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/766682084.jpg",
+   "impressions": 144983
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:766652854",
+   "headline": "Proactive management.​ Proven success.",
+   "copy": "There are strong opportunities in North American middle-market infrastructure. We invest in mid-sized businesses that deliver attractive, risk-adjusted returns and complement our client portfolios. Watch the full video.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/766652854.jpg",
+   "impressions": 138108
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:906192644",
+   "headline": "Mittelstand. Maximale Wirkung.",
+   "copy": "Der europäische Infrastrukturmarkt strotzt nur so vor Chancen, insbesondere im Mittelstand.\n\nNur für professionelle/institutionelle Anleger\nKapitalrisiko.",
+   "cta": null,
+   "landingPage": "https://www.igneoip.com/germany/de/institutional.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/906192644.jpg",
+   "impressions": 115972
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:771440604",
+   "headline": "Investing in North American Infrastructure",
+   "copy": "North America’s infrastructure market is bursting with opportunity, especially in the middle-market. We're tapping into this dynamic landscape to build resilient platforms and deliver long-term value.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/771440604.jpg",
+   "impressions": 72801
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:766701294",
+   "headline": "Investing in North American Infrastructure",
+   "copy": "North America’s infrastructure market is bursting with opportunity, especially in the middle-market. We're tapping into this dynamic landscape to build resilient platforms and deliver long-term value.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/766701294.jpg",
+   "impressions": 71846
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:934346044",
+   "headline": "Explore Igneo's European capabilities.",
+   "copy": "Discover the potential of European infrastructure, with over three decades of middle-market expertise, Igneo's proactive management approach is helping to power long-term returns for investors.\n\nFor professional/institutional investors only. Capital at risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/europe/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/934346044.jpg",
+   "impressions": 71077
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:896172924",
+   "headline": "Entdecken Sie das Potenzial der europäischen Infrastruktur.",
+   "copy": "Mit über drei Jahrzehnten Erfahrung im Mittelstand trägt der proaktive Managementansatz von Igneo dazu bei, langfristige Renditen für Investoren zu erzielen.\n\nNur für professionelle/institutionelle Anleger\nKapitalrisiko.",
+   "cta": null,
+   "landingPage": "https://www.igneoip.com/germany/de/institutional/about-us/our-philosophy.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/896172924.jpg",
+   "impressions": 61653
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:906262624",
+   "headline": "Mittelstand. Maximale Wirkung.",
+   "copy": "Der europäische Infrastrukturmittelstand ist reich an Potenzial. Wir investieren in Unternehmen, die das Potenzial haben, widerstandsfähige und attraktive langfristige Renditen zu erzielen.\n\nNur für professionelle/institutionelle Anleger\nKapitalrisiko.",
+   "cta": null,
+   "landingPage": "https://www.igneoip.com/germany/de/institutional/about-us/our-philosophy.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/906262624.jpg",
+   "impressions": 55970
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:766711194",
+   "headline": "Unlocking growth in the middle-market for over 30 years",
+   "copy": "Our proactive management approach offers attractive, risk-adjusted returns for our clients, driving value creation through hands-on partnership.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/766711194.jpg",
+   "impressions": 55285
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:906222734",
+   "headline": "Entdecken Sie die europäischen Kompetenzen von Igneo.",
+   "copy": "Die Vielzahl an Chancen, die wir im Bereich mittelständischer Infrastrukturprojekte sehen, bestärkt unseren Fokus und ermöglicht es uns, Investoren gezielt dabei zu begleiten, robuste und nachhaltige Werte mit langfristiger Perspektive zu erschließen.\n\nNur für professionelle/institutionelle Anleger\nKapitalrisiko.",
+   "cta": null,
+   "landingPage": "https://www.igneoip.com/germany/de/institutional/about-us/our-philosophy.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/906222734.jpg",
+   "impressions": 54088
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:771390794",
+   "headline": "On the fast track to value creation — powered by Igneo.",
+   "copy": "We invest in solid, mid-market businesses that we believe we can improve with our active management approach. Explore our capabilities in North America.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/771390794.jpg",
+   "impressions": 45904
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:771261624",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "North America’s infrastructure market is bursting with opportunity, especially in the middle-market.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/771261624.jpg",
+   "impressions": 44028
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:771470274",
+   "headline": "On the fast track to value creation — powered by Igneo.",
+   "copy": "We invest in solid, mid-market businesses that we believe we can improve with our active management approach. Explore our capabilities in North America.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/771470274.jpg",
+   "impressions": 42050
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1244640944",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1244640944.jpg",
+   "impressions": 37316
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1244640894",
+   "headline": "Investing in North American Infrastructure",
+   "copy": "Transforming businesses and creating value comes from hands-on action, delivering attractive, risk adjusted returns for our clients.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1244640894.jpg",
+   "impressions": 34754
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:934226464",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "The European middle-market infrastructure is rich with potential. We invest in mid-sized businesses with the potential to generate resilient and attractive long-term returns.\n\nFor professional/institutional investors only. Capital at risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/europe/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/934226464.jpg",
+   "impressions": 28687
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1245440914",
+   "headline": "Investing in North American Infrastructure",
+   "copy": "North America’s lower middle market offers a powerful opportunity to invest in high quality infrastructure businesses, leveraging our sector experience built globally over decades.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/1245440914.jpg",
+   "impressions": 23505
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:895973954",
+   "headline": "Investing in European Infrastructure.",
+   "copy": "We invest in solid, mid-market businesses that we believe we can improve with our active management approach. Explore our European capabilities.  \n\nFor professional/institutional investors only.\nCapital at risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/europe/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/895973954.jpg",
+   "impressions": 22820
+  },
+  {
+   "brand": "rqi",
+   "creativeId": "urn:li:sponsoredCreative:977502146",
+   "headline": "Does a strong corporate culture lead to better firm performance?",
+   "copy": "Does a strong corporate culture lead to better firm performance?\n \nOur analysis suggests that firms with a better culture may outperform the market. We see that as the score for culture increases, the return of assets \\(ROA\\) for the firms on average also increases. This shows that firms with better cultures tend to be better quality firms. \n\n🔗 Read more on how it could potentially lead to better long-term investment outcomes: https://bit.ly/4imC3zR\n\n{hashtag|\\#|marketingcommunication}\n \n\\*This content is intended for institutional/professional investors or financial advisers outside of Germany only. Capital at Risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://go.firstsentierinvestors.com/l/37502/2025-11-26/y57q1t",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/rqi/977502146.jpg",
+   "impressions": 22093
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:934226484",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "Our focus on middle market infrastructure is powered by the many opportunities we find to help investors unlock resilient, long-term sustainable value.\n\nFor professional/institutional investors only. Capital at risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/europe/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/934226484.jpg",
+   "impressions": 20492
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:896042954",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "Discover Igneo’s mid-market infrastructure strategy, focused on essential, asset-heavy businesses that form the backbone of our economy.\n\nFor professional/institutional investors only.\nCapital at risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/europe/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/896042954.jpg",
+   "impressions": 20308
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:881034164",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "How can US infrastructure investors find predictable revenues as global supply chains shift in response to tariffs and policy changes?  Read our latest article to find out more.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/news-and-insights/from-rail-to-runway-investing-in-americas-domestic-transportation-backbone.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/881034164.jpg",
+   "impressions": 19842
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1246040604",
+   "headline": "Investing in North American Infrastructure",
+   "copy": "We invest in quality infrastructure assets and work relentlessly to improve them, generating long-term, attractive returns for our clients.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1246040604.jpg",
+   "impressions": 18988
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1246338944",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "North America’s lower middle market offers a powerful opportunity to invest in high quality infrastructure businesses, leveraging our sector experience built globally over decades.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1246338944.jpg",
+   "impressions": 18866
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:934346024",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "The European Infrastructure market is bursting with opportunity, especially in the middle-market.\n\nFor professional/institutional investors only. Capital at risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/europe/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/934346024.jpg",
+   "impressions": 18628
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:886256144",
+   "headline": null,
+   "copy": "From Rail to Runway: investing in North America's Domestic transportation Backbone",
+   "cta": null,
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/news-and-insights/from-rail-to-runway-investing-in-americas-domestic-transportation-backbone.html",
+   "mediaType": null,
+   "image": null,
+   "impressions": 18023
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:934246724",
+   "headline": "Explore Igneo's European capabilities.",
+   "copy": "We invest in solid, mid-market businesses that we believe we can improve with our active management approach. \n\nFor professional/institutional investors only. Capital at risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/europe/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/934246724.jpg",
+   "impressions": 16910
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:896052364",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "European infrastructure market is bursting with opportunity, especially in the middle-market. Explore Igneo's European capabilities.  \n\nFor professional/institutional investors only.\nCapital at risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/europe/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/896052364.jpg",
+   "impressions": 16307
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:766584404",
+   "headline": "On the fast track to value creation — powered by Igneo",
+   "copy": "We invest in solid, mid-market businesses that we believe we can improve with our active management approach. Explore our capabilities in North America.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/766584404.jpg",
+   "impressions": 15277
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1243842694",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/1243842694.jpg",
+   "impressions": 15025
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:766662924",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "North America’s infrastructure market is bursting with opportunity, especially in the middle-market. Explore our North American capability.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/766662924.jpg",
+   "impressions": 14516
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:880974254",
+   "headline": "Investing in America’s Domestic Transportation Backbone",
+   "copy": "The changes in US Federal government policy in 2025 impacted trade flows with knock-on effects on the transport infrastructure which facilitates trade.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/news-and-insights/from-rail-to-runway-investing-in-americas-domestic-transportation-backbone.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/880974254.jpg",
+   "impressions": 11512
+  },
+  {
+   "brand": "rqi",
+   "creativeId": "urn:li:sponsoredCreative:832598136",
+   "headline": "What strategies can investors use to assess the strength of a top company's culture?",
+   "copy": "What strategies can investors use to assess the strength of a top company's culture? \n\nBy analyzing conference calls, we capture the essence of corporate values like innovation, integrity, quality, respect, and teamwork. 🔗 Explore the potential link between strong corporate culture and long-term investment outcomes here:  https://bit.ly/3JiKqil\n\n{hashtag|\\#|marketingcommunication} \n\n\\*This is intended for professional/institutional audiences in the United Kingdom or EEA only. RQI branded strategies, investment products and services are not available in Germany. Capital at Risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://bit.ly/3JiKqil",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/rqi/832598136.jpg",
+   "impressions": 10645
+  },
+  {
+   "brand": "rqi",
+   "creativeId": "urn:li:sponsoredCreative:798691226",
+   "headline": "Does a strong corporate culture lead to better firm performance?",
+   "copy": "Does a strong corporate culture lead to better firm performance?\n \nOur analysis suggests that firms with a better culture may outperform the market. We see that as the score for culture increases, the return of assets \\(ROA\\) for the firms on average also increases. This shows that firms with better cultures tend to be better quality firms. \n\n🔗 Read more on how it could potentially lead to better long-term investment outcomes: https://bit.ly/3IEJDb9\n\n{hashtag|\\#|marketingcommunication}\n \n\\*This content is intended for institutional/professional investors or financial advisers outside of Germany only. Capital at Risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://go.firstsentierinvestors.com/l/37502/2025-07-21/y4cr6v",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/rqi/798691226.jpg",
+   "impressions": 10602
+  },
+  {
+   "brand": "rqi",
+   "creativeId": "urn:li:sponsoredCreative:858192786",
+   "headline": "Does a strong corporate culture lead to lower average volatility?",
+   "copy": "Our analysis suggests that as the culture score increases, the volatility of the firm reduces, showing that firms with better culture are also lower risk.\n\n🔗 Read more on how it could potentially lead to better long-term investment outcomes: https://bit.ly/4mSRNvX\n\n{hashtag|\\#|marketingcommunication}\n\\*This content is intended for institutional/professional investors or financial advisers outside of Germany only. Capital at Risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://bit.ly/4mSRNvX",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/rqi/858192786.jpg",
+   "impressions": 9880
+  },
+  {
+   "brand": "rqi",
+   "creativeId": "urn:li:sponsoredCreative:948889476",
+   "headline": null,
+   "copy": "Between 2018-2020, quant funds from developed countries experienced a Quant Winter, with traditional models facing challenges. However, recent years have shown signs of recovery. \n\nFind out more in our latest research paper: Lessons from the Quant Winter\n\n\\*This content is intended for institutional/professional investors or financial advisers outside of Germany only.\n\n{hashtag|\\#|marketingcommunication}",
+   "cta": null,
+   "landingPage": "https://www.firstsentierinvestors.com/uk/en/intermediary/insights/lessons-from-the-quant-winter.html",
+   "mediaType": null,
+   "image": null,
+   "impressions": 9479
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1312111454",
+   "headline": "Middle Market. Maximum Impact.",
+   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1312111454.jpg",
+   "impressions": 9406
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:886346114",
+   "headline": null,
+   "copy": "Investing in solid, mid-market businesses that we believe we can improve with our active management approach.",
+   "cta": null,
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": null,
+   "image": null,
+   "impressions": 8024
+  },
+  {
+   "brand": "rqi",
+   "creativeId": "urn:li:sponsoredCreative:923840696",
+   "headline": null,
+   "copy": "Between 2018-2020, quant funds from developed countries experienced a Quant Winter, with traditional models facing challenges. However, recent years have shown signs of recovery. \n\nFind out more in our latest research paper: Lessons from the Quant Winter\n\n\\*This content is intended for institutional/professional investors or financial advisers outside of Germany only.\n\n{hashtag|\\#|marketingcommunication}",
+   "cta": null,
+   "landingPage": "https://www.firstsentierinvestors.com/uk/en/intermediary/insights/lessons-from-the-quant-winter.html",
+   "mediaType": null,
+   "image": null,
+   "impressions": 7785
+  }
+ ]
 }
