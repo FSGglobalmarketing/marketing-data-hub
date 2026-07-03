@@ -233,6 +233,70 @@ def build_competitor_ads(src: Path) -> dict:
 
 
 # --------------------------------------------------------------------------- #
+# Alphix -> alphix.json (firmographics: which named firms viewed the estate)
+# --------------------------------------------------------------------------- #
+ALPHIX_DOMAIN_BRAND = {
+    "fssaim.com": "fssa", "igneoip.com": "igneo",
+    "firstsentierinvestors.com": "fsi", "firstsentierinvestors.com.au": "fsi",
+    "scottishoriental.com": "stewart", "firststatestewart.net": "stewart",
+    "firststatestewartasia.com": "stewart", "rqiinvestors.com": "rqi",
+}
+
+
+def _alx_brand(domain: str | None) -> str | None:
+    d = (domain or "").lower().replace("www.", "").strip()
+    return ALPHIX_DOMAIN_BRAND.get(d)
+
+
+def build_alphix(src: Path) -> dict:
+    base = src / "alphix-mi-pipeline" / "data"
+    firms = read_csv(base / "mi_top_firms_viewing_estate" / "latest.csv")
+    top_firms = [{"firm": clean(r.get("Firm")), "industry": clean(r.get("Firm Industry")),
+                  "pageviews": int(num(r.get("Pageviews Human"))),
+                  "ipCount": int(num(r.get("IP Count Human")))}
+                 for r in firms
+                 if clean(r.get("Firm")) and clean(r.get("Firm")) != "Unknown"][:50]
+    traffic = read_csv(base / "mi_monthly_web_traffic_by_country" / "latest.csv")
+    by_country: dict[str, float] = {}
+    by_brand: dict[str, float] = {}
+    for r in traffic:
+        pv = num(r.get("Pageviews Human"))
+        by_country[clean(r.get("Country")) or "Unknown"] = by_country.get(clean(r.get("Country")) or "Unknown", 0) + pv
+        b = _alx_brand(r.get("Domain"))
+        if b:
+            by_brand[b] = by_brand.get(b, 0) + pv
+    return {"generatedAt": _now(), "source": "Alphix",
+            "topFirms": top_firms,
+            "byCountry": sorted(({"country": k, "pageviews": int(v)} for k, v in by_country.items()),
+                                key=lambda x: -x["pageviews"])[:30],
+            "byBrand": sorted(({"brand": k, "label": BRAND_LABELS.get(k, k), "pageviews": int(v)}
+                               for k, v in by_brand.items()), key=lambda x: -x["pageviews"])}
+
+
+# --------------------------------------------------------------------------- #
+# HubSpot -> hubspot.json (marketing engagement counts + campaign/email lists)
+# --------------------------------------------------------------------------- #
+def build_hubspot(src: Path) -> dict:
+    base = src / "hubspot" / "data"
+    emails = read_csv(base / "marketing_emails" / "latest.csv")
+    forms = read_csv(base / "forms" / "latest.csv")
+    camps = read_csv(base / "campaigns" / "latest.csv")
+    deals = read_csv(base / "deals" / "latest.csv")
+    campaigns = [{"name": clean(r.get("properties.hs_name")),
+                  "status": clean(r.get("properties.hs_campaign_status")),
+                  "startDate": clean(r.get("properties.hs_start_date")),
+                  "endDate": clean(r.get("properties.hs_end_date"))}
+                 for r in camps if clean(r.get("properties.hs_name"))]
+    recent_emails = [{"name": clean(r.get("name")), "subject": clean(r.get("subject")),
+                      "state": clean(r.get("state")), "publishDate": clean(r.get("publishDate"))}
+                     for r in emails if clean(r.get("name"))][:40]
+    return {"generatedAt": _now(), "source": "HubSpot",
+            "counts": {"marketingEmails": len(emails), "forms": len(forms),
+                       "campaigns": len(camps), "deals": len(deals)},
+            "campaigns": campaigns, "recentEmails": recent_emails}
+
+
+# --------------------------------------------------------------------------- #
 def main() -> None:
     ap = argparse.ArgumentParser(description="Marketing Data Hub ingest")
     ap.add_argument("--sources-dir", default="sources", help="dir holding checked-out source repos")
@@ -249,6 +313,8 @@ def main() -> None:
         "website.json": build_website(src),
         "linkedin.json": build_linkedin(src, img),
         "competitor-ads.json": build_competitor_ads(src),
+        "alphix.json": build_alphix(src),
+        "hubspot.json": build_hubspot(src),
     }
     for name, data in feeds.items():
         (out / name).write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")

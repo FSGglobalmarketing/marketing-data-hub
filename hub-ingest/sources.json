@@ -4,7 +4,9 @@
     "GA-website-api",
     "smartsheets-API",
     "linkedin-API",
-    "competitor-ads-mi-pipeline"
+    "competitor-ads-mi-pipeline",
+    "alphix-mi-pipeline",
+    "hubspot"
   ],
   "brand_map": {
     "FSI": "fsi",
