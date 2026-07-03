@@ -18,3 +18,6 @@ dist/
 
 # Local preview / tooling config (points at scratch paths)
 .claude/
+
+# hub-ingest: cloned source repos (never committed)
+sources/

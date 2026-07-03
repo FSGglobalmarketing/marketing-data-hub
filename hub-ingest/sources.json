@@ -1,0 +1,24 @@
+{
+  "_comment": "Config for hub-ingest. The refresh-data Action clones each repo (read-only PAT) into sources/, then ingest.py reads their data/ and writes assets/data/*.json feeds. Brand labels from the source feeds map to the dashboard brand ids in DATA-MODEL.md.",
+  "repos": [
+    "GA-website-api",
+    "smartsheets-API",
+    "linkedin-API"
+  ],
+  "brand_map": {
+    "FSI": "fsi",
+    "FSSA": "fssa",
+    "Igneo": "igneo",
+    "RQI": "rqi",
+    "Scottish Oriental": "stewart",
+    "SOSCOT": "stewart",
+    "Group / Corporate": "fsi"
+  },
+  "brand_labels": {
+    "fssa": "FSSA",
+    "stewart": "Stewart Investors",
+    "fsi": "First Sentier",
+    "rqi": "RQI Investors",
+    "igneo": "Igneo"
+  }
+}

@@ -1,0 +1,47 @@
+name: Refresh hub data
+
+# Pulls each source *-mi-pipeline repo (read-only), rebuilds the dashboard's JSON
+# feeds in assets/data/, and copies ad thumbnails into assets/img/. Needs a repo
+# secret SOURCES_READ_TOKEN — a PAT (classic: repo scope, or fine-grained:
+# Contents:Read) that can read the private source repos.
+
+on:
+  schedule:
+    - cron: "0 7 * * *"      # daily 07:00 UTC (after the source refreshes)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Clone source repos
+        env:
+          TOKEN: ${{ secrets.SOURCES_READ_TOKEN }}
+        run: |
+          set -e
+          if [ -z "$TOKEN" ]; then echo "::error::SOURCES_READ_TOKEN secret is not set"; exit 1; fi
+          mkdir -p sources
+          for repo in $(python -c "import json;print(' '.join(json.load(open('hub-ingest/sources.json'))['repos']))"); do
+            echo "cloning $repo"
+            git clone --depth 1 "https://x-access-token:${TOKEN}@github.com/FSGglobalmarketing/$repo.git" "sources/$repo"
+          done
+
+      - name: Build feeds
+        run: python hub-ingest/ingest.py --sources-dir sources --out assets/data --img assets/img
+
+      - name: Commit feeds
+        run: |
+          rm -rf sources
+          git config user.name  "hub-bot"
+          git config user.email "actions@github.com"
+          git add assets/data assets/img
+          git diff --staged --quiet || git commit -m "Refresh hub data feeds [skip ci]"
+          git push
