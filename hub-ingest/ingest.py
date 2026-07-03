@@ -197,6 +197,42 @@ def _copy_image(li_repo: Path, image_file: str | None, img_out: Path) -> str | N
 
 
 # --------------------------------------------------------------------------- #
+# Google Ads Transparency Center -> competitor-ads.json (competitor intelligence)
+# --------------------------------------------------------------------------- #
+def build_competitor_ads(src: Path) -> dict:
+    rows = read_csv(src / "competitor-ads-mi-pipeline" / "data" / "competitor_ads" / "latest.csv")
+    by_brand: dict[str, dict] = {}
+    by_comp: dict[tuple, dict] = {}
+    samples: list[dict] = []
+    for r in rows:
+        bid = brand_id(r.get("brand"))
+        if not bid:
+            continue
+        comp = clean(r.get("competitor")) or "Unknown"
+        last = clean(r.get("last_shown"))
+        bb = by_brand.setdefault(bid, {"brand": bid, "label": BRAND_LABELS.get(bid, bid),
+                                       "_comps": set(), "ads": 0})
+        bb["_comps"].add(comp); bb["ads"] += 1
+        bc = by_comp.setdefault((bid, comp), {"brand": bid, "competitor": comp, "ads": 0,
+                                              "lastShown": None})
+        bc["ads"] += 1
+        if last and (bc["lastShown"] is None or last > bc["lastShown"]):
+            bc["lastShown"] = last
+        if clean(r.get("media_url")):
+            samples.append({"brand": bid, "competitor": comp, "format": clean(r.get("format")),
+                            "firstShown": clean(r.get("first_shown")), "lastShown": last,
+                            "mediaUrl": clean(r.get("media_url")),
+                            "previewUrl": clean(r.get("preview_url"))})
+    for bb in by_brand.values():
+        bb["competitors"] = len(bb.pop("_comps"))
+    samples.sort(key=lambda s: (s.get("lastShown") or ""), reverse=True)
+    return {"generatedAt": _now(), "source": "Google Ads Transparency Center",
+            "byBrand": sorted(by_brand.values(), key=lambda x: -x["ads"]),
+            "byCompetitor": sorted(by_comp.values(), key=lambda x: -x["ads"]),
+            "sampleAds": samples[:60]}
+
+
+# --------------------------------------------------------------------------- #
 def main() -> None:
     ap = argparse.ArgumentParser(description="Marketing Data Hub ingest")
     ap.add_argument("--sources-dir", default="sources", help="dir holding checked-out source repos")
@@ -212,6 +248,7 @@ def main() -> None:
         "channel-tracker.json": build_activities(src),
         "website.json": build_website(src),
         "linkedin.json": build_linkedin(src, img),
+        "competitor-ads.json": build_competitor_ads(src),
     }
     for name, data in feeds.items():
         (out / name).write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")

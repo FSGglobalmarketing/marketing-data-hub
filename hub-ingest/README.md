@@ -18,6 +18,7 @@ JSON shapes load into the **Snowflake** database (InfoSec) later without reshapi
 | `channel-tracker.json` | Smartsheet Channel tracker | array of marketing activities (map + list) |
 | `website.json` | GA4 traffic-by-channel | `{byBrand:[…sessions,users,engagementRate…], byChannel:[…]}` |
 | `linkedin.json` | LinkedIn Ads | `{byBrand:[…impressions,clicks,spend,ctr…], topCreatives:[…copy,image,impressions]}` |
+| `competitor-ads.json` | Google Ads Transparency | `{byBrand:[…competitors,ads], byCompetitor:[…], sampleAds:[…mediaUrl,format,lastShown]}` |
 
 Brand labels from the feeds map to the dashboard brand ids (`fssa/stewart/fsi/rqi/igneo`)
 via `brand_map` in [`sources.json`](sources.json). LinkedIn ad thumbnails are copied to

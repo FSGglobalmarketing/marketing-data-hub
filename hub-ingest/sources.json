@@ -3,15 +3,19 @@
   "repos": [
     "GA-website-api",
     "smartsheets-API",
-    "linkedin-API"
+    "linkedin-API",
+    "competitor-ads-mi-pipeline"
   ],
   "brand_map": {
     "FSI": "fsi",
+    "FSI Domestic": "fsi",
+    "First Sentier Investors": "fsi",
     "FSSA": "fssa",
     "Igneo": "igneo",
     "RQI": "rqi",
     "Scottish Oriental": "stewart",
     "SOSCOT": "stewart",
+    "Stewart Investors": "stewart",
     "Group / Corporate": "fsi"
   },
   "brand_labels": {
