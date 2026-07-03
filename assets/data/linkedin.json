@@ -1,0 +1,59 @@
+{
+ "generatedAt": "2026-07-03T14:31:52Z",
+ "source": "LinkedIn Ads",
+ "byBrand": [
+  {
+   "brand": "igneo",
+   "label": "Igneo",
+   "currency": "GBP",
+   "impressions": 1568516,
+   "clicks": 19399,
+   "spend": 38063.15,
+   "reactions": 16,
+   "shares": 0,
+   "conversions": 7,
+   "landingPageClicks": 19399,
+   "ctr": 0.0124
+  },
+  {
+   "brand": "rqi",
+   "label": "RQI Investors",
+   "currency": "GBP",
+   "impressions": 100505,
+   "clicks": 2161,
+   "spend": 5320.55,
+   "reactions": 161,
+   "shares": 1,
+   "conversions": 0,
+   "landingPageClicks": 1492,
+   "ctr": 0.0215
+  },
+  {
+   "brand": "stewart",
+   "label": "Stewart Investors",
+   "currency": "GBP",
+   "impressions": 20422,
+   "clicks": 123,
+   "spend": 671.66,
+   "reactions": 3,
+   "shares": 0,
+   "conversions": 0,
+   "landingPageClicks": 123,
+   "ctr": 0.006
+  },
+  {
+   "brand": "fssa",
+   "label": "FSSA",
+   "currency": "GBP",
+   "impressions": 3850,
+   "clicks": 85,
+   "spend": 250.0,
+   "reactions": 3,
+   "shares": 0,
+   "conversions": 0,
+   "landingPageClicks": 1,
+   "ctr": 0.0221
+  }
+ ],
+ "topCreatives": []
+}
