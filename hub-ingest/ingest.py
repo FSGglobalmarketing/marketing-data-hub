@@ -233,6 +233,41 @@ def build_competitor_ads(src: Path) -> dict:
 
 
 # --------------------------------------------------------------------------- #
+# LinkedIn Ad Library -> competitor-linkedin.json (competitor LinkedIn ads + geo)
+# --------------------------------------------------------------------------- #
+def build_competitor_linkedin(src: Path) -> dict:
+    rows = read_csv(src / "linkedin-API" / "data" / "competitor_linkedin_ads" / "latest.csv")
+    by_comp: dict[tuple, dict] = {}
+    for r in rows:
+        bid = brand_id(r.get("brand"))
+        if not bid:
+            continue
+        comp = clean(r.get("competitor")) or "?"
+        c = by_comp.setdefault((bid, comp), {"brand": bid, "competitor": comp,
+                                             "advertiserUrl": clean(r.get("advertiser_url")),
+                                             "ads": 0, "_countries": {}})
+        c["ads"] = max(c["ads"], int(num(r.get("total_ads"))))     # true library-wide total
+        ctry = clean(r.get("country"))
+        if ctry:
+            c["_countries"][ctry] = c["_countries"].get(ctry, 0) + 1
+    comps = []
+    for c in by_comp.values():
+        ranked = sorted(c.pop("_countries").items(), key=lambda kv: -kv[1])
+        c["topCountry"] = ranked[0][0] if ranked else None
+        c["countries"] = [{"country": k, "count": v} for k, v in ranked[:6]]
+        comps.append(c)
+    by_brand: dict[str, dict] = {}
+    for c in comps:
+        b = by_brand.setdefault(c["brand"], {"brand": c["brand"], "label": BRAND_LABELS.get(c["brand"], c["brand"]),
+                                             "competitors": 0, "ads": 0})
+        b["competitors"] += 1
+        b["ads"] += c["ads"]
+    return {"generatedAt": _now(), "source": "LinkedIn Ad Library",
+            "byBrand": sorted(by_brand.values(), key=lambda x: -x["ads"]),
+            "byCompetitor": sorted(comps, key=lambda x: -x["ads"])}
+
+
+# --------------------------------------------------------------------------- #
 # Alphix -> alphix.json (firmographics: which named firms viewed the estate)
 # --------------------------------------------------------------------------- #
 ALPHIX_DOMAIN_BRAND = {
@@ -313,6 +348,7 @@ def main() -> None:
         "website.json": build_website(src),
         "linkedin.json": build_linkedin(src, img),
         "competitor-ads.json": build_competitor_ads(src),
+        "competitor-linkedin.json": build_competitor_linkedin(src),
         "alphix.json": build_alphix(src),
         "hubspot.json": build_hubspot(src),
     }

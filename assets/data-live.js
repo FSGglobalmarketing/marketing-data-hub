@@ -22,9 +22,9 @@ window.HUB_LIVE = (function () {
   const sum = (arr, k) => (arr || []).reduce((a, x) => a + (+x[k] || 0), 0);
 
   const ready = Promise.all(
-    ['website', 'linkedin', 'competitor-ads', 'alphix', 'hubspot'].map(load)
-  ).then(([website, linkedin, competitor, alphix, hubspot]) => ({
-    website, linkedin, competitor, alphix, hubspot,
+    ['website', 'linkedin', 'competitor-ads', 'competitor-linkedin', 'alphix', 'hubspot'].map(load)
+  ).then(([website, linkedin, competitor, competitorLi, alphix, hubspot]) => ({
+    website, linkedin, competitor, competitorLi, alphix, hubspot,
   }));
 
   return { ready, fmt, pct, sum };

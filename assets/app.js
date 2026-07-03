@@ -42,8 +42,15 @@
 
   /* ---- Activity → map marker mapping (Channel tracker feed) ------------ */
   const REGION = { ANZ: [-33.87, 151.21], UK: [51.51, -0.13], EMEA: [50.11, 8.68], US: [40.71, -74.01], Global: [22, 6], HK: [22.32, 114.17] };
-  const PEER_C = '#9db2cc';                                  // competitor / peer marker colour
+  const PEER_C = '#9db2cc';                                  // Google competitor peer colour
+  const LI_PEER_C = '#7aa0d8';                               // LinkedIn competitor peer colour
   const BRAND_REGION = { igneo: 'EMEA', fsi: 'ANZ', fssa: 'HK', rqi: 'Global', stewart: 'UK' };
+  // Country centroids (ISO-2) for placing LinkedIn competitor ads by real geography.
+  const COUNTRY = { GB: [54.0, -2.0], US: [39.8, -98.6], DE: [51.2, 10.4], FR: [46.6, 2.4],
+    IT: [42.8, 12.6], ES: [40.2, -3.7], NL: [52.2, 5.3], CH: [46.8, 8.2], IE: [53.4, -8.0],
+    SE: [62.0, 15.0], AU: [-25.3, 133.8], HK: [22.3, 114.2], SG: [1.35, 103.8], JP: [36.2, 138.3],
+    CN: [35.9, 104.2], IN: [22.6, 79.0], CA: [56.1, -106.3], AE: [23.4, 53.8], LU: [49.8, 6.1],
+    BE: [50.6, 4.7], NO: [61.0, 8.5], DK: [56.0, 10.0], FI: [64.0, 26.0], ZA: [-30.6, 22.9] };
   const COLOR  = { 'Live': '#f4ad44', 'In progress': '#5ec8e6', 'Complete': '#7fdca0', 'Draft': '#9db2cc' };
   const colorFor = (s) => COLOR[s] || '#7e93ac';
   const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -67,6 +74,7 @@
   }).addTo(map);
   let markers = [];
   let compMarkers = [];                                      // competitor-ad pins (Google Transparency)
+  let liCompMarkers = [];                                    // competitor-ad pins (LinkedIn Ad Library)
 
   function buildMarkers(acts) {
     const idx = {};
@@ -113,6 +121,33 @@
     });
   }
 
+  // Competitor LinkedIn ads (Ad Library) as peer pins, placed by REAL geography
+  // (top impression country), sized by total ad volume.
+  function buildLiCompMarkers() {
+    liCompMarkers = [];
+    if (!LIVE || !LIVE.competitorLi || !LIVE.competitorLi.byCompetitor) return;
+    const idx = {};
+    liCompMarkers = LIVE.competitorLi.byCompetitor.filter((c) => (c.ads || 0) > 0).map((c) => {
+      const base = COUNTRY[c.topCountry] || REGION[BRAND_REGION[c.brand] || 'Global'] || REGION.Global;
+      const ck = c.topCountry || c.brand; const i = idx[ck] || 0; idx[ck] = i + 1;
+      const ang = i * 2.39996, rad = 0.8 * Math.sqrt(i + 1);
+      const lat = base[0] - 2.4 + rad * Math.cos(ang), lng = base[1] - 2.4 + rad * Math.sin(ang) * 1.4;
+      const sz = Math.max(7, Math.min(17, 6 + Math.log10(c.ads + 1) * 4));
+      const html = `<span class="ring" style="--c:${LI_PEER_C};width:${sz * 2}px;height:${sz * 2}px;margin:${-sz}px 0 0 ${-sz}px;opacity:.45"></span>`
+        + `<span class="dot" style="--c:${LI_PEER_C};width:${sz}px;height:${sz}px"></span>`;
+      const m = L.marker([lat, lng], { icon: L.divIcon({ className: 'ds-pin', iconSize: [sz, sz], iconAnchor: [sz / 2, sz / 2], html }) });
+      const tip = `<div class="tip-head"><div class="tip-t">${c.competitor} <span style="color:${LI_PEER_C}">in</span></div></div>`
+        + `<div class="tip-row"><span>Type</span><b>Competitor · LinkedIn ads</b></div>`
+        + `<div class="tip-row"><span>Peer of</span><b>${(c.brand || '').toUpperCase()}</b></div>`
+        + `<div class="tip-row"><span>Ads live</span><b>${c.ads}</b></div>`
+        + `<div class="tip-row"><span>Top market</span><b>${c.topCountry || '—'}</b></div>`;
+      m.bindTooltip(tip, { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m.bindPopup(tip, { className: 'ds-pop', closeButton: false, offset: [0, -6] });
+      m._c = c;
+      return m;
+    });
+  }
+
   layer.on('clusterclick', (e) => {
     const kids = e.layer.getAllChildMarkers();
     const grid = `<div class="cluster-grid">${kids.map((m) => `<div class="tip-card">${infoHtml(m._a, true)}</div>`).join('')}</div>`;
@@ -136,9 +171,10 @@
   function applyFilters() {
     layer.clearLayers();
     layer.addLayers(markers.filter((m) => inRange(m._a) && ['brand', 'channel', 'strategy'].every((k) => state[k] === 'all' || m._a[FIELD[k]] === state[k])));
-    // Competitor pins follow the brand filter only (no channel/status/date breakdown).
+    // Competitor pins (Google + LinkedIn) follow the brand filter only.
     const cid = brandIdFor(state.brand);
     layer.addLayers(compMarkers.filter((m) => !cid || m._c.brand === cid));
+    layer.addLayers(liCompMarkers.filter((m) => !cid || m._c.brand === cid));
   }
 
   // Activities passing the current filters (brand ∧ channel ∧ status ∧ date).
@@ -237,7 +273,8 @@
             ${item('#c9d4e2', 'Draft')}
             ${item('#7fdca0', 'Complete')}
             ${item('#7e93ac', 'Planned')}
-            ${item(PEER_C, 'Competitor ad (Google)')}`;
+            ${item(PEER_C, 'Competitor ad (Google)')}
+            ${item(LI_PEER_C, 'Competitor ad (LinkedIn)')}`;
   }
 
   function openMenu(id) {
@@ -507,7 +544,8 @@
 
   if (window.HUB_LIVE) window.HUB_LIVE.ready.then((feeds) => {
     LIVE = feeds;
-    buildCompMarkers();     // competitor ad pins onto the map
+    buildCompMarkers();     // Google competitor ad pins
+    buildLiCompMarkers();   // LinkedIn competitor ad pins (real geo)
     refresh();              // re-render map + KPIs + live cards with feeds present
   });
 
