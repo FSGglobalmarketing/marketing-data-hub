@@ -1,0 +1,450 @@
+{
+ "generatedAt": "2026-07-03T14:49:33Z",
+ "source": "Alphix",
+ "topFirms": [
+  {
+   "firm": "BP",
+   "industry": "Oil and Energy",
+   "pageviews": 3798,
+   "ipCount": 0
+  },
+  {
+   "firm": "Macquarie Group Limited",
+   "industry": "Banking",
+   "pageviews": 2922,
+   "ipCount": 0
+  },
+  {
+   "firm": "Computing + Mathematical Sciences (CMS) Department",
+   "industry": "Education",
+   "pageviews": 2733,
+   "ipCount": 1
+  },
+  {
+   "firm": "The Hongkong and Shanghai Banking Corporation Limited",
+   "industry": "Banking",
+   "pageviews": 2231,
+   "ipCount": 0
+  },
+  {
+   "firm": "PricewaterhouseCoopers LLP",
+   "industry": "Accounting",
+   "pageviews": 2143,
+   "ipCount": 0
+  },
+  {
+   "firm": "Permira",
+   "industry": "Financial Services",
+   "pageviews": 2129,
+   "ipCount": 0
+  },
+  {
+   "firm": "ESPN",
+   "industry": "Sports",
+   "pageviews": 1897,
+   "ipCount": 1
+  },
+  {
+   "firm": "JPMorgan Chase & Co",
+   "industry": "Financial Services",
+   "pageviews": 1856,
+   "ipCount": 1
+  },
+  {
+   "firm": "Citigroup Inc",
+   "industry": "Banking",
+   "pageviews": 1848,
+   "ipCount": 0
+  },
+  {
+   "firm": "DBS Bank",
+   "industry": "Banking",
+   "pageviews": 1790,
+   "ipCount": 0
+  },
+  {
+   "firm": "New Relic",
+   "industry": "Computing",
+   "pageviews": 1558,
+   "ipCount": 1
+  },
+  {
+   "firm": "UBS",
+   "industry": "Investment Management",
+   "pageviews": 1395,
+   "ipCount": 0
+  },
+  {
+   "firm": "Commonwealth Bank",
+   "industry": "Banking",
+   "pageviews": 1209,
+   "ipCount": 0
+  },
+  {
+   "firm": "BNP Paribas",
+   "industry": "Banking",
+   "pageviews": 1137,
+   "ipCount": 0
+  },
+  {
+   "firm": "Barclays Bank PLC",
+   "industry": "Banking",
+   "pageviews": 1064,
+   "ipCount": 0
+  },
+  {
+   "firm": "Bank of America",
+   "industry": "Banking",
+   "pageviews": 942,
+   "ipCount": 1
+  },
+  {
+   "firm": "IOOF Holdings Ltd",
+   "industry": "Financial Services",
+   "pageviews": 936,
+   "ipCount": 0
+  },
+  {
+   "firm": "Perpetual Limited",
+   "industry": "Financial Services",
+   "pageviews": 913,
+   "ipCount": 0
+  },
+  {
+   "firm": "First Sentier Investors",
+   "industry": "Financial Services",
+   "pageviews": 865,
+   "ipCount": 0
+  },
+  {
+   "firm": "KPMG",
+   "industry": "Financial Services",
+   "pageviews": 850,
+   "ipCount": 0
+  },
+  {
+   "firm": "First Sentier",
+   "industry": "Unknown",
+   "pageviews": 832,
+   "ipCount": 1
+  },
+  {
+   "firm": "Norton Rose Fulbright",
+   "industry": "Legal Services",
+   "pageviews": 819,
+   "ipCount": 0
+  },
+  {
+   "firm": "Société Générale",
+   "industry": "Banking",
+   "pageviews": 815,
+   "ipCount": 1
+  },
+  {
+   "firm": "United Overseas Bank",
+   "industry": "Banking",
+   "pageviews": 787,
+   "ipCount": 0
+  },
+  {
+   "firm": "Ord Minnett Pty Ltd",
+   "industry": "Financial Services",
+   "pageviews": 739,
+   "ipCount": 0
+  },
+  {
+   "firm": "Vent-Axia",
+   "industry": "Electrical/Electronic Manufacturing",
+   "pageviews": 709,
+   "ipCount": 0
+  },
+  {
+   "firm": "HSBC",
+   "industry": "Banking",
+   "pageviews": 692,
+   "ipCount": 0
+  },
+  {
+   "firm": "Nanyang Technological University",
+   "industry": "Education",
+   "pageviews": 667,
+   "ipCount": 0
+  },
+  {
+   "firm": "Anstat Pty Ltd",
+   "industry": "Business Services",
+   "pageviews": 661,
+   "ipCount": 0
+  },
+  {
+   "firm": "Liberty General Insurance Berhad",
+   "industry": "Insurance",
+   "pageviews": 639,
+   "ipCount": 0
+  },
+  {
+   "firm": "Deutsche Bank",
+   "industry": "Banking",
+   "pageviews": 595,
+   "ipCount": 0
+  },
+  {
+   "firm": "BNY",
+   "industry": "Banking",
+   "pageviews": 588,
+   "ipCount": 0
+  },
+  {
+   "firm": "Colonial First State Investments Limited",
+   "industry": "Financial Services",
+   "pageviews": 554,
+   "ipCount": 1
+  },
+  {
+   "firm": "Royal Bank of Canada",
+   "industry": "Banking",
+   "pageviews": 524,
+   "ipCount": 0
+  },
+  {
+   "firm": "Brit Insurance",
+   "industry": "Insurance",
+   "pageviews": 517,
+   "ipCount": 0
+  },
+  {
+   "firm": "GHD Group Pty Ltd",
+   "industry": "Civil Engineering",
+   "pageviews": 516,
+   "ipCount": 0
+  },
+  {
+   "firm": "China Everbright Securities International Company Limited",
+   "industry": "Unknown",
+   "pageviews": 502,
+   "ipCount": 0
+  },
+  {
+   "firm": "Morgan Stanley",
+   "industry": "Banking",
+   "pageviews": 498,
+   "ipCount": 0
+  },
+  {
+   "firm": "Deloitte",
+   "industry": "Accounting",
+   "pageviews": 493,
+   "ipCount": 0
+  },
+  {
+   "firm": "Stockland",
+   "industry": "Real Estate",
+   "pageviews": 464,
+   "ipCount": 0
+  },
+  {
+   "firm": "Accor SA",
+   "industry": "Hotels and Accommodation",
+   "pageviews": 451,
+   "ipCount": 0
+  },
+  {
+   "firm": "Jefferies Financial Group Inc",
+   "industry": "Accounting",
+   "pageviews": 448,
+   "ipCount": 0
+  },
+  {
+   "firm": "FactSet Research Systems Inc",
+   "industry": "Computer Software",
+   "pageviews": 440,
+   "ipCount": 0
+  },
+  {
+   "firm": "Mitsubishi UFJ Financial Group Inc",
+   "industry": "Financial Services",
+   "pageviews": 435,
+   "ipCount": 0
+  },
+  {
+   "firm": "CMS Legal Services EEIG",
+   "industry": "Legal Services",
+   "pageviews": 405,
+   "ipCount": 1
+  },
+  {
+   "firm": "ANZ Banking Group Limited",
+   "industry": "Banking",
+   "pageviews": 403,
+   "ipCount": 0
+  },
+  {
+   "firm": "Bloomberg L.P.",
+   "industry": "Financial Services",
+   "pageviews": 403,
+   "ipCount": 0
+  },
+  {
+   "firm": "Cathay Life Insurance Co Ltd",
+   "industry": "Insurance",
+   "pageviews": 401,
+   "ipCount": 1
+  },
+  {
+   "firm": "RBC Royal Bank",
+   "industry": "Banking",
+   "pageviews": 393,
+   "ipCount": 1
+  },
+  {
+   "firm": "Barrenjoey Capital Partners Group Pty Limited",
+   "industry": "Investment Management",
+   "pageviews": 390,
+   "ipCount": 0
+  }
+ ],
+ "byCountry": [
+  {
+   "country": "Australia",
+   "pageviews": 247676
+  },
+  {
+   "country": "Hong Kong SAR",
+   "pageviews": 200492
+  },
+  {
+   "country": "United States of America",
+   "pageviews": 175602
+  },
+  {
+   "country": "Singapore",
+   "pageviews": 167008
+  },
+  {
+   "country": "United Kingdom",
+   "pageviews": 142278
+  },
+  {
+   "country": "Germany",
+   "pageviews": 73952
+  },
+  {
+   "country": "China",
+   "pageviews": 69613
+  },
+  {
+   "country": "Ireland",
+   "pageviews": 41120
+  },
+  {
+   "country": "India",
+   "pageviews": 23855
+  },
+  {
+   "country": "Japan",
+   "pageviews": 14202
+  },
+  {
+   "country": "France",
+   "pageviews": 8758
+  },
+  {
+   "country": "New Zealand",
+   "pageviews": 8032
+  },
+  {
+   "country": "Taiwan",
+   "pageviews": 7639
+  },
+  {
+   "country": "Brazil",
+   "pageviews": 6390
+  },
+  {
+   "country": "Macao",
+   "pageviews": 5350
+  },
+  {
+   "country": "Malaysia",
+   "pageviews": 5204
+  },
+  {
+   "country": "Netherlands",
+   "pageviews": 4821
+  },
+  {
+   "country": "Sweden",
+   "pageviews": 4817
+  },
+  {
+   "country": "Canada",
+   "pageviews": 4153
+  },
+  {
+   "country": "Italy",
+   "pageviews": 3484
+  },
+  {
+   "country": "Spain",
+   "pageviews": 3437
+  },
+  {
+   "country": "Philippines",
+   "pageviews": 3088
+  },
+  {
+   "country": "Vietnam",
+   "pageviews": 2666
+  },
+  {
+   "country": "Indonesia",
+   "pageviews": 2201
+  },
+  {
+   "country": "Denmark",
+   "pageviews": 2085
+  },
+  {
+   "country": "Portugal",
+   "pageviews": 2065
+  },
+  {
+   "country": "Switzerland",
+   "pageviews": 2010
+  },
+  {
+   "country": "Belgium",
+   "pageviews": 1954
+  },
+  {
+   "country": "Saudi Arabia",
+   "pageviews": 1486
+  },
+  {
+   "country": "Nigeria",
+   "pageviews": 1438
+  }
+ ],
+ "byBrand": [
+  {
+   "brand": "fsi",
+   "label": "First Sentier",
+   "pageviews": 923737
+  },
+  {
+   "brand": "fssa",
+   "label": "FSSA",
+   "pageviews": 202910
+  },
+  {
+   "brand": "igneo",
+   "label": "Igneo",
+   "pageviews": 108044
+  },
+  {
+   "brand": "stewart",
+   "label": "Stewart Investors",
+   "pageviews": 14130
+  }
+ ]
+}

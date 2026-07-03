@@ -1,0 +1,416 @@
+{
+ "generatedAt": "2026-07-03T14:49:33Z",
+ "source": "HubSpot",
+ "counts": {
+  "marketingEmails": 138,
+  "forms": 61,
+  "campaigns": 27,
+  "deals": 0
+ },
+ "campaigns": [
+  {
+   "name": "2026 Global FSG LinkedIn posts",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "2026 Global FSI LinkedIn posts",
+   "status": null,
+   "startDate": "2026-05-29 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "2026 Global FSSA LinkedIn posts",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "202604 FSI EOFY Campaign test - JA",
+   "status": null,
+   "startDate": "2026-04-27 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202605 APAC - AU - FSI - ETF event Adelaide",
+   "status": null,
+   "startDate": "2026-05-04 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202605 APAC - AU - FSI -WS Cash ETF campaign - Sydney",
+   "status": null,
+   "startDate": "2026-05-11 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202605 APAC - FSI Cash ETF campaign - test Melbourne",
+   "status": null,
+   "startDate": "2026-05-01 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202605 APAC - FSSA - Invite - test 2",
+   "status": null,
+   "startDate": "2026-05-18 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202605 APAC - FSSA - Invite - test 3",
+   "status": null,
+   "startDate": "2026-05-18 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202605 FSI Cash ETF campaign - test 1",
+   "status": null,
+   "startDate": "2026-05-11 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202605 NZ - FSSA GEM Focus Fund",
+   "status": null,
+   "startDate": null,
+   "endDate": null
+  },
+  {
+   "name": "202606 EMEA FSI - Fund launch ETF GLIS - wholesale",
+   "status": "planned",
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202606 EMEA FSI - Fund launch ETF GLIS - wholesale - Clone",
+   "status": "planned",
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "202606 FSI HubSpot test campaign",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "20260601 test campaign",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - full campaign test 3",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2027-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - TEMPLATE - Simple Email",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2027-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - TEMPLATE - Simple Email - Clone 406",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2027-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - TEMPLATE clean",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2027-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - TEMPLATE clean - Video",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2027-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "Email drip campaign - test",
+   "status": null,
+   "startDate": "2026-05-11 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "FSG WhatsApp",
+   "status": null,
+   "startDate": "2025-01-01 00:00:00+00:00",
+   "endDate": null
+  },
+  {
+   "name": "GLOBAL 2026 FSG - First Sentier Foundation - test 2",
+   "status": null,
+   "startDate": "2026-05-06 00:00:00+00:00",
+   "endDate": null
+  },
+  {
+   "name": "GLOBAL 2026 FSG - First Sentier Foundation enquiry form - FSG.com",
+   "status": null,
+   "startDate": "2026-05-06 00:00:00+00:00",
+   "endDate": null
+  },
+  {
+   "name": "New Fund Launch Collaboration",
+   "status": "in_progress",
+   "startDate": null,
+   "endDate": null
+  },
+  {
+   "name": "Test May",
+   "status": "planned",
+   "startDate": "2026-06-16 00:00:00+00:00",
+   "endDate": "2026-06-30 00:00:00+00:00"
+  },
+  {
+   "name": "Testing campaign",
+   "status": null,
+   "startDate": "2026-05-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  }
+ ],
+ "recentEmails": [
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-03-30 08:25:46+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-03-30 08:23:47+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-03-30 15:20:53+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-03-30 08:27:56+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-08 05:44:57+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-05-05 00:12:40+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-10 04:16:06+00:00"
+  },
+  {
+   "name": "Test email - May",
+   "subject": "FSI - First Test",
+   "state": "DRAFT",
+   "publishDate": "2026-04-22 01:13:00+00:00"
+  },
+  {
+   "name": "FSI News",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-13 06:59:49+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-13 08:56:05+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-14 13:53:26+00:00"
+  },
+  {
+   "name": "FSI - AEG Event 16 March 2026 [Thank You Email]",
+   "subject": "Thanks for your registration.",
+   "state": "AUTOMATED",
+   "publishDate": "2026-04-24 02:36:22+00:00"
+  },
+  {
+   "name": "Email FSG test Jasmine",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-16 04:52:11+00:00"
+  },
+  {
+   "name": "Email RQI Monthly newsletter test - Jasmine",
+   "subject": "Test email - RQI Monthly newsletter for {{ personalization_token('contact.firstname', 'you') }}",
+   "state": "DRAFT",
+   "publishDate": "2026-04-20 08:38:51+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-16 15:05:35+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-17 03:39:08+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-20 12:55:16+00:00"
+  },
+  {
+   "name": "Samuel Test Template",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-22 04:36:10+00:00"
+  },
+  {
+   "name": "FSI - Master Template - test JA",
+   "subject": "FSI - Master Template - test JA",
+   "state": "DRAFT",
+   "publishDate": "2026-04-22 10:04:02+00:00"
+  },
+  {
+   "name": "RQI Template - Email RQI Monthly newsletter test - Jasmine (Clone)",
+   "subject": "Test email - RQI Monthly newsletter for {{ personalization_token('contact.firstname', 'you') }}",
+   "state": "DRAFT",
+   "publishDate": "2026-04-22 06:49:22+00:00"
+  },
+  {
+   "name": "FSI - News Template - For Design (Clone for Ed)",
+   "subject": "FSI - News Template - For Design",
+   "state": "DRAFT_AB",
+   "publishDate": "2026-04-22 07:55:30+00:00"
+  },
+  {
+   "name": "FSI - News Template - For Design (Clone for Ed)",
+   "subject": "Insights & Webinar: Boost Your Investment Returns",
+   "state": "DRAFT_AB_VARIANT",
+   "publishDate": "2026-04-22 07:55:30+00:00"
+  },
+  {
+   "name": "FSI - Master Template - For Design (Rich & Gav)",
+   "subject": "FSI - Master Template - For Design",
+   "state": "DRAFT",
+   "publishDate": "2026-04-28 13:42:57+00:00"
+  },
+  {
+   "name": "FSI - EOFY event email test JA",
+   "subject": "FSI - News Template - For Design",
+   "state": "DRAFT",
+   "publishDate": "2026-05-05 02:14:48+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-24 03:26:39+00:00"
+  },
+  {
+   "name": "FSI - News Template - For Design (Rich & Gav)",
+   "subject": "FSI - News Template - For Design",
+   "state": "DRAFT",
+   "publishDate": "2026-04-28 13:40:48+00:00"
+  },
+  {
+   "name": "FSI - Invite Template - For Design (Rich & Gav)",
+   "subject": "FSI - Invite Template - For Design",
+   "state": "DRAFT",
+   "publishDate": "2026-04-29 23:55:13+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-28 15:11:05+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-29 15:06:42+00:00"
+  },
+  {
+   "name": "Josie Test - FSG",
+   "subject": "Let’s celebrate! Join us for EOFY drinks",
+   "state": "DRAFT_AB",
+   "publishDate": "2026-04-29 05:47:03+00:00"
+  },
+  {
+   "name": "Josie Test - FSG",
+   "subject": "Join Us for Australian Equities Growth Reporting Season Update",
+   "state": "DRAFT_AB_VARIANT",
+   "publishDate": "2026-04-29 05:47:03+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-29 07:46:56+00:00"
+  },
+  {
+   "name": "FSI - Invite Template - Josie test",
+   "subject": "FSI - Invite Template - For Design",
+   "state": "DRAFT",
+   "publishDate": "2026-04-30 00:55:33+00:00"
+  },
+  {
+   "name": "FSI - News Template - Josie CPD",
+   "subject": "FSI - News Template - For Design",
+   "state": "DRAFT",
+   "publishDate": "2026-04-30 01:09:44+00:00"
+  },
+  {
+   "name": "FSI - Master Template - For Design (Judi)",
+   "subject": "FSI - Master Template - For Design",
+   "state": "DRAFT",
+   "publishDate": "2026-04-30 01:26:19+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-30 09:36:17+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-04-30 09:29:23+00:00"
+  },
+  {
+   "name": "FSSA - Master template - For review",
+   "subject": "FSSA - Master Template - For review",
+   "state": "DRAFT",
+   "publishDate": "2026-06-08 07:26:18+00:00"
+  },
+  {
+   "name": "New email",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-05-01 01:33:12+00:00"
+  },
+  {
+   "name": "Apply branding test - FSG",
+   "subject": null,
+   "state": "DRAFT",
+   "publishDate": "2026-05-04 02:16:41+00:00"
+  }
+ ]
+}
