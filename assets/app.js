@@ -278,9 +278,9 @@
   }
 
   // --- Row 1: featured campaign + 3 channel cards ---
-  const f = D.featured;
-  const featuredCard =
-    `<div class="ds-glass ds-card" data-href="campaign.html?id=rqi-asia-ph2" style="cursor:pointer;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
+  function mkFeatured() {
+   const f = D.featured;
+   return `<div class="ds-glass ds-card" data-href="${f.href || 'campaign.html?id=rqi-asia-ph2'}" style="cursor:pointer;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
        <div style="display:flex;align-items:flex-start;justify-content:space-between">
          <div>
            <div style="display:flex;align-items:center;gap:8px">
@@ -303,9 +303,10 @@
            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
        </div>
      </div>`;
+  }
 
-  const chTab = { search: 'search', website: 'website', email: 'leads' };
-  const channelCards = D.channelCards.map((c) =>
+  const chTab = { search: 'search', website: 'website', email: 'leads', linkedin: 'social', competitor: 'search' };
+  function mkChannelCards() { return D.channelCards.map((c) =>
     `<div class="ds-glass ds-card" data-href="channel.html?tab=${chTab[c.id] || 'website'}" style="cursor:pointer;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between">
        <div style="display:flex;align-items:flex-start;justify-content:space-between">
          <div style="display:flex;align-items:center;gap:7px">
@@ -316,11 +317,12 @@
          ${drill}
        </div>
        <div style="display:flex;gap:16px;margin-top:12px">${c.gauges.map(ring).join('')}</div>
-       <div style="font-size:10.5px;color:var(--ds-positive);margin-top:11px">${c.delta} vs prior quarter</div>
+       <div style="font-size:10.5px;color:var(--ds-positive);margin-top:11px">${c.deltaText || (c.delta + ' vs prior quarter')}</div>
      </div>`
-  ).join('');
+  ).join(''); }
 
-  document.getElementById('rail-row1').innerHTML = featuredCard + channelCards;
+  function renderRow1() { document.getElementById('rail-row1').innerHTML = mkFeatured() + mkChannelCards(); }
+  renderRow1();
 
   // --- Row 2: analytics widgets ---
   function widgetShell(w, chart, footer, href) {
@@ -382,17 +384,81 @@
        </div>`).join('') + `</div>`;
   }
 
-  const W = D.widgets;
-  document.getElementById('rail-row2').innerHTML =
-    widgetShell(W.reachAnalysis, barsChart(W.reachAnalysis), W.reachAnalysis.footer, 'channel.html?tab=display') +
-    widgetShell(W.funnelHealth, funnelChart(W.funnelHealth), W.funnelHealth.footer, 'channel.html?tab=website') +
-    widgetShell(W.costPerLead, linesChart(W.costPerLead), W.costPerLead.footer, 'channel.html?tab=leads') +
-    widgetShell(W.shareOfVoice, peerChart(W.shareOfVoice), W.shareOfVoice.footer, 'channel.html?tab=search');
+  function renderRow2() {
+    const W = D.widgets;
+    document.getElementById('rail-row2').innerHTML =
+      widgetShell(W.reachAnalysis, barsChart(W.reachAnalysis), W.reachAnalysis.footer, 'channel.html?tab=display') +
+      widgetShell(W.funnelHealth, funnelChart(W.funnelHealth), W.funnelHealth.footer, 'channel.html?tab=website') +
+      widgetShell(W.costPerLead, linesChart(W.costPerLead), W.costPerLead.footer, 'channel.html?tab=leads') +
+      widgetShell(W.shareOfVoice, peerChart(W.shareOfVoice), W.shareOfVoice.footer, 'channel.html?tab=search');
+  }
+  renderRow2();
+
+  /* ======================================================================
+     LIVE DATA HYDRATION — swap dummy widgets for the DataHub feeds
+     ====================================================================== */
+  if (window.HUB_LIVE) window.HUB_LIVE.ready.then((L) => {
+    const F = HUB_LIVE.fmt, SUM = HUB_LIVE.sum, PCT = HUB_LIVE.pct;
+
+    // -- Row 1: live channel cards (Website · LinkedIn · Competitor ads) ----
+    const cards = [];
+    if (L.website && L.website.byBrand && L.website.byBrand.length) {
+      const s = SUM(L.website.byBrand, 'sessions'), u = SUM(L.website.byBrand, 'users');
+      cards.push({ id: 'website', title: 'Website', status: 'LIVE · GA4',
+        gauges: [{ label: 'Sessions', value: F(s), pct: 74, tone: 'accent' },
+                 { label: 'Users', value: F(u), pct: 66, tone: 'cyan' }],
+        deltaText: `${L.website.byBrand.length} brands · GA4` });
+    }
+    if (L.linkedin && L.linkedin.byBrand && L.linkedin.byBrand.length) {
+      const imp = SUM(L.linkedin.byBrand, 'impressions'), sp = SUM(L.linkedin.byBrand, 'spend');
+      cards.push({ id: 'linkedin', title: 'LinkedIn', status: 'LIVE · paid',
+        gauges: [{ label: 'Impressions', value: F(imp), pct: 82, tone: 'accent' },
+                 { label: 'Spend', value: 'GBP ' + F(sp), pct: 48, tone: 'cyan' }],
+        deltaText: `${(L.linkedin.topCreatives || []).length} live creatives` });
+    }
+    if (L.competitor && L.competitor.byBrand && L.competitor.byBrand.length) {
+      const ads = SUM(L.competitor.byBrand, 'ads'), comp = SUM(L.competitor.byBrand, 'competitors');
+      cards.push({ id: 'competitor', title: 'Competitor ads', status: 'LIVE',
+        gauges: [{ label: 'Ads tracked', value: F(ads), pct: 70, tone: 'accent' },
+                 { label: 'Competitors', value: String(comp), pct: 40, tone: 'cyan' }],
+        deltaText: 'Google Ads Transparency' });
+    }
+    if (cards.length) {
+      D.channelCards = cards;
+      // Feature the biggest live paid push — LinkedIn — on the featured card.
+      if (L.linkedin && L.linkedin.byBrand && L.linkedin.byBrand.length) {
+        const top = L.linkedin.byBrand[0];
+        D.featured = { name: 'LinkedIn advertising — ' + (top.label || top.brand),
+          brand: top.label || top.brand, channel: 'LinkedIn Ads', status: 'LIVE',
+          reach: F(SUM(L.linkedin.byBrand, 'impressions')),
+          href: 'channel.html?tab=social',
+          description: `Live paid activity across ${L.linkedin.byBrand.length} brands — `
+            + `GBP ${F(SUM(L.linkedin.byBrand, 'spend'))} spend, `
+            + `${F(SUM(L.linkedin.byBrand, 'clicks'))} clicks. Historic reach to 2022.` };
+      }
+      renderRow1();
+    }
+
+    // -- Row 2: Share of voice → live competitor ad volume ------------------
+    if (L.competitor && L.competitor.byCompetitor && L.competitor.byCompetitor.length) {
+      const peersRaw = L.competitor.byCompetitor.slice(0, 5);
+      const tot = peersRaw.reduce((a, p) => a + (p.ads || 0), 0) || 1;
+      D.widgets.shareOfVoice = {
+        title: 'Competitor ad volume', subtitle: 'Share of top-5 peer ads (Google)',
+        peers: peersRaw.map((p) => ({ name: p.competitor.slice(0, 12), pct: Math.round((p.ads / tot) * 100) })),
+        footer: `${SUM(L.competitor.byBrand, 'ads')} competitor ads tracked`,
+      };
+      renderRow2();
+    }
+  });
 
   // Card navigation (drill-in ↗ opens a detail screen) — with a fade
   function navTo(url) { document.body.classList.add('dh-fadeout'); setTimeout(() => { location.href = url; }, 240); }
-  document.querySelectorAll('[data-href]').forEach((el) => {
-    el.addEventListener('click', () => navTo(el.dataset.href));
+  // Delegated so re-rendered (live-hydrated) cards stay navigable.
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest || e.target.closest('.tip-go')) return;   // .tip-go handled above
+    const card = e.target.closest('[data-href]');
+    if (card) navTo(card.dataset.href);
   });
 
   /* ---- Boot: load the Channel tracker feed and drive the map ----------- */
