@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 import shutil
 import sys
 from datetime import datetime, timezone
@@ -33,6 +34,11 @@ csv.field_size_limit(10_000_000)
 
 def _now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _slug(s: str) -> str:
+    """Match the scraper's slug so scraped creatives line up by competitor."""
+    return re.sub(r"[^a-z0-9]+", "_", (s or "").lower()).strip("_")
 
 
 def read_csv(path: Path) -> list[dict]:
