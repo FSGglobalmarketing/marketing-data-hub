@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-06T08:34:50Z",
+ "generatedAt": "2026-07-06T10:39:32Z",
  "source": "Google Ads Transparency Center",
  "byBrand": [
   {
@@ -38,229 +38,267 @@
    "brand": "igneo",
    "competitor": "J.P. Morgan",
    "ads": 532,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/11548021366167637292"
   },
   {
    "brand": "stewart",
    "competitor": "Fidelity Asian Values",
    "ads": 532,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/5699466655159972127"
   },
   {
    "brand": "stewart",
    "competitor": "J.P. Morgan",
    "ads": 532,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/11548021366167637292"
   },
   {
    "brand": "fssa",
    "competitor": "Invesco",
    "ads": 266,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://s0.2mdn.net/15294271/INV_Investment_trust_Programmatic-UK_Set_Your_Clock-NA-Discover_More_UK_static_970x250.jpg"
   },
   {
    "brand": "fssa",
    "competitor": "Aberdeen",
    "ads": 226,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://s0.2mdn.net/8433256/SLA1718746_300x600a.gif"
   },
   {
    "brand": "stewart",
    "competitor": "F&C",
    "ads": 182,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/417780548064229478"
   },
   {
    "brand": "stewart",
    "competitor": "Baillie Gifford",
    "ads": 144,
-   "lastShown": "2026-07-01"
+   "lastShown": "2026-07-01",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/2239425197151103783"
   },
   {
    "brand": "fssa",
    "competitor": "Schroders",
    "ads": 121,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/10313620883973379984"
   },
   {
    "brand": "stewart",
    "competitor": "Schroders",
    "ads": 121,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/10313620883973379984"
   },
   {
    "brand": "fsi",
    "competitor": "UBS",
    "ads": 119,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/8197271370422430657"
   },
   {
    "brand": "fsi",
    "competitor": "iShares (BlackRock)",
    "ads": 116,
-   "lastShown": "2026-07-05"
+   "lastShown": "2026-07-05",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/7249848757947945895"
   },
   {
    "brand": "fssa",
    "competitor": "Janus Henderson",
    "ads": 102,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3200742376356377095"
   },
   {
    "brand": "stewart",
    "competitor": "TEMIT",
    "ads": 76,
-   "lastShown": "2026-07-05"
+   "lastShown": "2026-07-05",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/16636883293391856566"
   },
   {
    "brand": "igneo",
    "competitor": "Macquarie",
    "ads": 64,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/4874860083163635909"
   },
   {
    "brand": "fsi",
    "competitor": "Macquarie Asset Management",
    "ads": 64,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/4874860083163635909"
   },
   {
    "brand": "stewart",
    "competitor": "Wellington",
    "ads": 57,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/9862695714404297481"
   },
   {
    "brand": "stewart",
    "competitor": "Guinness Global Investors",
    "ads": 54,
-   "lastShown": "2026-07-05"
+   "lastShown": "2026-07-05",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/16770572497782210918"
   },
   {
    "brand": "fssa",
    "competitor": "Artemis",
    "ads": 39,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/10434795491171633223"
   },
   {
    "brand": "fssa",
    "competitor": "Ninety One",
    "ads": 39,
-   "lastShown": "2026-03-26"
+   "lastShown": "2026-03-26",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3276543213126891044"
   },
   {
    "brand": "stewart",
    "competitor": "Ninety One",
    "ads": 39,
-   "lastShown": "2026-03-26"
+   "lastShown": "2026-03-26",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3276543213126891044"
   },
   {
    "brand": "stewart",
    "competitor": "Scottish Mortgage",
    "ads": 31,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/12116434748104620326"
   },
   {
    "brand": "fssa",
    "competitor": "M&G",
    "ads": 29,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/1953533077890685000"
   },
   {
    "brand": "fssa",
    "competitor": "Quilter",
    "ads": 29,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/15101263143300404948"
   },
   {
    "brand": "stewart",
    "competitor": "Pictet Asset Management",
    "ads": 27,
-   "lastShown": "2026-07-05"
+   "lastShown": "2026-07-05",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/6221889871285003740"
   },
   {
    "brand": "fssa",
    "competitor": "Jupiter",
    "ads": 20,
-   "lastShown": "2026-06-07"
+   "lastShown": "2026-06-07",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/8937168711122530650"
   },
   {
    "brand": "stewart",
    "competitor": "Federated Hermes",
    "ads": 18,
-   "lastShown": "2026-05-23"
+   "lastShown": "2026-05-23",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/15255517662504952066"
   },
   {
    "brand": "igneo",
    "competitor": "KKR",
    "ads": 14,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/15114678627671549566"
   },
   {
    "brand": "fsi",
    "competitor": "EQT AB Group",
    "ads": 9,
-   "lastShown": "2026-06-26"
+   "lastShown": "2026-06-26",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3391901963617958046"
   },
   {
    "brand": "fsi",
    "competitor": "Robeco",
    "ads": 9,
-   "lastShown": "2026-07-05"
+   "lastShown": "2026-07-05",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/16605321005975606579"
   },
   {
    "brand": "stewart",
    "competitor": "Robeco",
    "ads": 9,
-   "lastShown": "2026-07-05"
+   "lastShown": "2026-07-05",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/16605321005975606579"
   },
   {
    "brand": "rqi",
    "competitor": "AllianceBernstein",
    "ads": 6,
-   "lastShown": "2025-12-17"
+   "lastShown": "2025-12-17",
+   "sampleImage": "https://s0.2mdn.net/10511252/US_EN_Insights_Static_OnTheMuni_300x600.jpg"
   },
   {
    "brand": "igneo",
    "competitor": "Ardian",
    "ads": 3,
-   "lastShown": "2025-12-18"
+   "lastShown": "2025-12-18",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3842298188235688020"
   },
   {
    "brand": "fsi",
    "competitor": "Ardian",
    "ads": 3,
-   "lastShown": "2025-12-18"
+   "lastShown": "2025-12-18",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3842298188235688020"
   },
   {
    "brand": "igneo",
    "competitor": "Stonepeak",
    "ads": 2,
-   "lastShown": "2026-07-06"
+   "lastShown": "2026-07-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/852206539277671291"
   },
   {
    "brand": "fssa",
    "competitor": "Lazard",
    "ads": 2,
-   "lastShown": "2026-05-01"
+   "lastShown": "2026-05-01",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/12049860127163172566"
   },
   {
    "brand": "stewart",
    "competitor": "Nordea Asset Management",
    "ads": 2,
-   "lastShown": "2026-06-18"
+   "lastShown": "2026-06-18",
+   "sampleImage": "https://s0.2mdn.net//8701942/9ea341e6-03da-4c1f-9c62-7c7614e22f4c.png"
   },
   {
    "brand": "rqi",
    "competitor": "AQR Capital Management",
    "ads": 1,
-   "lastShown": "2025-12-31"
+   "lastShown": "2025-12-31",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/5394419405978685676"
   },
   {
    "brand": "fsi",
    "competitor": "Vanguard",
    "ads": 1,
-   "lastShown": "2025-11-06"
+   "lastShown": "2025-11-06",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/4101002914249859224"
   }
  ],
  "sampleAds": [
