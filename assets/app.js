@@ -154,7 +154,7 @@
       const pills = [['Type', 'Competitor · LinkedIn', '#'], ['Peer of', (c.brand || '').toUpperCase(), '#'],
                      ['Ads live', c.ads, '#'], ['Top market', c.topCountry, '#']];
       m.bindTooltip(pinHtml({ title: c.competitor, pills }), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
-      m.bindPopup(pinHtml({ title: c.competitor, pills, arrowHref: c.advertiserUrl || null }), { className: 'ds-pop', closeButton: false, offset: [0, -6] });
+      m.bindPopup(pinHtml({ title: c.competitor, pills, img: c.sampleImage, arrowHref: c.advertiserUrl || null }), { className: 'ds-pop', closeButton: false, offset: [0, -6] });
       m._c = c;
       return m;
     });

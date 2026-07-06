@@ -237,8 +237,9 @@ def build_competitor_ads(src: Path) -> dict:
 # --------------------------------------------------------------------------- #
 # LinkedIn Ad Library -> competitor-linkedin.json (competitor LinkedIn ads + geo)
 # --------------------------------------------------------------------------- #
-def build_competitor_linkedin(src: Path) -> dict:
+def build_competitor_linkedin(src: Path, img_out: Path) -> dict:
     rows = read_csv(src / "linkedin-API" / "data" / "competitor_linkedin_ads" / "latest.csv")
+    media_dir = src / "linkedin-API" / "data" / "competitor_li_media"   # scraped creatives
     by_comp: dict[tuple, dict] = {}
     for r in rows:
         bid = brand_id(r.get("brand"))
@@ -257,6 +258,15 @@ def build_competitor_linkedin(src: Path) -> dict:
         ranked = sorted(c.pop("_countries").items(), key=lambda kv: -kv[1])
         c["topCountry"] = ranked[0][0] if ranked else None
         c["countries"] = [{"country": k, "count": v} for k, v in ranked[:6]]
+        # A scraped creative image for this competitor, if the scraper produced one.
+        cslug = _slug(c["competitor"])
+        srcimg = media_dir / f"{cslug}.jpg"
+        c["sampleImage"] = None
+        if srcimg.exists():
+            dest = img_out / "competitor_li" / f"{cslug}.jpg"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(srcimg, dest)
+            c["sampleImage"] = f"assets/img/competitor_li/{cslug}.jpg"
         comps.append(c)
     by_brand: dict[str, dict] = {}
     for c in comps:
@@ -350,7 +360,7 @@ def main() -> None:
         "website.json": build_website(src),
         "linkedin.json": build_linkedin(src, img),
         "competitor-ads.json": build_competitor_ads(src),
-        "competitor-linkedin.json": build_competitor_linkedin(src),
+        "competitor-linkedin.json": build_competitor_linkedin(src, img),
         "alphix.json": build_alphix(src),
         "hubspot.json": build_hubspot(src),
     }
