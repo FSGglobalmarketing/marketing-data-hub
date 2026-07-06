@@ -33,7 +33,7 @@ window.HUB_DATA = (function () {
   ];
 
   /* Semantic marker colours (status, not brand) — match tokens.css ---------*/
-  const C = { active: '#f4ad44', growing: '#5ec8e6', peer: '#9db2cc' };
+  const C = { active: '#f4ad44', growing: '#35cdee', peer: '#9db2cc' };
 
   /* ---- Campaigns / map markers ------------------------------------------ */
   /* strategy 'competitor' + brand 'peer' => neutral marker, shown under

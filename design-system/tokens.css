@@ -52,11 +52,23 @@
   --ds-accent-ink:    #0c1f39;   /* text/icon ON amber                        */
   --ds-accent-soft:   rgba(242, 163, 68, .16);  /* amber wash (badges/hover)  */
   --ds-accent-border: rgba(242, 163, 68, .35);
-  --ds-cyan:          #5ec8e6;   /* secondary data / "share of voice growing" */
-  --ds-cyan-soft:     rgba(70, 183, 216, .16);
-  --ds-positive:      #7fdca0;   /* deltas up / good                          */
+  --ds-cyan:          #35cdee;   /* info / secondary data (official)          */
+  --ds-cyan-soft:     rgba(53, 205, 238, .16);
+  --ds-positive:      #35e88b;   /* deltas up / good (official green)         */
+  --ds-positive-soft: rgba(53, 232, 139, .16);
+  --ds-negative:      #ff5c6e;   /* deltas down / bad (official coral)        */
+  --ds-negative-ink:  #ff8a80;   /* negative text                             */
+  --ds-negative-soft: rgba(255, 92, 110, .16);
   --ds-neutral:       #9db2cc;   /* competitor / peer / inactive marker       */
   --ds-chart-bar:     #3a5c82;   /* muted bars & non-highlighted series       */
+
+  /* Official categorical data / chart palette */
+  --ds-data-1: #f4ad44;   /* amber   */
+  --ds-data-2: #35cdee;   /* cyan    */
+  --ds-data-3: #e96bff;   /* magenta */
+  --ds-data-4: #35e88b;   /* green   */
+  --ds-data-5: #5b6cff;   /* indigo  */
+  --ds-data-6: #ff5c6e;   /* coral   */
 
   /* ---- Text ramp (on dark) ---- */
   --ds-ink:    #ffffff;   /* max                                             */
@@ -234,8 +246,8 @@ body {
 .ds-map-scrim {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
-    radial-gradient(44% 42% at 70% 30%, rgba(242,163,60,.13), transparent 70%),
-    radial-gradient(42% 40% at 25% 36%, rgba(70,183,216,.11), transparent 70%),
+    radial-gradient(44% 42% at 70% 30%, rgba(244,173,68,.13), transparent 70%),
+    radial-gradient(42% 40% at 25% 36%, rgba(53,205,238,.11), transparent 70%),
     linear-gradient(180deg, rgba(8,20,39,.62) 0%, rgba(8,20,39,.12) 26%,
                             rgba(8,20,39,.30) 70%, rgba(8,20,39,.78) 100%);
 }

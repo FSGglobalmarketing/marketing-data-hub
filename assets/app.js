@@ -43,7 +43,7 @@
   /* ---- Activity → map marker mapping (Channel tracker feed) ------------ */
   const REGION = { ANZ: [-33.87, 151.21], UK: [51.51, -0.13], EMEA: [50.11, 8.68], US: [40.71, -74.01], Global: [22, 6], HK: [22.32, 114.17] };
   const PEER_C = '#9db2cc';                                  // Google competitor peer colour
-  const LI_PEER_C = '#7aa0d8';                               // LinkedIn competitor peer colour
+  const LI_PEER_C = '#5b6cff';                               // LinkedIn competitor peer colour (data indigo)
   const BRAND_REGION = { igneo: 'EMEA', fsi: 'ANZ', fssa: 'HK', rqi: 'Global', stewart: 'UK' };
   // Country centroids (ISO-2) for placing LinkedIn competitor ads by real geography.
   const COUNTRY = { GB: [54.0, -2.0], US: [39.8, -98.6], DE: [51.2, 10.4], FR: [46.6, 2.4],
@@ -51,7 +51,7 @@
     SE: [62.0, 15.0], AU: [-25.3, 133.8], HK: [22.3, 114.2], SG: [1.35, 103.8], JP: [36.2, 138.3],
     CN: [35.9, 104.2], IN: [22.6, 79.0], CA: [56.1, -106.3], AE: [23.4, 53.8], LU: [49.8, 6.1],
     BE: [50.6, 4.7], NO: [61.0, 8.5], DK: [56.0, 10.0], FI: [64.0, 26.0], ZA: [-30.6, 22.9] };
-  const COLOR  = { 'Live': '#f4ad44', 'In progress': '#5ec8e6', 'Complete': '#7fdca0', 'Draft': '#9db2cc' };
+  const COLOR  = { 'Live': '#f4ad44', 'In progress': '#35cdee', 'Complete': '#35e88b', 'Draft': '#9db2cc' };
   const colorFor = (s) => COLOR[s] || '#7e93ac';
   const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const fmtDate = (x) => { if (!x) return null; const b = x.split('-'); return `${+b[2]} ${MON[+b[1] - 1]} ${b[0]}`; };
@@ -274,9 +274,9 @@
               <span class="ds-tbtn" id="flyout-close" style="width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px">✕</span>
             </div>
             ${item('#f4ad44', 'Live')}
-            ${item('#5ec8e6', 'In progress')}
+            ${item('#35cdee', 'In progress')}
             ${item('#c9d4e2', 'Draft')}
-            ${item('#7fdca0', 'Complete')}
+            ${item('#35e88b', 'Complete')}
             ${item('#7e93ac', 'Planned')}
             ${item(PEER_C, 'Competitor ad (Google)')}
             ${item(LI_PEER_C, 'Competitor ad (LinkedIn)')}`;
