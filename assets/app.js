@@ -57,19 +57,37 @@
   const fmtDate = (x) => { if (!x) return null; const b = x.split('-'); return `${+b[2]} ${MON[+b[1] - 1]} ${b[0]}`; };
   const fmtRange = (a) => { const s = fmtDate(a.startDate), e = fmtDate(a.endDate) || fmtDate(a.goLive); return s && e ? `${s} – ${e}` : (s || e || ''); };
 
-  // Pin info — Title, Channel, Audience, Status, Activated + a drill ↗ (mock).
-  const ARROW = `<a class="tip-go" data-href="campaign.html?id=rqi-asia-ph2" title="Open activity"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M7 17L17 7M9 7h8v8"/></svg></a>`;
-  function infoHtml(a, withArrow) {
-    const row = (k, v) => `<div class="tip-row"><span>${k}</span><b>${v || '—'}</b></div>`;
-    return `<div class="tip-head"><div class="tip-t">${a.title || 'Untitled'}${a.keyActivity ? ' <span style="color:#f4ad44">★</span>' : ''}</div>${withArrow ? ARROW : ''}</div>
-      ${row('Channel', a.channel)}${row('Audience', a.audience)}${row('Status', a.status || 'Planned')}${row('Activated', fmtDate(a.goLive))}`;
+  // Taxonomy pill — a linkable chip. href defaults to '#' (future parent page).
+  function pill(label, val, href) {
+    if (val === undefined || val === null || val === '') return '';
+    return `<a href="${href || '#'}" class="tip-pill" style="display:inline-flex;align-items:baseline;gap:5px;`
+      + `padding:3px 9px;margin:3px 4px 0 0;border-radius:999px;background:rgba(255,255,255,.07);`
+      + `border:1px solid rgba(255,255,255,.12);font-size:10px;text-decoration:none;white-space:nowrap">`
+      + `<span style="color:var(--ds-ink-5)">${label}</span><b style="color:var(--ds-ink-1);font-weight:600">${val}</b></a>`;
+  }
+  // Info box: title (+ drill ↗), a row of linkable taxonomy pills, optional creative.
+  function pinHtml(o) {
+    const arrow = o.arrowHref
+      ? `<a class="tip-go" data-href="${o.arrowHref}" title="Open"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M7 17L17 7M9 7h8v8"/></svg></a>`
+      : '';
+    const pills = (o.pills || []).map((p) => pill(p[0], p[1], p[2])).join('');
+    const img = o.img
+      ? `<img src="${o.img}" loading="lazy" onerror="this.remove()" style="display:block;width:100%;max-height:118px;object-fit:cover;border-radius:8px;margin-top:9px;border:1px solid rgba(255,255,255,.1)"/>`
+      : '';
+    return `<div class="tip-head"><div class="tip-t">${o.title || 'Untitled'}${o.star ? ' <span style="color:#f4ad44">★</span>' : ''}</div>${arrow}</div>`
+      + `<div style="display:flex;flex-wrap:wrap;max-width:236px">${pills}</div>${img}`;
+  }
+  function activityInfo(a, withArrow) {
+    return pinHtml({ title: a.title, star: a.keyActivity,
+      arrowHref: withArrow ? 'campaign.html?id=rqi-asia-ph2' : null,
+      pills: [['Channel', a.channel], ['Brand', a.affiliate], ['Region', a.region],
+              ['Audience', a.audience], ['Status', a.status || 'Planned'], ['Strategy', a.strategy]] });
   }
 
-  // Cluster when activities share a market; zooming in unclusters. Clicking a
-  // cluster opens a scrollable glass grid of every activity in that market.
+  // Cluster when pins share a market; clicking a cluster ZOOMS IN (no popup).
   const layer = L.markerClusterGroup({
     maxClusterRadius: 46, showCoverageOnHover: false, spiderfyOnMaxZoom: false,
-    zoomToBoundsOnClick: false, disableClusteringAtZoom: 7, chunkedLoading: true,
+    zoomToBoundsOnClick: true, disableClusteringAtZoom: 7, chunkedLoading: true,
     iconCreateFunction: (c) => L.divIcon({ html: `<div class="ds-cluster">${c.getChildCount()}</div>`, className: 'ds-cluster-wrap', iconSize: [38, 38] }),
   }).addTo(map);
   let markers = [];
@@ -88,8 +106,8 @@
       const html = `<span class="ring" style="--c:${color};width:${ring}px;height:${ring}px;margin:${-ring/2}px 0 0 ${-ring/2}px"></span>`
         + `<span class="dot" style="--c:${color};width:${dot}px;height:${dot}px"></span>`;
       const m = L.marker([lat, lng], { icon: L.divIcon({ className: 'ds-pin', iconSize: [dot, dot], iconAnchor: [dot/2, dot/2], html }) });
-      m.bindTooltip(infoHtml(a, false), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
-      m.bindPopup(infoHtml(a, true), { className: 'ds-pop', closeButton: false, offset: [0, -6] });  // click → stays open, has ↗
+      m.bindTooltip(activityInfo(a, false), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m.bindPopup(activityInfo(a, true), { className: 'ds-pop', closeButton: false, offset: [0, -6] });
       m._a = a;
       return m;
     });
@@ -110,12 +128,9 @@
       const html = `<span class="ring" style="--c:${PEER_C};width:${sz * 2}px;height:${sz * 2}px;margin:${-sz}px 0 0 ${-sz}px;opacity:.45"></span>`
         + `<span class="dot" style="--c:${PEER_C};width:${sz}px;height:${sz}px"></span>`;
       const m = L.marker([lat, lng], { icon: L.divIcon({ className: 'ds-pin', iconSize: [sz, sz], iconAnchor: [sz / 2, sz / 2], html }) });
-      const tip = `<div class="tip-head"><div class="tip-t">${c.competitor} <span style="color:${PEER_C}">◆</span></div></div>`
-        + `<div class="tip-row"><span>Type</span><b>Competitor · Google ads</b></div>`
-        + `<div class="tip-row"><span>Peer of</span><b>${(c.brand || '').toUpperCase()}</b></div>`
-        + `<div class="tip-row"><span>Ads live</span><b>${c.ads}</b></div>`;
-      m.bindTooltip(tip, { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
-      m.bindPopup(tip, { className: 'ds-pop', closeButton: false, offset: [0, -6] });
+      const pills = [['Type', 'Competitor · Google', '#'], ['Peer of', (c.brand || '').toUpperCase(), '#'], ['Ads live', c.ads, '#']];
+      m.bindTooltip(pinHtml({ title: c.competitor, pills }), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m.bindPopup(pinHtml({ title: c.competitor, pills, img: c.sampleImage }), { className: 'ds-pop', closeButton: false, offset: [0, -6] });
       m._c = c;
       return m;
     });
@@ -136,26 +151,16 @@
       const html = `<span class="ring" style="--c:${LI_PEER_C};width:${sz * 2}px;height:${sz * 2}px;margin:${-sz}px 0 0 ${-sz}px;opacity:.45"></span>`
         + `<span class="dot" style="--c:${LI_PEER_C};width:${sz}px;height:${sz}px"></span>`;
       const m = L.marker([lat, lng], { icon: L.divIcon({ className: 'ds-pin', iconSize: [sz, sz], iconAnchor: [sz / 2, sz / 2], html }) });
-      const tip = `<div class="tip-head"><div class="tip-t">${c.competitor} <span style="color:${LI_PEER_C}">in</span></div></div>`
-        + `<div class="tip-row"><span>Type</span><b>Competitor · LinkedIn ads</b></div>`
-        + `<div class="tip-row"><span>Peer of</span><b>${(c.brand || '').toUpperCase()}</b></div>`
-        + `<div class="tip-row"><span>Ads live</span><b>${c.ads}</b></div>`
-        + `<div class="tip-row"><span>Top market</span><b>${c.topCountry || '—'}</b></div>`;
-      m.bindTooltip(tip, { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
-      m.bindPopup(tip, { className: 'ds-pop', closeButton: false, offset: [0, -6] });
+      const pills = [['Type', 'Competitor · LinkedIn', '#'], ['Peer of', (c.brand || '').toUpperCase(), '#'],
+                     ['Ads live', c.ads, '#'], ['Top market', c.topCountry, '#']];
+      m.bindTooltip(pinHtml({ title: c.competitor, pills }), { className: 'ds-tip', direction: 'top', offset: [0, -8], opacity: 1 });
+      m.bindPopup(pinHtml({ title: c.competitor, pills, arrowHref: c.advertiserUrl || null }), { className: 'ds-pop', closeButton: false, offset: [0, -6] });
       m._c = c;
       return m;
     });
   }
 
-  layer.on('clusterclick', (e) => {
-    const kids = e.layer.getAllChildMarkers();
-    const grid = `<div class="cluster-grid">${kids.map((m) => `<div class="tip-card">${infoHtml(m._a, true)}</div>`).join('')}</div>`;
-    L.popup({ className: 'ds-cluster-pop', autoClose: true, offset: [0, -4], maxWidth: 340 })
-      .setLatLng(e.latlng).setContent(grid).openOn(map);
-  });
-
-  // drill ↗ inside any popup / cluster card → open the activity (mock target)
+  // drill ↗ inside any popup → open the target (mock)
   document.addEventListener('click', (e) => {
     const go = e.target.closest ? e.target.closest('.tip-go') : null;
     if (go) { e.preventDefault(); navTo(go.dataset.href); }

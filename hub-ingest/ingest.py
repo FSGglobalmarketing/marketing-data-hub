@@ -214,11 +214,13 @@ def build_competitor_ads(src: Path) -> dict:
                                        "_comps": set(), "ads": 0})
         bb["_comps"].add(comp); bb["ads"] += 1
         bc = by_comp.setdefault((bid, comp), {"brand": bid, "competitor": comp, "ads": 0,
-                                              "lastShown": None})
+                                              "lastShown": None, "sampleImage": None})
         bc["ads"] += 1
         if last and (bc["lastShown"] is None or last > bc["lastShown"]):
             bc["lastShown"] = last
         if clean(r.get("media_url")):
+            if not bc["sampleImage"]:
+                bc["sampleImage"] = clean(r.get("media_url"))     # one creative per competitor
             samples.append({"brand": bid, "competitor": comp, "format": clean(r.get("format")),
                             "firstShown": clean(r.get("first_shown")), "lastShown": last,
                             "mediaUrl": clean(r.get("media_url")),
