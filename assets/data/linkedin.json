@@ -1,32 +1,32 @@
 {
- "generatedAt": "2026-07-15T07:40:10Z",
+ "generatedAt": "2026-07-16T07:44:41Z",
  "source": "LinkedIn Ads",
  "byBrand": [
   {
    "brand": "igneo",
    "label": "Igneo",
    "currency": "GBP",
-   "impressions": 1568516,
-   "clicks": 19399,
-   "spend": 38063.15,
+   "impressions": 1581277,
+   "clicks": 19616,
+   "spend": 38589.69,
    "reactions": 16,
    "shares": 0,
    "conversions": 7,
-   "landingPageClicks": 19399,
+   "landingPageClicks": 19616,
    "ctr": 0.0124
   },
   {
    "brand": "rqi",
    "label": "RQI Investors",
    "currency": "GBP",
-   "impressions": 100505,
-   "clicks": 2161,
-   "spend": 5320.55,
-   "reactions": 161,
+   "impressions": 96878,
+   "clicks": 2103,
+   "spend": 5021.22,
+   "reactions": 147,
    "shares": 1,
    "conversions": 0,
-   "landingPageClicks": 1492,
-   "ctr": 0.0215
+   "landingPageClicks": 1479,
+   "ctr": 0.0217
   },
   {
    "brand": "stewart",
@@ -219,7 +219,7 @@
    "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
    "mediaType": "article",
    "image": "assets/img/ad_media/igneo/1244640944.jpg",
-   "impressions": 37316
+   "impressions": 38052
   },
   {
    "brand": "igneo",
@@ -230,7 +230,7 @@
    "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
    "mediaType": "article",
    "image": "assets/img/ad_media/igneo/1244640894.jpg",
-   "impressions": 34754
+   "impressions": 36350
   },
   {
    "brand": "igneo",
@@ -252,7 +252,7 @@
    "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
    "mediaType": "video",
    "image": "assets/img/ad_media/igneo/1245440914.jpg",
-   "impressions": 23505
+   "impressions": 23875
   },
   {
    "brand": "igneo",
@@ -311,6 +311,17 @@
   },
   {
    "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1246338944",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "North America’s lower middle market offers a powerful opportunity to invest in high quality infrastructure businesses, leveraging our sector experience built globally over decades.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1246338944.jpg",
+   "impressions": 19540
+  },
+  {
+   "brand": "igneo",
    "creativeId": "urn:li:sponsoredCreative:1246040604",
    "headline": "Investing in North American Infrastructure",
    "copy": "We invest in quality infrastructure assets and work relentlessly to improve them, generating long-term, attractive returns for our clients.",
@@ -319,17 +330,6 @@
    "mediaType": "article",
    "image": "assets/img/ad_media/igneo/1246040604.jpg",
    "impressions": 18988
-  },
-  {
-   "brand": "igneo",
-   "creativeId": "urn:li:sponsoredCreative:1246338944",
-   "headline": "Middle-market. Maximum impact.",
-   "copy": "North America’s lower middle market offers a powerful opportunity to invest in high quality infrastructure businesses, leveraging our sector experience built globally over decades.",
-   "cta": "LEARN_MORE",
-   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
-   "mediaType": "article",
-   "image": "assets/img/ad_media/igneo/1246338944.jpg",
-   "impressions": 18866
   },
   {
    "brand": "igneo",
@@ -377,6 +377,17 @@
   },
   {
    "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1243842694",
+   "headline": "Middle-market. Maximum impact.",
+   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/igneo/1243842694.jpg",
+   "impressions": 15988
+  },
+  {
+   "brand": "igneo",
    "creativeId": "urn:li:sponsoredCreative:766584404",
    "headline": "On the fast track to value creation — powered by Igneo",
    "copy": "We invest in solid, mid-market businesses that we believe we can improve with our active management approach. Explore our capabilities in North America.",
@@ -385,17 +396,6 @@
    "mediaType": "video",
    "image": "assets/img/ad_media/igneo/766584404.jpg",
    "impressions": 15277
-  },
-  {
-   "brand": "igneo",
-   "creativeId": "urn:li:sponsoredCreative:1243842694",
-   "headline": "Middle-market. Maximum impact.",
-   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
-   "cta": "LEARN_MORE",
-   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
-   "mediaType": "video",
-   "image": "assets/img/ad_media/igneo/1243842694.jpg",
-   "impressions": 15025
   },
   {
    "brand": "igneo",
@@ -418,6 +418,17 @@
    "mediaType": "article",
    "image": "assets/img/ad_media/igneo/880974254.jpg",
    "impressions": 11512
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1312111454",
+   "headline": "Middle Market. Maximum Impact.",
+   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1312111454.jpg",
+   "impressions": 10827
   },
   {
    "brand": "rqi",
@@ -462,17 +473,6 @@
    "mediaType": null,
    "image": null,
    "impressions": 9479
-  },
-  {
-   "brand": "igneo",
-   "creativeId": "urn:li:sponsoredCreative:1312111454",
-   "headline": "Middle Market. Maximum Impact.",
-   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
-   "cta": "LEARN_MORE",
-   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
-   "mediaType": "article",
-   "image": "assets/img/ad_media/igneo/1312111454.jpg",
-   "impressions": 9406
   },
   {
    "brand": "igneo",
