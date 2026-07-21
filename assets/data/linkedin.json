@@ -1,31 +1,31 @@
 {
- "generatedAt": "2026-07-20T08:04:21Z",
+ "generatedAt": "2026-07-21T07:50:59Z",
  "source": "LinkedIn Ads",
  "byBrand": [
   {
    "brand": "igneo",
    "label": "Igneo",
    "currency": "GBP",
-   "impressions": 1581277,
-   "clicks": 19616,
-   "spend": 38589.69,
+   "impressions": 1586255,
+   "clicks": 19703,
+   "spend": 38807.88,
    "reactions": 16,
    "shares": 0,
    "conversions": 7,
-   "landingPageClicks": 19616,
+   "landingPageClicks": 19703,
    "ctr": 0.0124
   },
   {
    "brand": "rqi",
    "label": "RQI Investors",
    "currency": "GBP",
-   "impressions": 96878,
-   "clicks": 2103,
-   "spend": 5021.22,
-   "reactions": 147,
+   "impressions": 95626,
+   "clicks": 2079,
+   "spend": 4910.08,
+   "reactions": 142,
    "shares": 1,
    "conversions": 0,
-   "landingPageClicks": 1479,
+   "landingPageClicks": 1470,
    "ctr": 0.0217
   },
   {
@@ -428,7 +428,7 @@
    "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
    "mediaType": "article",
    "image": "assets/img/ad_media/igneo/1312111454.jpg",
-   "impressions": 10827
+   "impressions": 11191
   },
   {
    "brand": "rqi",
