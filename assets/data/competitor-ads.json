@@ -1,29 +1,17 @@
 {
- "generatedAt": "2026-07-26T07:51:24Z",
+ "generatedAt": "2026-07-27T08:13:05Z",
  "source": "Google Ads Transparency Center",
  "byBrand": [
   {
-   "brand": "stewart",
-   "label": "Stewart Investors",
-   "ads": 1836,
-   "competitors": 14
+   "brand": "igneo",
+   "label": "Igneo",
+   "ads": 634,
+   "competitors": 5
   },
   {
    "brand": "fssa",
    "label": "FSSA",
-   "ads": 675,
-   "competitors": 9
-  },
-  {
-   "brand": "igneo",
-   "label": "Igneo",
-   "ads": 619,
-   "competitors": 5
-  },
-  {
-   "brand": "fsi",
-   "label": "First Sentier",
-   "ads": 314,
+   "ads": 499,
    "competitors": 7
   },
   {
@@ -35,140 +23,42 @@
  ],
  "byCompetitor": [
   {
-   "brand": "stewart",
-   "competitor": "Fidelity Asian Values",
-   "ads": 540,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/7853794837336634235"
-  },
-  {
    "brand": "igneo",
    "competitor": "J.P. Morgan",
-   "ads": 536,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/15021579586341256412"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "J.P. Morgan",
-   "ads": 536,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/15021579586341256412"
+   "ads": 551,
+   "lastShown": "2026-07-27",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/18406617045618520096"
   },
   {
    "brand": "fssa",
    "competitor": "Aberdeen",
-   "ads": 229,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/15876374897437449136"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "F&C",
-   "ads": 192,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/13205237710896973795"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "Baillie Gifford",
-   "ads": 144,
-   "lastShown": "2026-07-01",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/2239425197151103783"
-  },
-  {
-   "brand": "fssa",
-   "competitor": "Schroders",
-   "ads": 122,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/232580155534162563"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "Schroders",
-   "ads": 122,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/232580155534162563"
-  },
-  {
-   "brand": "fsi",
-   "competitor": "iShares (BlackRock)",
-   "ads": 119,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/7249848757947945895"
-  },
-  {
-   "brand": "fsi",
-   "competitor": "UBS",
-   "ads": 109,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/18218813132774831993"
+   "ads": 235,
+   "lastShown": "2026-07-27",
+   "sampleImage": "https://s0.2mdn.net/8433256/UK_EN_Brand_Static_PooledSummerIncome_0726_300x250_.jpg"
   },
   {
    "brand": "fssa",
    "competitor": "Janus Henderson",
    "ads": 102,
-   "lastShown": "2026-07-19",
+   "lastShown": "2026-07-26",
    "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3200742376356377095"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "TEMIT",
-   "ads": 80,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/16636883293391856566"
   },
   {
    "brand": "igneo",
    "competitor": "Macquarie",
    "ads": 64,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/1043898046031552501"
-  },
-  {
-   "brand": "fsi",
-   "competitor": "Macquarie Asset Management",
-   "ads": 64,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/1043898046031552501"
-  },
-  {
-   "brand": "fssa",
-   "competitor": "Invesco",
-   "ads": 61,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://s0.2mdn.net/15294271/INV_Investment_trust_Programmatic-UK_Set_Your_Clock-NA-Discover_More_UK_static_728x90.jpg"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "Wellington",
-   "ads": 57,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/9614069158262553354"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "Guinness Global Investors",
-   "ads": 55,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/16770572497782210918"
+   "lastShown": "2026-07-27",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/12444150040923519631"
   },
   {
    "brand": "fssa",
    "competitor": "Artemis",
    "ads": 42,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/13546192907428740074"
+   "lastShown": "2026-07-27",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/15567775594297371874"
   },
   {
    "brand": "fssa",
-   "competitor": "Ninety One",
-   "ads": 39,
-   "lastShown": "2026-03-26",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3276543213126891044"
-  },
-  {
-   "brand": "stewart",
    "competitor": "Ninety One",
    "ads": 39,
    "lastShown": "2026-03-26",
@@ -177,30 +67,16 @@
   {
    "brand": "fssa",
    "competitor": "M&G",
-   "ads": 31,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/11931744075551763228"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "Scottish Mortgage",
-   "ads": 31,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/11603024243368192756"
+   "ads": 32,
+   "lastShown": "2026-07-27",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/6305199313122535153"
   },
   {
    "brand": "fssa",
    "competitor": "Quilter",
    "ads": 29,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/141714038193961272"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "Pictet Asset Management",
-   "ads": 25,
-   "lastShown": "2026-07-19",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/6281772773376124000"
+   "lastShown": "2026-07-27",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/15101263143300404948"
   },
   {
    "brand": "fssa",
@@ -213,29 +89,8 @@
    "brand": "igneo",
    "competitor": "KKR",
    "ads": 14,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/114437947006007198"
-  },
-  {
-   "brand": "fsi",
-   "competitor": "EQT AB Group",
-   "ads": 10,
-   "lastShown": "2026-07-20",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3391901963617958046"
-  },
-  {
-   "brand": "fsi",
-   "competitor": "Robeco",
-   "ads": 8,
-   "lastShown": "2026-07-19",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/11593868646718869116"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "Robeco",
-   "ads": 8,
-   "lastShown": "2026-07-19",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/11593868646718869116"
+   "lastShown": "2026-07-27",
+   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/8507410877390338971"
   },
   {
    "brand": "rqi",
@@ -245,21 +100,7 @@
    "sampleImage": "https://s0.2mdn.net/10511252/US_EN_Insights_Static_OnTheMuni_300x600.jpg"
   },
   {
-   "brand": "stewart",
-   "competitor": "Federated Hermes",
-   "ads": 5,
-   "lastShown": "2026-05-23",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/14818138630669418861"
-  },
-  {
    "brand": "igneo",
-   "competitor": "Ardian",
-   "ads": 3,
-   "lastShown": "2025-12-18",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/3842298188235688020"
-  },
-  {
-   "brand": "fsi",
    "competitor": "Ardian",
    "ads": 3,
    "lastShown": "2025-12-18",
@@ -269,15 +110,8 @@
    "brand": "igneo",
    "competitor": "Stonepeak",
    "ads": 2,
-   "lastShown": "2026-07-19",
+   "lastShown": "2026-07-27",
    "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/14032907932331250429"
-  },
-  {
-   "brand": "stewart",
-   "competitor": "Nordea Asset Management",
-   "ads": 2,
-   "lastShown": "2026-06-18",
-   "sampleImage": "https://s0.2mdn.net//8701942/9ea341e6-03da-4c1f-9c62-7c7614e22f4c.png"
   },
   {
    "brand": "rqi",
@@ -285,418 +119,168 @@
    "ads": 1,
    "lastShown": "2025-12-31",
    "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/5394419405978685676"
-  },
-  {
-   "brand": "fsi",
-   "competitor": "Vanguard",
-   "ads": 1,
-   "lastShown": "2025-11-06",
-   "sampleImage": "https://tpc.googlesyndication.com/archive/simgad/4101002914249859224"
   }
  ],
  "sampleAds": [
   {
    "brand": "igneo",
-   "competitor": "Macquarie",
+   "competitor": "Stonepeak",
    "format": "Image",
-   "firstShown": "2026-04-30",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/1043898046031552501",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR05553875674210500609/creative/CR14398612817408163841"
+   "firstShown": "2025-09-05",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14032907932331250429",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR05683360829286645761/creative/CR10890861255229177857"
   },
   {
    "brand": "igneo",
    "competitor": "Macquarie",
    "format": "Image",
    "firstShown": "2024-11-27",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/2323929373645577166",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR07445201433953042433"
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/12444150040923519631",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR12153840747040210945"
   },
   {
    "brand": "igneo",
    "competitor": "Macquarie",
    "format": "Image",
    "firstShown": "2024-11-27",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/13303830464989769398",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR07749718746997981185"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "Macquarie",
-   "format": "Image",
-   "firstShown": "2026-04-29",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6277387154607424576",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR05553875674210500609/creative/CR07432351029242363905"
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/5510768524539734201",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR06679355172474322945"
   },
   {
    "brand": "igneo",
    "competitor": "Macquarie",
    "format": "Image",
    "firstShown": "2024-11-27",
-   "lastShown": "2026-07-20",
+   "lastShown": "2026-07-27",
    "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11527110499534880739",
    "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR00414333519360163841"
   },
   {
    "brand": "igneo",
-   "competitor": "KKR",
+   "competitor": "Macquarie",
    "format": "Image",
-   "firstShown": "2025-02-12",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/114437947006007198",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR01080501604307697665/creative/CR06749199793202921473"
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/376964244060148928",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR09006504105694199809"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/17946493271097334507",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR04417195760232169473"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/13359842701670750484",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR17485808345968279553"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/7152851480589919167",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR15591417671793508353"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9735663754550647428",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR08326179499301404673"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/8689810469536343216",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR05902844464249962497"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14854645723548102611",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR14095715033451331585"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/16848177086510883132",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR15755151445843771393"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/7278349700926516209",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR17603879092879360001"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11188678165778773226",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR11671172047437824001"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14731136442063410200",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR13019857886518444033"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "Macquarie",
+   "format": "Image",
+   "firstShown": "2024-11-27",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/13303830464989769398",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02096945987598680065/creative/CR07749718746997981185"
   },
   {
    "brand": "igneo",
    "competitor": "KKR",
    "format": "Image",
-   "firstShown": "2026-03-24",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/17051062266159355798",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR01080501604307697665/creative/CR01708808891116027905"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "KKR",
-   "format": "Image",
-   "firstShown": "2026-03-24",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/16715403420458210815",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR01080501604307697665/creative/CR08366644267392696321"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-11-07",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/15021579586341256412",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR04343089217685946369"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-03-01",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/17202291961278172842",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR09672444282497138689"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-02-24",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/1475351640257532162",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR05135490892588646401"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-02-23",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/15854837398680345010",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR03043982282047094785"
+   "firstShown": "2025-11-10",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/8507410877390338971",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR01080501604307697665/creative/CR02937550630220201985"
   },
   {
    "brand": "igneo",
    "competitor": "J.P. Morgan",
    "format": "Image",
    "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11821715651742115343",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR07597382063804645377"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-11-06",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/15411101015298589793",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR03054156037369102337"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/15807841205251032282",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR01115659862995369985"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/13475432545838389983",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR10194946398588239873"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9389436697877047370",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR01116563824762159105"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/7583487526052228219",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR04864099786124427265"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-03-01",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/7387556421410890102",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR15199994624681705473"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/16113609701036132214",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR11612532171750768641"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-07-14",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/2426424309411214008",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR01840093920957038593"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11319191234590492172",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR11568723505331568641"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14385726059302656663",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR12937777110121971713"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11967775080816901993",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR02354431785254780929"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/4713249367536856791",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR16820855144060026881"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/5918523346543839722",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR00536240324901601281"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/12660440522843621954",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR03939958063955443713"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-03-10",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14901281927787163546",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR10561381901497532417"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-02-11",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/446979102842489710",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR14298387041136672769"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-04-24",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/7469090369544945378",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR12037949051786756097"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/3807434491274946589",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR16783716527491776513"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6782587278807108819",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR09460110891908333569"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/15762708878526885018",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR13400990088909815809"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-04-24",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/10954820615326816093",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR16224035490859319297"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-02-24",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/12382743492894399457",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR10051660268049530881"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-03-02",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/2394839365208098854",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR07837755199924994049"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-03-10",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/8253472675661357340",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR02036306126030503937"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14826335447596035408",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR10335366016413990913"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-07-14",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14088309200482155858",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR10951298179592617985"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-29",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/15720257835850822966",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR16124022607526756353"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2026-03-10",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6066242011629340239",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR00454232038963150849"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/17314166511245257673",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR12364667695029813249"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/16186114540538045839",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR13155456223165808641"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/1069964484610815906",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR01527994891123032065"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "J.P. Morgan",
-   "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
+   "lastShown": "2026-07-27",
    "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/18406617045618520096",
    "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR12925870223826878465"
   },
@@ -704,136 +288,379 @@
    "brand": "igneo",
    "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/7205904846368863039",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR04499863469679443969"
+   "firstShown": "2025-03-02",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/2394839365208098854",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR07837755199924994049"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-11-17",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/16721916996385995726",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR08248271781849202689"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2026-03-10",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9707388638450081460",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR09811624578919694337"
   },
   {
    "brand": "igneo",
    "competitor": "J.P. Morgan",
    "format": "Image",
    "firstShown": "2025-10-28",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/1160193768293345713",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR08862169805566771201"
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14227650537178851817",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR02655031117463158785"
   },
   {
-   "brand": "fssa",
-   "competitor": "Artemis",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-02-26",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/13546192907428740074",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR15238390034580111361/creative/CR17608905914012663809"
+   "firstShown": "2025-11-10",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/963512186379427596",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR04475288010409115649"
   },
   {
-   "brand": "fssa",
-   "competitor": "Artemis",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-02-26",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/4141352701595075710",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR15238390034580111361/creative/CR02691908625789616129"
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11324156887908914583",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR17412527751402881025"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2025-10-18",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/15876374897437449136",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR06126147544910135297"
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14561418448388365154",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR13485284448500973569"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2025-10-19",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/5077402621993514616",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR09508426181611880449"
+   "firstShown": "2025-11-16",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14156455637746520712",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR06029236066051948545"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-02-26",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/2658138330000858141",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR13942521856469762049"
+   "firstShown": "2025-12-01",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/3143468988325603335",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR01695071979385651201"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-02-26",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/8572334504674802860",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR04090430241716043777"
+   "firstShown": "2025-11-04",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/10803355076477869544",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR06508986498585460737"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-03-30",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/8402917368916081216",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR02203110836057145345"
+   "firstShown": "2025-10-29",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/5481440072385637622",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR14546074369123155969"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2025-11-11",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/1152957076823751283",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR08923337011809484801"
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9747476639201173104",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR05659272118659973121"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-03-30",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/18071774602004724859",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR16787536643203530753"
+   "firstShown": "2025-03-02",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/5508439670730527480",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR05887979926035890177"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2025-10-20",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14611351973153630038",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR15604356415391531009"
+   "firstShown": "2026-02-24",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/10678667333094403798",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR06902996516168794113"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-03-31",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6955325868728010763",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR04700978027733975041/creative/CR10005933641034629121"
+   "firstShown": "2025-10-29",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11558451810413875220",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR17131842799566585857"
   },
   {
-   "brand": "fssa",
-   "competitor": "M&G",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-07-06",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11931744075551763228",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR15687218497878753281/creative/CR16854686223493496833"
+   "firstShown": "2026-04-08",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6540630736109484449",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR13302987207322107905"
   },
   {
-   "brand": "fssa",
-   "competitor": "M&G",
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
    "format": "Image",
-   "firstShown": "2026-06-04",
-   "lastShown": "2026-07-20",
-   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6305199313122535153",
-   "previewUrl": "https://adstransparency.google.com/advertiser/AR18208967279679373313/creative/CR04100780700582543361"
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/16192395913168788246",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR08281547427522019329"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2023-04-20",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11955244427454423164",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR16864015708504195073"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2026-07-17",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/3348024323680869690",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR02882172919633412097/creative/CR08714652410686996481"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-11-24",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/518163915003471256",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR08016680299071012865"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-03-01",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/1179573673104579601",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR02002864144864247809"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2026-02-24",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/15885937134682597548",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR07986056151458381825"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-07-22",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/3130581400248861724",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR15978383496334802945"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9804448307026161801",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR13205009837840138241"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9970290442295540768",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR13785203320450711553"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-30",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9486111600530229020",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR15130166737145692161"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9869720663356364686",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR01664945085906681857"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14735301907885278719",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR04553152400231235585"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/4477351679507239945",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR00289844991797231617"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-11-10",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/9272050723743561183",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR09785031971078930433"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-07-14",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/10874557980772280465",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR14504618219500732417"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/12004635875593915226",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR07128656434362843137"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-03-01",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6736093489720943344",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR04296467940393353217"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/17708840921122523203",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR13605283747397107713"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/7249842829066876933",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR12651294682580516865"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-29",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6467679617487974720",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR03717528055657267201"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-03-01",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/11548021366167637292",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR14647563200787120129/creative/CR03462100655437512705"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6918176503049027685",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR13335440117649637377"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/8110901446638026126",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR03670433129371271169"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/6716887779745889572",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR12753342718986420225"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2026-01-23",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/14160705929086764483",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR00579368754400460801/creative/CR06128782000540090369"
+  },
+  {
+   "brand": "igneo",
+   "competitor": "J.P. Morgan",
+   "format": "Image",
+   "firstShown": "2025-10-28",
+   "lastShown": "2026-07-27",
+   "mediaUrl": "https://tpc.googlesyndication.com/archive/simgad/17936910062063892370",
+   "previewUrl": "https://adstransparency.google.com/advertiser/AR08627960789329772545/creative/CR01976687693584662529"
   }
  ]
 }
