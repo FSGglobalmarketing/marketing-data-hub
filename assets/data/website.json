@@ -1,159 +1,159 @@
 {
- "generatedAt": "2026-07-29T07:57:24Z",
+ "generatedAt": "2026-07-30T07:50:45Z",
  "source": "GA4",
  "byBrand": [
   {
    "brand": "fsi",
    "label": "First Sentier",
    "site": "firstsentierinvestors.com",
-   "sessions": 649058,
-   "users": 587229,
-   "newUsers": 486218,
-   "engagedSessions": 310166,
-   "keyEvents": 84392,
-   "engagementRate": 0.4779
+   "sessions": 649779,
+   "users": 587959,
+   "newUsers": 486830,
+   "engagedSessions": 310374,
+   "keyEvents": 84229,
+   "engagementRate": 0.4777
   },
   {
    "brand": "fssa",
    "label": "FSSA",
    "site": "fssaim.com",
-   "sessions": 118913,
-   "users": 107129,
-   "newUsers": 89164,
-   "engagedSessions": 63784,
-   "keyEvents": 74500,
-   "engagementRate": 0.5364
+   "sessions": 119137,
+   "users": 107329,
+   "newUsers": 89313,
+   "engagedSessions": 63923,
+   "keyEvents": 74781,
+   "engagementRate": 0.5366
   },
   {
    "brand": "igneo",
    "label": "Igneo",
    "site": "igneoip.com",
-   "sessions": 108534,
-   "users": 88370,
-   "newUsers": 58229,
-   "engagedSessions": 71697,
+   "sessions": 108673,
+   "users": 88482,
+   "newUsers": 58299,
+   "engagedSessions": 71800,
    "keyEvents": 0,
-   "engagementRate": 0.6606
+   "engagementRate": 0.6607
   },
   {
    "brand": "stewart",
    "label": "Stewart Investors",
    "site": "scottishoriental.com",
-   "sessions": 28013,
-   "users": 25072,
-   "newUsers": 10251,
-   "engagedSessions": 4971,
-   "keyEvents": 3877,
-   "engagementRate": 0.1775
+   "sessions": 28015,
+   "users": 25068,
+   "newUsers": 10253,
+   "engagedSessions": 4988,
+   "keyEvents": 3892,
+   "engagementRate": 0.178
   },
   {
    "brand": "rqi",
    "label": "RQI Investors",
    "site": "rqiinvestors.com",
-   "sessions": 2500,
-   "users": 2131,
-   "newUsers": 1778,
-   "engagedSessions": 1198,
+   "sessions": 2752,
+   "users": 2349,
+   "newUsers": 1959,
+   "engagedSessions": 1276,
    "keyEvents": 0,
-   "engagementRate": 0.4792
+   "engagementRate": 0.4637
   }
  ],
  "byChannel": [
   {
    "brand": "fsi",
    "channel": "Direct",
-   "sessions": 406839,
-   "users": 386872
+   "sessions": 407432,
+   "users": 387457
   },
   {
    "brand": "fsi",
    "channel": "Organic Search",
-   "sessions": 108421,
-   "users": 86157
+   "sessions": 108341,
+   "users": 86101
   },
   {
    "brand": "fssa",
    "channel": "Direct",
-   "sessions": 64553,
-   "users": 61349
+   "sessions": 64689,
+   "users": 61486
   },
   {
    "brand": "igneo",
    "channel": "Direct",
-   "sessions": 56555,
-   "users": 47332
+   "sessions": 56616,
+   "users": 47377
   },
   {
    "brand": "fsi",
    "channel": "Display",
-   "sessions": 49724,
-   "users": 47428
+   "sessions": 49685,
+   "users": 47386
   },
   {
    "brand": "igneo",
    "channel": "Organic Search",
-   "sessions": 38392,
-   "users": 29981
+   "sessions": 38328,
+   "users": 29924
   },
   {
    "brand": "fsi",
    "channel": "Referral",
-   "sessions": 36312,
-   "users": 23410
+   "sessions": 36297,
+   "users": 23390
   },
   {
    "brand": "fsi",
    "channel": "Paid Search",
-   "sessions": 22911,
-   "users": 20891
+   "sessions": 22918,
+   "users": 20897
   },
   {
    "brand": "fssa",
    "channel": "Paid Search",
-   "sessions": 20828,
-   "users": 19556
+   "sessions": 20895,
+   "users": 19619
   },
   {
    "brand": "fssa",
    "channel": "Organic Search",
-   "sessions": 20705,
-   "users": 16333
+   "sessions": 20790,
+   "users": 16396
   },
   {
    "brand": "stewart",
    "channel": "Unassigned",
-   "sessions": 10481,
-   "users": 9656
+   "sessions": 10470,
+   "users": 9645
   },
   {
    "brand": "fsi",
    "channel": "Unassigned",
-   "sessions": 9798,
-   "users": 9283
+   "sessions": 9895,
+   "users": 9379
   },
   {
    "brand": "fssa",
    "channel": "Referral",
-   "sessions": 7274,
-   "users": 4874
+   "sessions": 7276,
+   "users": 4872
   },
   {
    "brand": "fsi",
    "channel": "Organic Social",
-   "sessions": 7013,
-   "users": 5995
+   "sessions": 6988,
+   "users": 5979
   },
   {
    "brand": "fsi",
    "channel": "Email",
-   "sessions": 6964,
-   "users": 6170
+   "sessions": 6959,
+   "users": 6173
   },
   {
    "brand": "stewart",
    "channel": "Direct",
-   "sessions": 5136,
-   "users": 4497
+   "sessions": 5134,
+   "users": 4493
   },
   {
    "brand": "stewart",
@@ -164,8 +164,8 @@
   {
    "brand": "igneo",
    "channel": "Organic Social",
-   "sessions": 3668,
-   "users": 3152
+   "sessions": 3712,
+   "users": 3195
   },
   {
    "brand": "stewart",
@@ -176,86 +176,86 @@
   {
    "brand": "igneo",
    "channel": "Referral",
-   "sessions": 3348,
-   "users": 2107
+   "sessions": 3349,
+   "users": 2105
   },
   {
    "brand": "igneo",
    "channel": "Paid Search",
-   "sessions": 2910,
-   "users": 2551
+   "sessions": 2943,
+   "users": 2581
   },
   {
    "brand": "stewart",
    "channel": "Organic Search",
-   "sessions": 2606,
-   "users": 2184
+   "sessions": 2617,
+   "users": 2193
   },
   {
    "brand": "fssa",
    "channel": "Unassigned",
-   "sessions": 2343,
-   "users": 2170
+   "sessions": 2349,
+   "users": 2174
   },
   {
    "brand": "igneo",
    "channel": "Display",
-   "sessions": 1239,
-   "users": 1083
+   "sessions": 1255,
+   "users": 1099
   },
   {
    "brand": "rqi",
    "channel": "Direct",
-   "sessions": 1204,
-   "users": 1045
+   "sessions": 1241,
+   "users": 1079
   },
   {
    "brand": "igneo",
    "channel": "Unassigned",
-   "sessions": 976,
-   "users": 858
-  },
-  {
-   "brand": "fssa",
-   "channel": "Email",
-   "sessions": 907,
-   "users": 776
-  },
-  {
-   "brand": "stewart",
-   "channel": "Referral",
-   "sessions": 891,
-   "users": 714
-  },
-  {
-   "brand": "fssa",
-   "channel": "Display",
-   "sessions": 874,
-   "users": 828
+   "sessions": 1004,
+   "users": 882
   },
   {
    "brand": "rqi",
    "channel": "Organic Social",
-   "sessions": 732,
-   "users": 683
+   "sessions": 901,
+   "users": 840
+  },
+  {
+   "brand": "stewart",
+   "channel": "Referral",
+   "sessions": 895,
+   "users": 716
   },
   {
    "brand": "fsi",
    "channel": "Cross-network",
-   "sessions": 711,
-   "users": 684
+   "sessions": 890,
+   "users": 851
+  },
+  {
+   "brand": "fssa",
+   "channel": "Email",
+   "sessions": 866,
+   "users": 737
+  },
+  {
+   "brand": "fssa",
+   "channel": "Display",
+   "sessions": 851,
+   "users": 805
   },
   {
    "brand": "fssa",
    "channel": "Organic Social",
-   "sessions": 617,
-   "users": 451
+   "sessions": 607,
+   "users": 446
   },
   {
    "brand": "fssa",
    "channel": "Cross-network",
-   "sessions": 559,
-   "users": 558
+   "sessions": 560,
+   "users": 559
   },
   {
    "brand": "stewart",
@@ -272,26 +272,26 @@
   {
    "brand": "igneo",
    "channel": "Cross-network",
-   "sessions": 358,
-   "users": 348
+   "sessions": 360,
+   "users": 350
   },
   {
    "brand": "igneo",
    "channel": "Paid Social",
-   "sessions": 344,
-   "users": 327
+   "sessions": 348,
+   "users": 331
   },
   {
    "brand": "rqi",
    "channel": "Referral",
-   "sessions": 311,
-   "users": 209
+   "sessions": 339,
+   "users": 222
   },
   {
    "brand": "igneo",
    "channel": "Email",
-   "sessions": 273,
-   "users": 190
+   "sessions": 286,
+   "users": 196
   },
   {
    "brand": "stewart",
@@ -314,8 +314,8 @@
   {
    "brand": "fsi",
    "channel": "AI Assistant",
-   "sessions": 145,
-   "users": 124
+   "sessions": 154,
+   "users": 131
   },
   {
    "brand": "stewart",
@@ -326,20 +326,20 @@
   {
    "brand": "rqi",
    "channel": "Unassigned",
-   "sessions": 117,
-   "users": 95
+   "sessions": 119,
+   "users": 97
   },
   {
    "brand": "rqi",
    "channel": "Organic Search",
-   "sessions": 95,
-   "users": 66
+   "sessions": 104,
+   "users": 75
   },
   {
    "brand": "igneo",
    "channel": "AI Assistant",
-   "sessions": 87,
-   "users": 65
+   "sessions": 88,
+   "users": 66
   },
   {
    "brand": "stewart",
@@ -350,8 +350,8 @@
   {
    "brand": "fssa",
    "channel": "AI Assistant",
-   "sessions": 57,
-   "users": 50
+   "sessions": 58,
+   "users": 51
   },
   {
    "brand": "fsi",
@@ -360,16 +360,16 @@
    "users": 44
   },
   {
+   "brand": "rqi",
+   "channel": "Email",
+   "sessions": 31,
+   "users": 19
+  },
+  {
    "brand": "stewart",
    "channel": "Organic Shopping",
    "sessions": 30,
    "users": 30
-  },
-  {
-   "brand": "rqi",
-   "channel": "Email",
-   "sessions": 24,
-   "users": 16
   },
   {
    "brand": "igneo",
