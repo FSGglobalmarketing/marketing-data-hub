@@ -1,416 +1,524 @@
 {
- "generatedAt": "2026-08-01T07:47:36Z",
+ "generatedAt": "2026-08-02T07:48:23Z",
  "source": "HubSpot",
  "counts": {
-  "marketingEmails": 138,
-  "forms": 61,
-  "campaigns": 27,
+  "marketingEmails": 81,
+  "forms": 46,
+  "campaigns": 45,
   "deals": 0
  },
  "campaigns": [
   {
-   "name": "2026 Global FSG LinkedIn posts",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2026-12-31 00:00:00+00:00"
-  },
-  {
-   "name": "2026 Global FSI LinkedIn posts",
-   "status": null,
-   "startDate": "2026-05-29 00:00:00+00:00",
-   "endDate": "2026-12-31 00:00:00+00:00"
-  },
-  {
-   "name": "2026 Global FSSA LinkedIn posts",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2026-12-31 00:00:00+00:00"
-  },
-  {
-   "name": "202604 FSI EOFY Campaign test - JA",
-   "status": null,
-   "startDate": "2026-04-27 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
-  },
-  {
-   "name": "202605 APAC - AU - FSI - ETF event Adelaide",
-   "status": null,
-   "startDate": "2026-05-04 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
-  },
-  {
-   "name": "202605 APAC - AU - FSI -WS Cash ETF campaign - Sydney",
-   "status": null,
-   "startDate": "2026-05-11 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
-  },
-  {
-   "name": "202605 APAC - FSI Cash ETF campaign - test Melbourne",
-   "status": null,
-   "startDate": "2026-05-01 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
-  },
-  {
-   "name": "202605 APAC - FSSA - Invite - test 2",
-   "status": null,
-   "startDate": "2026-05-18 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
-  },
-  {
-   "name": "202605 APAC - FSSA - Invite - test 3",
-   "status": null,
-   "startDate": "2026-05-18 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
-  },
-  {
-   "name": "202605 FSI Cash ETF campaign - test 1",
-   "status": null,
-   "startDate": "2026-05-11 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
-  },
-  {
-   "name": "202605 NZ - FSSA GEM Focus Fund",
-   "status": null,
+   "name": "202607-ANZ-FSG-Rhombus-Competition",
+   "status": "planned",
    "startDate": null,
    "endDate": null
   },
   {
-   "name": "202606 EMEA FSI - Fund launch ETF GLIS - wholesale",
+   "name": "ANZ 202607 FSI SMIDS Quarterly update_Q2 2026",
    "status": "planned",
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
+   "startDate": null,
+   "endDate": null
   },
   {
-   "name": "202606 EMEA FSI - Fund launch ETF GLIS - wholesale - Clone",
+   "name": "ANZ 202609 AEQ Growth Reporting season roundtables",
    "status": "planned",
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
+   "startDate": null,
+   "endDate": null
   },
   {
-   "name": "202606 FSI HubSpot test campaign",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
+   "name": "ANZ_2026_06 ANZ GLIS Quarterly Update_Q2 2026",
+   "status": "planned",
+   "startDate": null,
+   "endDate": null
   },
   {
-   "name": "20260601 test campaign",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
+   "name": "ANZ-202607-FSG-TPC-VPD-Competition",
+   "status": "planned",
+   "startDate": null,
+   "endDate": null
   },
   {
-   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - full campaign test 3",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2027-06-30 00:00:00+00:00"
+   "name": "ANZ-202607-FSG-Year-end-event",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
   },
   {
-   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - TEMPLATE - Simple Email",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2027-06-30 00:00:00+00:00"
+   "name": "ANZ-202607-FSI-JA-Test-Campaign-For-HubSpot",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-10-31 00:00:00+00:00"
   },
   {
-   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - TEMPLATE - Simple Email - Clone 406",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2027-06-30 00:00:00+00:00"
+   "name": "ANZ-202607-RQI-Newsletter-Insto",
+   "status": "planned",
+   "startDate": "2026-07-22 00:00:00+00:00",
+   "endDate": null
   },
   {
-   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - TEMPLATE clean",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2027-06-30 00:00:00+00:00"
+   "name": "ANZ-202607-RQI-Newsletter-WS",
+   "status": "planned",
+   "startDate": "2026-07-22 00:00:00+00:00",
+   "endDate": null
   },
   {
-   "name": "2026MM REGION - COUNTRY - BRAND - TOPIC - TEMPLATE clean - Video",
-   "status": null,
-   "startDate": "2026-06-01 00:00:00+00:00",
-   "endDate": "2027-06-30 00:00:00+00:00"
+   "name": "ANZ-202607-RQI-Roadshow-WS",
+   "status": "planned",
+   "startDate": null,
+   "endDate": null
   },
   {
-   "name": "Email drip campaign - test",
-   "status": null,
-   "startDate": "2026-05-11 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
+   "name": "ANZ-202609-FSI-AEQ-Growth-Reporting-Season-Roundtables-WS",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
   },
   {
-   "name": "FSG WhatsApp",
+   "name": "ASIA-202607-FSG-Whatsapp",
    "status": null,
    "startDate": "2025-01-01 00:00:00+00:00",
    "endDate": null
   },
   {
-   "name": "GLOBAL 2026 FSG - First Sentier Foundation - test 2",
-   "status": null,
-   "startDate": "2026-05-06 00:00:00+00:00",
-   "endDate": null
-  },
-  {
-   "name": "GLOBAL 2026 FSG - First Sentier Foundation enquiry form - FSG.com",
-   "status": null,
-   "startDate": "2026-05-06 00:00:00+00:00",
-   "endDate": null
-  },
-  {
-   "name": "New Fund Launch Collaboration",
-   "status": "in_progress",
+   "name": "ASIA-HK-202607-AFI&GLIS",
+   "status": "planned",
    "startDate": null,
    "endDate": null
   },
   {
-   "name": "Test May",
+   "name": "ASIA-HK-SG-202607-AFI-GLIS-monthly-eDM",
    "status": "planned",
-   "startDate": "2026-06-16 00:00:00+00:00",
-   "endDate": "2026-06-30 00:00:00+00:00"
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
   },
   {
-   "name": "Testing campaign",
-   "status": null,
-   "startDate": "2026-05-01 00:00:00+00:00",
+   "name": "ASIA-SG-202608-FSSA-Martin-Roundtable",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-10-31 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202607-Igneo-Bigger-isnt-always-better-article",
+   "status": "planned",
+   "startDate": "2026-07-20 00:00:00+00:00",
+   "endDate": "2026-11-30 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202607-Igneo-EDIF-II-webcast-invite",
+   "status": "planned",
+   "startDate": "2026-07-22 00:00:00+00:00",
+   "endDate": "2026-11-30 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202607-Igneo-EDIF-III-webcast-invite",
+   "status": "planned",
+   "startDate": "2026-07-22 00:00:00+00:00",
+   "endDate": "2026-11-30 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202607-Igneo-EDIF-IV-webcast-invite",
+   "status": "planned",
+   "startDate": "2026-07-22 00:00:00+00:00",
+   "endDate": "2026-11-30 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202607-Igneo-Test-sends",
+   "status": "planned",
+   "startDate": null,
+   "endDate": "2026-07-20 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-FSI-GLIS-Attrax",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-07-31 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-FSI-GLIS-DE-Attrax",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-07-31 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-FSSA-Indian-Subcontinent-DE-Attrax",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-07-31 00:00:00+00:00"
+  },
+  {
+   "name": "FSI Campaign Template",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "FSI LinkedIn posts UTMs [2026]",
+   "status": "planned",
+   "startDate": "2026-05-29 00:00:00+00:00",
    "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "FSI website enquiries",
+   "status": "planned",
+   "startDate": "2026-07-16 00:00:00+00:00",
+   "endDate": "2030-07-31 00:00:00+00:00"
+  },
+  {
+   "name": "FSSA Campaign for testing",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "FSSA Linkedin posts UTMs [2026]",
+   "status": null,
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "GLOBAL - FSI GLIS QUARTERLY UPDATES",
+   "status": "planned",
+   "startDate": null,
+   "endDate": null
+  },
+  {
+   "name": "GLOBAL_GLIS Quarterly Updates_Evergreen",
+   "status": "planned",
+   "startDate": "2026-07-27 00:00:00+00:00",
+   "endDate": "2026-08-14 00:00:00+00:00"
+  },
+  {
+   "name": "GLOBAL-2026-FSG-LinkedIn-UTMs",
+   "status": null,
+   "startDate": "2026-06-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "GLOBAL-202607-FSG-First-Sentier-Foundation",
+   "status": null,
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": null
+  },
+  {
+   "name": "GLOBAL-202607-Sustainable-Investment-Institute-website-subscription",
+   "status": "planned",
+   "startDate": "2026-07-09 00:00:00+00:00",
+   "endDate": "2030-07-31 00:00:00+00:00"
+  },
+  {
+   "name": "Igneo - July 2026 - North American campaign",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2027-09-19 00:00:00+00:00"
+  },
+  {
+   "name": "Igneo Linkedin posts UTMs [2026]",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "Igneo RI report 2025",
+   "status": "planned",
+   "startDate": "2026-07-16 00:00:00+00:00",
+   "endDate": "2027-07-26 00:00:00+00:00"
+  },
+  {
+   "name": "Igneo Template Campaign – simple",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "Igneo website enquiries",
+   "status": "planned",
+   "startDate": null,
+   "endDate": null
+  },
+  {
+   "name": "RQI Linkedin posts UTMs [2026]",
+   "status": null,
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "RQI Template Campaign – simple",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "Scottish Oriental Trust website subscriptions",
+   "status": "planned",
+   "startDate": "2026-07-15 00:00:00+00:00",
+   "endDate": "2030-08-09 00:00:00+00:00"
+  },
+  {
+   "name": "SOSCOT Template Campaign – simple",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "Template-REGION-YYYYMM-BRAND-Campaign-name",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "Test template - First Sentier Group Campaign",
+   "status": null,
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "YYYYMM-REGION-FSSA-Template-Campaign",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
   }
  ],
  "recentEmails": [
   {
-   "name": "New email",
-   "subject": null,
+   "name": "FSI - News template - FINAL",
+   "subject": "FSI - News template",
    "state": "DRAFT",
-   "publishDate": "2026-03-30 08:25:46+00:00"
+   "publishDate": "2026-07-31 07:20:29+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "FSSA - Master template - FINAL",
+   "subject": "FSSA - Master template",
    "state": "DRAFT",
-   "publishDate": "2026-03-30 08:23:47+00:00"
+   "publishDate": "2026-07-24 05:23:05+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "FSI - Master template - FINAL",
+   "subject": "FSI - Master template",
    "state": "DRAFT",
-   "publishDate": "2026-03-30 15:20:53+00:00"
+   "publishDate": "2026-07-31 07:24:15+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "FSI - Invitation template - FINAL",
+   "subject": "FSI - Invitation template",
    "state": "DRAFT",
-   "publishDate": "2026-03-30 08:27:56+00:00"
+   "publishDate": "2026-07-31 07:22:40+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "FSSA - Invitation template - FINAL",
+   "subject": "FSSA - Invitation template",
    "state": "DRAFT",
-   "publishDate": "2026-04-08 05:44:57+00:00"
+   "publishDate": "2026-07-29 01:16:58+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "Igneo - Master template - FINAL",
+   "subject": "Igneo - Master template",
    "state": "DRAFT",
-   "publishDate": "2026-05-05 00:12:40+00:00"
+   "publishDate": "2026-07-24 05:56:26+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "FSSA - News template - FINAL",
+   "subject": "FSSA - News template",
    "state": "DRAFT",
-   "publishDate": "2026-04-10 04:16:06+00:00"
+   "publishDate": "2026-07-29 01:11:00+00:00"
   },
   {
-   "name": "Test email - May",
-   "subject": "FSI - First Test",
+   "name": "Igneo - News template - FINAL",
+   "subject": "Igneo - News template",
    "state": "DRAFT",
-   "publishDate": "2026-04-22 01:13:00+00:00"
+   "publishDate": "2026-07-29 01:28:40+00:00"
   },
   {
-   "name": "FSI News",
-   "subject": null,
+   "name": "RQI - Master template - FINAL",
+   "subject": "RQI - Master template",
    "state": "DRAFT",
-   "publishDate": "2026-04-13 06:59:49+00:00"
+   "publishDate": "2026-07-21 01:35:56+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "RQI - Invitation template - FINAL",
+   "subject": "RQI - Invitation template",
    "state": "DRAFT",
-   "publishDate": "2026-04-13 08:56:05+00:00"
+   "publishDate": "2026-07-27 05:04:42+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "RQI - News template - FINAL",
+   "subject": "RQI - News template",
    "state": "DRAFT",
-   "publishDate": "2026-04-14 13:53:26+00:00"
+   "publishDate": "2026-07-21 01:34:41+00:00"
   },
   {
-   "name": "FSI - AEG Event 16 March 2026 [Thank You Email]",
-   "subject": "Thanks for your registration.",
+   "name": "FSG - Invitation template - FINAL",
+   "subject": "FSG - Invitation template",
+   "state": "DRAFT",
+   "publishDate": "2026-07-21 01:22:06+00:00"
+  },
+  {
+   "name": "FSG - News template - FINAL",
+   "subject": "FSG - News template",
+   "state": "DRAFT",
+   "publishDate": "2026-07-21 01:23:28+00:00"
+  },
+  {
+   "name": "Igneo - Invitation template - FINAL",
+   "subject": "Igneo Invite you",
+   "state": "DRAFT",
+   "publishDate": "2026-07-29 01:31:03+00:00"
+  },
+  {
+   "name": "SOSCOT - Invitation template - FINAL",
+   "subject": "SOSCOT - Invitation template",
+   "state": "DRAFT",
+   "publishDate": "2026-07-27 05:02:51+00:00"
+  },
+  {
+   "name": "SOSCOT - Monthly factsheet template - FINAL",
+   "subject": "SOSCOT - Monthly factsheet template",
+   "state": "DRAFT",
+   "publishDate": "2026-07-21 01:37:20+00:00"
+  },
+  {
+   "name": "SOSCOT - Master template - FINAL",
+   "subject": "SOSCOT - Master template",
+   "state": "DRAFT",
+   "publishDate": "2026-07-21 01:38:30+00:00"
+  },
+  {
+   "name": "FSI Template - placeholder email for workflows (Do not delete)",
+   "subject": "FSI - Invitation template - For review",
    "state": "AUTOMATED",
-   "publishDate": "2026-04-24 02:36:22+00:00"
+   "publishDate": "2026-07-16 00:18:57+00:00"
   },
   {
-   "name": "Email FSG test Jasmine",
+   "name": "FSI Template - placeholder alternate email for workflows (Do not delete)",
+   "subject": "FSI - Did you miss this?",
+   "state": "AUTOMATED",
+   "publishDate": "2026-07-10 06:30:27+00:00"
+  },
+  {
+   "name": "FSG - News template - JA Test",
+   "subject": "FSG - News template",
+   "state": "DRAFT",
+   "publishDate": "2026-07-17 01:42:15+00:00"
+  },
+  {
+   "name": "FSI Template - placeholder alternate email for workflows (Do not delete) (SOSCOT Template Campaign – simple - Clone)",
+   "subject": "FSI - Did you miss this?",
+   "state": "AUTOMATED_DRAFT",
+   "publishDate": "2026-07-14 08:49:05+00:00"
+  },
+  {
+   "name": "Pacific Assets - July 2026 factsheet",
+   "subject": "Pacific Assets Trust June Factsheet",
+   "state": "DRAFT",
+   "publishDate": "2026-07-24 09:19:14+00:00"
+  },
+  {
+   "name": "FSG Template - placeholder thank you email",
+   "subject": "Your form submission has been received - thank you",
+   "state": "AUTOMATED",
+   "publishDate": "2026-07-15 08:07:06+00:00"
+  },
+  {
+   "name": "SOSCOT - Website sign-up automated reply",
+   "subject": "Welcome to the Scottish Oriental Smaller Companies Trust monthly update",
+   "state": "AUTOMATED",
+   "publishDate": "2026-07-15 10:30:55+00:00"
+  },
+  {
+   "name": "SII - website subscription automation",
+   "subject": "Newsletter confirmation - Sustainable Investment Institute",
+   "state": "AUTOMATED",
+   "publishDate": "2026-07-16 08:54:03+00:00"
+  },
+  {
+   "name": "ANZ-202607-FSG-Year-end-event",
+   "subject": "You're invited to join us at the FSG Year-end-event",
+   "state": "AUTOMATED_DRAFT",
+   "publishDate": "2026-07-17 02:24:24+00:00"
+  },
+  {
+   "name": "ANZ-202607-FSG-Year-end-event (Regular)",
+   "subject": "You're invited to join us at the FSG Year-end-event",
+   "state": "DRAFT",
+   "publishDate": "2026-07-17 04:12:31+00:00"
+  },
+  {
+   "name": "ANZ-202607-FSG-Year-end-event-Sydney (Automated)",
+   "subject": "You're invited to join us at the FSG Year-end-event",
+   "state": "AUTOMATED_DRAFT",
+   "publishDate": "2026-07-20 01:11:29+00:00"
+  },
+  {
+   "name": "ANZ-202609-FSI-AEQ-Growth-Reporting-Season-Roundtable-Brisbane",
+   "subject": "Your invitation: Australian Equities Growth Reporting Season update in Brisbane",
+   "state": "PUBLISHED",
+   "publishDate": "2026-07-28 04:34:46+00:00"
+  },
+  {
+   "name": "ANZ-202607-FSG-Year-end-event-Sydney",
+   "subject": "You're invited to join us at the FSG Year-end-event",
+   "state": "PUBLISHED",
+   "publishDate": "2026-07-20 01:20:31+00:00"
+  },
+  {
+   "name": "ANZ-202607-FSG-Year-end-event-2",
+   "subject": "You're invited to join us at the FSG Year-end-event",
+   "state": "PUBLISHED",
+   "publishDate": "2026-07-20 07:01:00+00:00"
+  },
+  {
+   "name": "Create an automated event reminder email",
    "subject": null,
    "state": "DRAFT",
-   "publishDate": "2026-04-16 04:52:11+00:00"
+   "publishDate": "2026-07-24 05:31:26+00:00"
   },
   {
-   "name": "Email RQI Monthly newsletter test - Jasmine",
-   "subject": "Test email - RQI Monthly newsletter for {{ personalization_token('contact.firstname', 'you') }}",
+   "name": "ANZ-202607-FSG-Year-end-event-3",
+   "subject": "{{ personalization_token('contact.firstname', 'Hi') }} you're invited for another end of year party with First Sentier Group",
+   "state": "PUBLISHED",
+   "publishDate": "2026-07-20 07:01:15+00:00"
+  },
+  {
+   "name": "ANZ-202607-FSG-Year-end-event-4",
+   "subject": "{{ personalization_token('contact.firstname', 'Hi') }} you're invited for another end of year party with First Sentier Group",
    "state": "DRAFT",
-   "publishDate": "2026-04-20 08:38:51+00:00"
+   "publishDate": "2026-07-20 08:58:56+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "Igneo - Invitation template - CT test",
+   "subject": "Igneo - Test invite",
+   "state": "PUBLISHED",
+   "publishDate": "2026-07-21 14:37:03+00:00"
+  },
+  {
+   "name": "ASIA-SG-202608-FSSA-Martin-Roundtable-invite",
+   "subject": "Invitation to FSSA luncheon | Beyond the AI rally: Finding quality and resilience across Asia",
    "state": "DRAFT",
-   "publishDate": "2026-04-16 15:05:35+00:00"
+   "publishDate": "2026-07-22 06:39:58+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
+   "name": "ANZ-202607-RQI-Newsletter-Insto",
+   "subject": "RQI Investors Newsletter - June 2026",
+   "state": "PUBLISHED",
+   "publishDate": "2026-07-30 02:17:37+00:00"
+  },
+  {
+   "name": "ANZ-202607-RQI-Newsletter-WS",
+   "subject": "RQI Investors Newsletter - June 2026",
+   "state": "PUBLISHED",
+   "publishDate": "2026-07-30 06:00:53+00:00"
+  },
+  {
+   "name": "ANZ-202607-RQI-Newsletter-WS (Clone JA)",
+   "subject": "RQI Investors Newsletter - June 2026",
    "state": "DRAFT",
-   "publishDate": "2026-04-17 03:39:08+00:00"
+   "publishDate": "2026-07-22 07:38:25+00:00"
   },
   {
-   "name": "New email",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-04-20 12:55:16+00:00"
-  },
-  {
-   "name": "Samuel Test Template",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-04-22 04:36:10+00:00"
-  },
-  {
-   "name": "FSI - Master Template - test JA",
-   "subject": "FSI - Master Template - test JA",
-   "state": "DRAFT",
-   "publishDate": "2026-04-22 10:04:02+00:00"
-  },
-  {
-   "name": "RQI Template - Email RQI Monthly newsletter test - Jasmine (Clone)",
-   "subject": "Test email - RQI Monthly newsletter for {{ personalization_token('contact.firstname', 'you') }}",
-   "state": "DRAFT",
-   "publishDate": "2026-04-22 06:49:22+00:00"
-  },
-  {
-   "name": "FSI - News Template - For Design (Clone for Ed)",
-   "subject": "FSI - News Template - For Design",
-   "state": "DRAFT_AB",
-   "publishDate": "2026-04-22 07:55:30+00:00"
-  },
-  {
-   "name": "FSI - News Template - For Design (Clone for Ed)",
-   "subject": "Insights & Webinar: Boost Your Investment Returns",
-   "state": "DRAFT_AB_VARIANT",
-   "publishDate": "2026-04-22 07:55:30+00:00"
-  },
-  {
-   "name": "FSI - Master Template - For Design (Rich & Gav)",
-   "subject": "FSI - Master Template - For Design",
-   "state": "DRAFT",
-   "publishDate": "2026-04-28 13:42:57+00:00"
-  },
-  {
-   "name": "FSI - EOFY event email test JA",
-   "subject": "FSI - News Template - For Design",
-   "state": "DRAFT",
-   "publishDate": "2026-05-05 02:14:48+00:00"
-  },
-  {
-   "name": "New email",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-04-24 03:26:39+00:00"
-  },
-  {
-   "name": "FSI - News Template - For Design (Rich & Gav)",
-   "subject": "FSI - News Template - For Design",
-   "state": "DRAFT",
-   "publishDate": "2026-04-28 13:40:48+00:00"
-  },
-  {
-   "name": "FSI - Invite Template - For Design (Rich & Gav)",
-   "subject": "FSI - Invite Template - For Design",
-   "state": "DRAFT",
-   "publishDate": "2026-04-29 23:55:13+00:00"
-  },
-  {
-   "name": "New email",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-04-28 15:11:05+00:00"
-  },
-  {
-   "name": "New email",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-04-29 15:06:42+00:00"
-  },
-  {
-   "name": "Josie Test - FSG",
-   "subject": "Let’s celebrate! Join us for EOFY drinks",
-   "state": "DRAFT_AB",
-   "publishDate": "2026-04-29 05:47:03+00:00"
-  },
-  {
-   "name": "Josie Test - FSG",
-   "subject": "Join Us for Australian Equities Growth Reporting Season Update",
-   "state": "DRAFT_AB_VARIANT",
-   "publishDate": "2026-04-29 05:47:03+00:00"
-  },
-  {
-   "name": "New email",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-04-29 07:46:56+00:00"
-  },
-  {
-   "name": "FSI - Invite Template - Josie test",
-   "subject": "FSI - Invite Template - For Design",
-   "state": "DRAFT",
-   "publishDate": "2026-04-30 00:55:33+00:00"
-  },
-  {
-   "name": "FSI - News Template - Josie CPD",
-   "subject": "FSI - News Template - For Design",
-   "state": "DRAFT",
-   "publishDate": "2026-04-30 01:09:44+00:00"
-  },
-  {
-   "name": "FSI - Master Template - For Design (Judi)",
-   "subject": "FSI - Master Template - For Design",
-   "state": "DRAFT",
-   "publishDate": "2026-04-30 01:26:19+00:00"
-  },
-  {
-   "name": "New email",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-04-30 09:36:17+00:00"
-  },
-  {
-   "name": "New email",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-04-30 09:29:23+00:00"
-  },
-  {
-   "name": "FSSA - Master template - For review",
-   "subject": "FSSA - Master Template - For review",
-   "state": "DRAFT",
-   "publishDate": "2026-06-08 07:26:18+00:00"
-  },
-  {
-   "name": "New email",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-05-01 01:33:12+00:00"
-  },
-  {
-   "name": "Apply branding test - FSG",
-   "subject": null,
-   "state": "DRAFT",
-   "publishDate": "2026-05-04 02:16:41+00:00"
+   "name": "EMEA - 202607 - Igneo - EDIF IV quarterly webcast invitation",
+   "subject": "Register now: Igneo EDIF IV update webcast",
+   "state": "PUBLISHED",
+   "publishDate": "2026-07-28 14:14:16+00:00"
   }
  ]
 }
