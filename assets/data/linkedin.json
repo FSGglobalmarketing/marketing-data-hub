@@ -1,32 +1,32 @@
 {
- "generatedAt": "2026-08-03T08:12:08Z",
+ "generatedAt": "2026-08-04T07:54:50Z",
  "source": "LinkedIn Ads",
  "byBrand": [
   {
    "brand": "igneo",
    "label": "Igneo",
    "currency": "GBP",
-   "impressions": 1586255,
-   "clicks": 19703,
-   "spend": 38807.88,
+   "impressions": 1607040,
+   "clicks": 20038,
+   "spend": 39740.31,
    "reactions": 16,
    "shares": 0,
    "conversions": 7,
-   "landingPageClicks": 19703,
-   "ctr": 0.0124
+   "landingPageClicks": 20038,
+   "ctr": 0.0125
   },
   {
    "brand": "rqi",
    "label": "RQI Investors",
    "currency": "GBP",
-   "impressions": 95626,
-   "clicks": 2079,
-   "spend": 4910.08,
-   "reactions": 142,
+   "impressions": 89329,
+   "clicks": 1994,
+   "spend": 4588.44,
+   "reactions": 134,
    "shares": 1,
    "conversions": 0,
-   "landingPageClicks": 1470,
-   "ctr": 0.0217
+   "landingPageClicks": 1431,
+   "ctr": 0.0223
   },
   {
    "brand": "stewart",
@@ -40,19 +40,6 @@
    "conversions": 0,
    "landingPageClicks": 123,
    "ctr": 0.006
-  },
-  {
-   "brand": "fssa",
-   "label": "FSSA",
-   "currency": "GBP",
-   "impressions": 3850,
-   "clicks": 85,
-   "spend": 250.0,
-   "reactions": 3,
-   "shares": 0,
-   "conversions": 0,
-   "landingPageClicks": 1,
-   "ctr": 0.0221
   }
  ],
  "topCreatives": [
@@ -399,6 +386,17 @@
   },
   {
    "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1312111454",
+   "headline": "Middle Market. Maximum Impact.",
+   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1312111454.jpg",
+   "impressions": 14549
+  },
+  {
+   "brand": "igneo",
    "creativeId": "urn:li:sponsoredCreative:766662924",
    "headline": "Middle-market. Maximum impact.",
    "copy": "North America’s infrastructure market is bursting with opportunity, especially in the middle-market. Explore our North American capability.",
@@ -407,6 +405,17 @@
    "mediaType": "video",
    "image": "assets/img/ad_media/igneo/766662924.jpg",
    "impressions": 14516
+  },
+  {
+   "brand": "igneo",
+   "creativeId": "urn:li:sponsoredCreative:1461358814",
+   "headline": "Explore the opportunities in North America’s middle market",
+   "copy": "Power demand from data centers alone is expected to almost double by 2030 - driven by cloud, AI model training and the coming needs of AI inference workloads.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://www.igneoip.com/usa/en/institutional/news-and-insights/bigger-isnt-always-better.html",
+   "mediaType": "article",
+   "image": "assets/img/ad_media/igneo/1461358814.jpg",
+   "impressions": 13045
   },
   {
    "brand": "igneo",
@@ -420,17 +429,6 @@
    "impressions": 11512
   },
   {
-   "brand": "igneo",
-   "creativeId": "urn:li:sponsoredCreative:1312111454",
-   "headline": "Middle Market. Maximum Impact.",
-   "copy": "North American middle market infrastructure. Where our global experience and active ownership can deliver maximum impact.",
-   "cta": "LEARN_MORE",
-   "landingPage": "https://www.igneoip.com/usa/en/institutional/our-offering/middle-market-maximum-impact.html",
-   "mediaType": "article",
-   "image": "assets/img/ad_media/igneo/1312111454.jpg",
-   "impressions": 11191
-  },
-  {
    "brand": "rqi",
    "creativeId": "urn:li:sponsoredCreative:832598136",
    "headline": "What strategies can investors use to assess the strength of a top company's culture?",
@@ -440,17 +438,6 @@
    "mediaType": "video",
    "image": "assets/img/ad_media/rqi/832598136.jpg",
    "impressions": 10645
-  },
-  {
-   "brand": "rqi",
-   "creativeId": "urn:li:sponsoredCreative:798691226",
-   "headline": "Does a strong corporate culture lead to better firm performance?",
-   "copy": "Does a strong corporate culture lead to better firm performance?\n \nOur analysis suggests that firms with a better culture may outperform the market. We see that as the score for culture increases, the return of assets \\(ROA\\) for the firms on average also increases. This shows that firms with better cultures tend to be better quality firms. \n\n🔗 Read more on how it could potentially lead to better long-term investment outcomes: https://bit.ly/3IEJDb9\n\n{hashtag|\\#|marketingcommunication}\n \n\\*This content is intended for institutional/professional investors or financial advisers outside of Germany only. Capital at Risk.",
-   "cta": "LEARN_MORE",
-   "landingPage": "https://go.firstsentierinvestors.com/l/37502/2025-07-21/y4cr6v",
-   "mediaType": "video",
-   "image": "assets/img/ad_media/rqi/798691226.jpg",
-   "impressions": 10602
   },
   {
    "brand": "rqi",
@@ -487,14 +474,14 @@
   },
   {
    "brand": "rqi",
-   "creativeId": "urn:li:sponsoredCreative:923840696",
-   "headline": null,
-   "copy": "Between 2018-2020, quant funds from developed countries experienced a Quant Winter, with traditional models facing challenges. However, recent years have shown signs of recovery. \n\nFind out more in our latest research paper: Lessons from the Quant Winter\n\n\\*This content is intended for institutional/professional investors or financial advisers outside of Germany only.\n\n{hashtag|\\#|marketingcommunication}",
-   "cta": null,
-   "landingPage": "https://www.firstsentierinvestors.com/uk/en/intermediary/insights/lessons-from-the-quant-winter.html",
-   "mediaType": null,
-   "image": null,
-   "impressions": 7785
+   "creativeId": "urn:li:sponsoredCreative:798691226",
+   "headline": "Does a strong corporate culture lead to better firm performance?",
+   "copy": "Does a strong corporate culture lead to better firm performance?\n \nOur analysis suggests that firms with a better culture may outperform the market. We see that as the score for culture increases, the return of assets \\(ROA\\) for the firms on average also increases. This shows that firms with better cultures tend to be better quality firms. \n\n🔗 Read more on how it could potentially lead to better long-term investment outcomes: https://bit.ly/3IEJDb9\n\n{hashtag|\\#|marketingcommunication}\n \n\\*This content is intended for institutional/professional investors or financial advisers outside of Germany only. Capital at Risk.",
+   "cta": "LEARN_MORE",
+   "landingPage": "https://go.firstsentierinvestors.com/l/37502/2025-07-21/y4cr6v",
+   "mediaType": "video",
+   "image": "assets/img/ad_media/rqi/798691226.jpg",
+   "impressions": 7820
   }
  ]
 }
