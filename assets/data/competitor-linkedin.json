@@ -1,36 +1,36 @@
 {
- "generatedAt": "2026-08-18T07:18:20Z",
+ "generatedAt": "2026-08-19T07:18:46Z",
  "source": "LinkedIn Ad Library",
  "byBrand": [
   {
    "brand": "rqi",
    "label": "RQI Investors",
    "competitors": 5,
-   "ads": 14815
+   "ads": 15037
   },
   {
    "brand": "fssa",
    "label": "FSSA",
    "competitors": 8,
-   "ads": 13099
+   "ads": 13117
   },
   {
    "brand": "igneo",
    "label": "Igneo",
    "competitors": 10,
-   "ads": 9432
+   "ads": 9809
   },
   {
    "brand": "fsi",
    "label": "First Sentier",
    "competitors": 4,
-   "ads": 8917
+   "ads": 8920
   },
   {
    "brand": "stewart",
    "label": "Stewart Investors",
    "competitors": 7,
-   "ads": 4119
+   "ads": 4234
   }
  ],
  "byCompetitor": [
@@ -38,20 +38,32 @@
    "brand": "rqi",
    "competitor": "AllianceBernstein",
    "advertiserUrl": "https://www.linkedin.com/company/3796",
-   "ads": 13151,
+   "ads": 13380,
    "topCountry": "DE",
    "countries": [
     {
      "country": "DE",
-     "count": 20
-    },
-    {
-     "country": "IT",
-     "count": 15
+     "count": 54
     },
     {
      "country": "ES",
+     "count": 9
+    },
+    {
+     "country": "IT",
      "count": 8
+    },
+    {
+     "country": "HK",
+     "count": 2
+    },
+    {
+     "country": "FR",
+     "count": 1
+    },
+    {
+     "country": "CH",
+     "count": 1
     }
    ],
    "sampleImage": "assets/img/competitor_li/alliancebernstein.jpg"
@@ -59,33 +71,33 @@
   {
    "brand": "fsi",
    "competitor": "Vanguard",
-   "advertiserUrl": "https://www.linkedin.com/company/112497205",
-   "ads": 5940,
-   "topCountry": "ES",
+   "advertiserUrl": "https://www.linkedin.com/company/139343974",
+   "ads": 5966,
+   "topCountry": "IT",
    "countries": [
     {
+     "country": "IT",
+     "count": 26
+    },
+    {
      "country": "ES",
-     "count": 27
+     "count": 20
+    },
+    {
+     "country": "AU",
+     "count": 3
+    },
+    {
+     "country": "PA",
+     "count": 3
+    },
+    {
+     "country": "AR",
+     "count": 3
     },
     {
      "country": "DE",
      "count": 2
-    },
-    {
-     "country": "IT",
-     "count": 1
-    },
-    {
-     "country": "CL",
-     "count": 1
-    },
-    {
-     "country": "BE",
-     "count": 1
-    },
-    {
-     "country": "CO",
-     "count": 1
     }
    ],
    "sampleImage": "assets/img/competitor_li/vanguard.jpg"
@@ -93,29 +105,29 @@
   {
    "brand": "igneo",
    "competitor": "J.P. Morgan",
-   "advertiserUrl": "https://www.linkedin.com/company/10657590",
-   "ads": 5568,
-   "topCountry": "TW",
+   "advertiserUrl": "https://www.linkedin.com/company/3492416",
+   "ads": 5684,
+   "topCountry": "DK",
    "countries": [
     {
-     "country": "TW",
+     "country": "DK",
+     "count": 8
+    },
+    {
+     "country": "SE",
+     "count": 6
+    },
+    {
+     "country": "LU",
+     "count": 6
+    },
+    {
+     "country": "AT",
+     "count": 5
+    },
+    {
+     "country": "ES",
      "count": 3
-    },
-    {
-     "country": "AO",
-     "count": 3
-    },
-    {
-     "country": "US",
-     "count": 3
-    },
-    {
-     "country": "AE",
-     "count": 2
-    },
-    {
-     "country": "KR",
-     "count": 2
     },
     {
      "country": "IN",
@@ -128,46 +140,41 @@
    "brand": "fssa",
    "competitor": "Janus Henderson",
    "advertiserUrl": "https://www.linkedin.com/company/164171",
-   "ads": 4203,
-   "topCountry": "IT",
-   "countries": [
-    {
-     "country": "IT",
-     "count": 3
-    }
-   ],
+   "ads": 4292,
+   "topCountry": null,
+   "countries": [],
    "sampleImage": "assets/img/competitor_li/janus_henderson.jpg"
   },
   {
    "brand": "fsi",
    "competitor": "BlackRock",
    "advertiserUrl": "https://www.linkedin.com/company/4764",
-   "ads": 2807,
-   "topCountry": "NL",
+   "ads": 2774,
+   "topCountry": "DE",
    "countries": [
     {
-     "country": "NL",
+     "country": "DE",
      "count": 6
     },
     {
-     "country": "FR",
-     "count": 1
+     "country": "AR",
+     "count": 4
     },
     {
-     "country": "IT",
-     "count": 1
-    },
-    {
-     "country": "NO",
-     "count": 1
+     "country": "AU",
+     "count": 4
     },
     {
      "country": "AT",
-     "count": 1
+     "count": 3
     },
     {
-     "country": "AF",
-     "count": 1
+     "country": "ES",
+     "count": 3
+    },
+    {
+     "country": "NL",
+     "count": 3
     }
    ],
    "sampleImage": "assets/img/competitor_li/blackrock.jpg"
@@ -176,32 +183,32 @@
    "brand": "fssa",
    "competitor": "Schroders",
    "advertiserUrl": "https://www.linkedin.com/company/5494",
-   "ads": 2494,
-   "topCountry": "IT",
+   "ads": 2503,
+   "topCountry": "GB",
    "countries": [
     {
-     "country": "IT",
-     "count": 3
+     "country": "GB",
+     "count": 8
+    },
+    {
+     "country": "CH",
+     "count": 7
     },
     {
      "country": "DE",
-     "count": 3
+     "count": 6
     },
     {
-     "country": "FR",
-     "count": 2
+     "country": "IT",
+     "count": 6
     },
     {
-     "country": "IL",
-     "count": 2
+     "country": "ES",
+     "count": 4
     },
     {
-     "country": "AE",
-     "count": 2
-    },
-    {
-     "country": "LU",
-     "count": 2
+     "country": "US",
+     "count": 4
     }
    ],
    "sampleImage": "assets/img/competitor_li/schroders.jpg"
@@ -210,32 +217,32 @@
    "brand": "fssa",
    "competitor": "Fidelity International",
    "advertiserUrl": "https://www.linkedin.com/company/1313",
-   "ads": 2490,
-   "topCountry": "DE",
+   "ads": 2494,
+   "topCountry": "US",
    "countries": [
     {
-     "country": "DE",
-     "count": 19
-    },
-    {
      "country": "US",
-     "count": 15
+     "count": 20
     },
     {
      "country": "AU",
-     "count": 11
+     "count": 17
     },
     {
-     "country": "ES",
-     "count": 5
+     "country": "DE",
+     "count": 16
     },
     {
-     "country": "GB",
-     "count": 4
+     "country": "BR",
+     "count": 12
     },
     {
      "country": "FR",
-     "count": 3
+     "count": 7
+    },
+    {
+     "country": "IT",
+     "count": 6
     }
    ],
    "sampleImage": "assets/img/competitor_li/fidelity_international.jpg"
@@ -243,76 +250,42 @@
   {
    "brand": "stewart",
    "competitor": "Baillie Gifford",
-   "advertiserUrl": "https://www.linkedin.com/company/34342",
-   "ads": 1725,
+   "advertiserUrl": "https://www.linkedin.com/company/37207020",
+   "ads": 1810,
    "topCountry": "DE",
    "countries": [
     {
      "country": "DE",
-     "count": 21
+     "count": 25
+    },
+    {
+     "country": "FO",
+     "count": 15
     },
     {
      "country": "LU",
-     "count": 14
-    },
-    {
-     "country": "FI",
-     "count": 9
-    },
-    {
-     "country": "NO",
-     "count": 6
-    },
-    {
-     "country": "BE",
-     "count": 6
+     "count": 12
     },
     {
      "country": "IS",
-     "count": 3
+     "count": 11
+    },
+    {
+     "country": "ES",
+     "count": 10
+    },
+    {
+     "country": "FR",
+     "count": 9
     }
    ],
    "sampleImage": null
   },
   {
-   "brand": "rqi",
-   "competitor": "Dimensional Fund Advisors",
-   "advertiserUrl": "https://www.linkedin.com/company/15068",
-   "ads": 1639,
-   "topCountry": "AT",
-   "countries": [
-    {
-     "country": "AT",
-     "count": 17
-    },
-    {
-     "country": "NL",
-     "count": 7
-    },
-    {
-     "country": "IE",
-     "count": 4
-    },
-    {
-     "country": "FI",
-     "count": 2
-    },
-    {
-     "country": "US",
-     "count": 2
-    },
-    {
-     "country": "ES",
-     "count": 1
-    }
-   ],
-   "sampleImage": "assets/img/competitor_li/dimensional_fund_advisors.jpg"
-  },
-  {
    "brand": "igneo",
    "competitor": "Macquarie",
-   "advertiserUrl": "https://www.linkedin.com/company/3537",
-   "ads": 1608,
+   "advertiserUrl": "https://www.linkedin.com/company/9850",
+   "ads": 1643,
    "topCountry": "HK",
    "countries": [
     {
@@ -320,7 +293,15 @@
      "count": 1
     },
     {
+     "country": "CO",
+     "count": 1
+    },
+    {
      "country": "CY",
+     "count": 1
+    },
+    {
+     "country": "ES",
      "count": 1
     },
     {
@@ -330,43 +311,73 @@
     {
      "country": "PT",
      "count": 1
-    },
-    {
-     "country": "CO",
-     "count": 1
-    },
-    {
-     "country": "ES",
-     "count": 1
     }
    ],
    "sampleImage": "assets/img/competitor_li/macquarie.jpg"
   },
   {
-   "brand": "fssa",
-   "competitor": "Aberdeen",
-   "advertiserUrl": "https://www.linkedin.com/company/74514529",
-   "ads": 1303,
-   "topCountry": "AR",
+   "brand": "rqi",
+   "competitor": "Dimensional Fund Advisors",
+   "advertiserUrl": "https://www.linkedin.com/company/15068",
+   "ads": 1631,
+   "topCountry": "IE",
    "countries": [
     {
-     "country": "AR",
+     "country": "IE",
+     "count": 10
+    },
+    {
+     "country": "AT",
+     "count": 10
+    },
+    {
+     "country": "HK",
+     "count": 2
+    },
+    {
+     "country": "FI",
+     "count": 2
+    },
+    {
+     "country": "ES",
      "count": 1
     },
     {
-     "country": "MU",
+     "country": "US",
+     "count": 1
+    }
+   ],
+   "sampleImage": "assets/img/competitor_li/dimensional_fund_advisors.jpg"
+  },
+  {
+   "brand": "fssa",
+   "competitor": "Aberdeen",
+   "advertiserUrl": "https://www.linkedin.com/company/13849",
+   "ads": 1249,
+   "topCountry": "IE",
+   "countries": [
+    {
+     "country": "IE",
+     "count": 10
+    },
+    {
+     "country": "IN",
+     "count": 4
+    },
+    {
+     "country": "AE",
+     "count": 2
+    },
+    {
+     "country": "MT",
      "count": 1
     },
     {
-     "country": "JE",
+     "country": "GP",
      "count": 1
     },
     {
-     "country": "AG",
-     "count": 1
-    },
-    {
-     "country": "AD",
+     "country": "MY",
      "count": 1
     }
    ],
@@ -375,8 +386,8 @@
   {
    "brand": "fssa",
    "competitor": "Invesco",
-   "advertiserUrl": "https://www.linkedin.com/company/110170224",
-   "ads": 1145,
+   "advertiserUrl": "https://www.linkedin.com/company/3582438",
+   "ads": 1106,
    "topCountry": "AO",
    "countries": [
     {
@@ -386,6 +397,10 @@
     {
      "country": "DE",
      "count": 4
+    },
+    {
+     "country": "AE",
+     "count": 2
     },
     {
      "country": "AL",
@@ -398,10 +413,6 @@
     {
      "country": "GB",
      "count": 1
-    },
-    {
-     "country": "NL",
-     "count": 1
     }
    ],
    "sampleImage": "assets/img/competitor_li/invesco.jpg"
@@ -410,12 +421,12 @@
    "brand": "igneo",
    "competitor": "Blackstone",
    "advertiserUrl": "https://www.linkedin.com/company/7834",
-   "ads": 742,
+   "ads": 785,
    "topCountry": "IT",
    "countries": [
     {
      "country": "IT",
-     "count": 4
+     "count": 5
     },
     {
      "country": "DK",
@@ -444,32 +455,32 @@
    "brand": "igneo",
    "competitor": "KKR",
    "advertiserUrl": "https://www.linkedin.com/company/15787",
-   "ads": 683,
+   "ads": 725,
    "topCountry": "US",
    "countries": [
     {
      "country": "US",
-     "count": 14
+     "count": 17
     },
     {
      "country": "CA",
-     "count": 12
-    },
-    {
-     "country": "CR",
-     "count": 2
-    },
-    {
-     "country": "PR",
-     "count": 2
+     "count": 17
     },
     {
      "country": "BR",
-     "count": 2
+     "count": 15
+    },
+    {
+     "country": "AR",
+     "count": 10
     },
     {
      "country": "MX",
-     "count": 2
+     "count": 9
+    },
+    {
+     "country": "PR",
+     "count": 5
     }
    ],
    "sampleImage": "assets/img/competitor_li/kkr.jpg"
@@ -478,99 +489,65 @@
    "brand": "fssa",
    "competitor": "Ninety One",
    "advertiserUrl": "https://www.linkedin.com/company/30720095",
-   "ads": 680,
+   "ads": 681,
    "topCountry": "DE",
    "countries": [
     {
      "country": "DE",
-     "count": 3
+     "count": 4
     },
     {
-     "country": "FI",
+     "country": "ES",
+     "count": 2
+    },
+    {
+     "country": "FO",
      "count": 1
     },
     {
-     "country": "AT",
+     "country": "LB",
+     "count": 1
+    },
+    {
+     "country": "NO",
      "count": 1
     },
     {
      "country": "FR",
-     "count": 1
-    },
-    {
-     "country": "AR",
-     "count": 1
-    },
-    {
-     "country": "BE",
      "count": 1
     }
    ],
    "sampleImage": "assets/img/competitor_li/ninety_one.jpg"
   },
   {
-   "brand": "stewart",
-   "competitor": "Amundi",
-   "advertiserUrl": "https://www.linkedin.com/company/732914",
-   "ads": 576,
-   "topCountry": "AF",
-   "countries": [
-    {
-     "country": "AF",
-     "count": 7
-    },
-    {
-     "country": "AU",
-     "count": 4
-    },
-    {
-     "country": "AM",
-     "count": 4
-    },
-    {
-     "country": "HK",
-     "count": 4
-    },
-    {
-     "country": "AT",
-     "count": 4
-    },
-    {
-     "country": "AR",
-     "count": 3
-    }
-   ],
-   "sampleImage": "assets/img/competitor_li/amundi.jpg"
-  },
-  {
    "brand": "fssa",
    "competitor": "Allianz Global Investors",
    "advertiserUrl": "https://www.linkedin.com/company/7475",
-   "ads": 572,
-   "topCountry": "BR",
+   "ads": 590,
+   "topCountry": "DE",
    "countries": [
+    {
+     "country": "DE",
+     "count": 14
+    },
     {
      "country": "BR",
      "count": 9
     },
     {
-     "country": "DE",
-     "count": 4
+     "country": "FR",
+     "count": 7
     },
     {
      "country": "CH",
-     "count": 3
+     "count": 2
+    },
+    {
+     "country": "IN",
+     "count": 2
     },
     {
      "country": "SE",
-     "count": 1
-    },
-    {
-     "country": "CA",
-     "count": 1
-    },
-    {
-     "country": "IT",
      "count": 1
     }
    ],
@@ -578,34 +555,68 @@
   },
   {
    "brand": "stewart",
+   "competitor": "Amundi",
+   "advertiserUrl": "https://www.linkedin.com/company/732914",
+   "ads": 558,
+   "topCountry": "AF",
+   "countries": [
+    {
+     "country": "AF",
+     "count": 10
+    },
+    {
+     "country": "BR",
+     "count": 6
+    },
+    {
+     "country": "HK",
+     "count": 6
+    },
+    {
+     "country": "AU",
+     "count": 6
+    },
+    {
+     "country": "AT",
+     "count": 6
+    },
+    {
+     "country": "AE",
+     "count": 5
+    }
+   ],
+   "sampleImage": "assets/img/competitor_li/amundi.jpg"
+  },
+  {
+   "brand": "stewart",
    "competitor": "Federated Hermes",
    "advertiserUrl": "https://www.linkedin.com/company/37820997",
-   "ads": 513,
+   "ads": 516,
    "topCountry": "GB",
    "countries": [
     {
      "country": "GB",
-     "count": 5
+     "count": 9
     },
     {
-     "country": "CH",
-     "count": 5
+     "country": "SJ",
+     "count": 7
     },
     {
      "country": "BE",
-     "count": 3
+     "count": 6
     },
     {
-     "country": "ES",
-     "count": 3
+     "country": "IT",
+     "count": 6
     },
     {
      "country": "FR",
-     "count": 3
+     "count": 6
     },
     {
-     "country": "IL",
-     "count": 2
+     "country": "AE",
+     "count": 6
     }
    ],
    "sampleImage": "assets/img/competitor_li/federated_hermes.jpg"
@@ -614,32 +625,32 @@
    "brand": "stewart",
    "competitor": "Wellington Management",
    "advertiserUrl": "https://www.linkedin.com/company/166910",
-   "ads": 454,
-   "topCountry": "CH",
+   "ads": 469,
+   "topCountry": "IT",
    "countries": [
+    {
+     "country": "IT",
+     "count": 9
+    },
+    {
+     "country": "IS",
+     "count": 6
+    },
+    {
+     "country": "NO",
+     "count": 6
+    },
     {
      "country": "CH",
      "count": 6
     },
     {
      "country": "ES",
-     "count": 4
-    },
-    {
-     "country": "NO",
-     "count": 4
+     "count": 5
     },
     {
      "country": "FI",
-     "count": 3
-    },
-    {
-     "country": "AR",
-     "count": 3
-    },
-    {
-     "country": "EC",
-     "count": 2
+     "count": 5
     }
    ],
    "sampleImage": "assets/img/competitor_li/wellington_management.jpg"
@@ -648,32 +659,32 @@
    "brand": "stewart",
    "competitor": "Robeco",
    "advertiserUrl": "https://www.linkedin.com/company/5009",
-   "ads": 421,
+   "ads": 433,
    "topCountry": "AE",
    "countries": [
     {
      "country": "AE",
-     "count": 12
+     "count": 19
     },
     {
      "country": "IN",
-     "count": 8
+     "count": 15
     },
     {
-     "country": "AU",
-     "count": 6
+     "country": "DK",
+     "count": 11
     },
     {
      "country": "AT",
-     "count": 5
+     "count": 10
+    },
+    {
+     "country": "AU",
+     "count": 10
     },
     {
      "country": "US",
-     "count": 5
-    },
-    {
-     "country": "ZA",
-     "count": 4
+     "count": 10
     }
    ],
    "sampleImage": null
@@ -682,31 +693,31 @@
    "brand": "igneo",
    "competitor": "IFM Investors",
    "advertiserUrl": "https://www.linkedin.com/company/1305718",
-   "ads": 420,
+   "ads": 417,
    "topCountry": "DE",
    "countries": [
     {
      "country": "DE",
-     "count": 7
+     "count": 9
+    },
+    {
+     "country": "SE",
+     "count": 4
+    },
+    {
+     "country": "LV",
+     "count": 2
     },
     {
      "country": "GR",
      "count": 2
     },
     {
-     "country": "GB",
-     "count": 1
+     "country": "US",
+     "count": 2
     },
     {
-     "country": "AD",
-     "count": 1
-    },
-    {
-     "country": "AR",
-     "count": 1
-    },
-    {
-     "country": "AE",
+     "country": "IE",
      "count": 1
     }
    ],
@@ -716,31 +727,31 @@
    "brand": "stewart",
    "competitor": "Pictet Asset Management",
    "advertiserUrl": "https://www.linkedin.com/company/8167",
-   "ads": 350,
-   "topCountry": "CA",
+   "ads": 356,
+   "topCountry": "AU",
    "countries": [
+    {
+     "country": "AU",
+     "count": 2
+    },
+    {
+     "country": "GB",
+     "count": 2
+    },
+    {
+     "country": "US",
+     "count": 2
+    },
     {
      "country": "CA",
      "count": 1
     },
     {
+     "country": "AR",
+     "count": 1
+    },
+    {
      "country": "AL",
-     "count": 1
-    },
-    {
-     "country": "FR",
-     "count": 1
-    },
-    {
-     "country": "AU",
-     "count": 1
-    },
-    {
-     "country": "IN",
-     "count": 1
-    },
-    {
-     "country": "AM",
      "count": 1
     }
    ],
@@ -755,61 +766,70 @@
    "countries": [
     {
      "country": "BR",
-     "count": 25
+     "count": 38
     },
     {
      "country": "JE",
+     "count": 14
+    },
+    {
+     "country": "AR",
      "count": 9
     },
     {
-     "country": "BE",
-     "count": 5
-    },
-    {
-     "country": "DE",
-     "count": 5
-    },
-    {
      "country": "FR",
-     "count": 4
+     "count": 8
     },
     {
-     "country": "SE",
-     "count": 3
+     "country": "IN",
+     "count": 7
+    },
+    {
+     "country": "BE",
+     "count": 6
     }
    ],
    "sampleImage": "assets/img/competitor_li/ardian.jpg"
   },
   {
+   "brand": "igneo",
+   "competitor": "EQT Group",
+   "advertiserUrl": "https://www.linkedin.com/company/508278",
+   "ads": 272,
+   "topCountry": null,
+   "countries": [],
+   "sampleImage": "assets/img/competitor_li/eqt_group.jpg"
+  },
+  {
    "brand": "fssa",
    "competitor": "Jupiter Asset Management",
    "advertiserUrl": "https://www.linkedin.com/company/64039",
-   "ads": 212,
+   "ads": 202,
    "topCountry": "ES",
    "countries": [
     {
      "country": "ES",
-     "count": 14
+     "count": 25
+    },
+    {
+     "country": "PT",
+     "count": 9
+    },
+    {
+     "country": "US",
+     "count": 7
+    },
+    {
+     "country": "CH",
+     "count": 4
+    },
+    {
+     "country": "DE",
+     "count": 4
     },
     {
      "country": "AT",
      "count": 3
-    },
-    {
-     "country": "AE",
-     "count": 2
-    },
-    {
-     "country": "CH",
-     "count": 2
-    },
-    {
-     "country": "NL",
-     "count": 2
-    },
-    {
-     "country": "BR",
-     "count": 2
     }
    ],
    "sampleImage": "assets/img/competitor_li/jupiter_asset_management.jpg"
@@ -818,7 +838,7 @@
    "brand": "fsi",
    "competitor": "Perpetual",
    "advertiserUrl": "https://www.linkedin.com/company/210387",
-   "ads": 162,
+   "ads": 169,
    "topCountry": "AL",
    "countries": [
     {
@@ -832,58 +852,40 @@
     {
      "country": "BY",
      "count": 1
-    }
-   ],
-   "sampleImage": "assets/img/competitor_li/perpetual.jpg"
-  },
-  {
-   "brand": "igneo",
-   "competitor": "EQT Group",
-   "advertiserUrl": "https://www.linkedin.com/company/508278",
-   "ads": 128,
-   "topCountry": "BR",
-   "countries": [
-    {
-     "country": "BR",
-     "count": 2
     },
     {
-     "country": "AR",
-     "count": 2
+     "country": "BM",
+     "count": 1
     },
     {
-     "country": "AU",
+     "country": "GB",
      "count": 1
     },
     {
      "country": "AE",
      "count": 1
-    },
-    {
-     "country": "BG",
-     "count": 1
     }
    ],
-   "sampleImage": "assets/img/competitor_li/eqt_group.jpg"
+   "sampleImage": "assets/img/competitor_li/perpetual.jpg"
   },
   {
    "brand": "stewart",
    "competitor": "Impax Asset Management",
    "advertiserUrl": "https://www.linkedin.com/company/518016",
-   "ads": 80,
+   "ads": 92,
    "topCountry": "IS",
    "countries": [
     {
      "country": "IS",
-     "count": 5
+     "count": 6
+    },
+    {
+     "country": "AT",
+     "count": 4
     },
     {
      "country": "IE",
      "count": 4
-    },
-    {
-     "country": "AT",
-     "count": 3
     },
     {
      "country": "GB",
@@ -894,8 +896,8 @@
      "count": 3
     },
     {
-     "country": "CA",
-     "count": 1
+     "country": "NL",
+     "count": 2
     }
    ],
    "sampleImage": "assets/img/competitor_li/impax_asset_management.jpg"
@@ -904,7 +906,7 @@
    "brand": "rqi",
    "competitor": "AQR Capital Management",
    "advertiserUrl": "https://www.linkedin.com/company/20749",
-   "ads": 20,
+   "ads": 21,
    "topCountry": "BH",
    "countries": [
     {
@@ -922,7 +924,7 @@
    "brand": "fsi",
    "competitor": "Betashares",
    "advertiserUrl": "https://www.linkedin.com/company/305047",
-   "ads": 8,
+   "ads": 11,
    "topCountry": null,
    "countries": [],
    "sampleImage": "assets/img/competitor_li/betashares.jpg"
