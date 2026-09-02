@@ -1,15 +1,39 @@
 {
- "generatedAt": "2026-09-01T07:15:42Z",
+ "generatedAt": "2026-09-02T07:16:52Z",
  "source": "HubSpot",
  "counts": {
-  "marketingEmails": 81,
-  "forms": 46,
-  "campaigns": 45,
+  "marketingEmails": 146,
+  "forms": 73,
+  "campaigns": 71,
   "deals": 0
  },
  "campaigns": [
   {
    "name": "202607-ANZ-FSG-Rhombus-Competition",
+   "status": "planned",
+   "startDate": null,
+   "endDate": null
+  },
+  {
+   "name": "202608-APAC-FSSA-Asia-Client-Update-Test",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-08-31 00:00:00+00:00"
+  },
+  {
+   "name": "202608-Asia-FSSA-Asia-Client-Update",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-11-30 00:00:00+00:00"
+  },
+  {
+   "name": "202608-EMEA-Igeno-EMEA-campaign",
+   "status": "planned",
+   "startDate": "2026-08-01 00:00:00+00:00",
+   "endDate": "2030-08-30 00:00:00+00:00"
+  },
+  {
+   "name": "202608-RQI-Lonsec-rating-Global-Diversified-Alpha",
    "status": "planned",
    "startDate": null,
    "endDate": null
@@ -33,6 +57,24 @@
    "endDate": null
   },
   {
+   "name": "ANZ-2026-FSG-Competitions",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "ANZ-2026-FSU-Market-Links",
+   "status": "planned",
+   "startDate": null,
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
+   "name": "ANZ-2026-RQI-Newsletter-Insto",
+   "status": "planned",
+   "startDate": "2026-07-22 00:00:00+00:00",
+   "endDate": null
+  },
+  {
    "name": "ANZ-202607-FSG-TPC-VPD-Competition",
    "status": "planned",
    "startDate": null,
@@ -49,12 +91,6 @@
    "status": "planned",
    "startDate": "2026-07-01 00:00:00+00:00",
    "endDate": "2026-10-31 00:00:00+00:00"
-  },
-  {
-   "name": "ANZ-202607-RQI-Newsletter-Insto",
-   "status": "planned",
-   "startDate": "2026-07-22 00:00:00+00:00",
-   "endDate": null
   },
   {
    "name": "ANZ-202607-RQI-Newsletter-WS",
@@ -81,6 +117,12 @@
    "endDate": null
   },
   {
+   "name": "ASIA-202608-FSG-Fund-Selector-Asia-Campaign",
+   "status": "in_progress",
+   "startDate": "2026-08-25 00:00:00+00:00",
+   "endDate": "2026-12-31 00:00:00+00:00"
+  },
+  {
    "name": "ASIA-HK-202607-AFI&GLIS",
    "status": "planned",
    "startDate": null,
@@ -97,6 +139,36 @@
    "status": "planned",
    "startDate": "2026-07-01 00:00:00+00:00",
    "endDate": "2026-10-31 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202606-FSSA-Asia-Client-Update-DE",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202606-FSSA-Asia-Client-Update-EEA",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202606-FSSA-Asia-Client-Update-FR",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202606-FSSA-Asia-Client-Update-UK-Insti",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202606-FSSA-Asia-Client-Update-UK-Intermediary",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
   },
   {
    "name": "EMEA-202607-Igneo-Bigger-isnt-always-better-article",
@@ -127,6 +199,48 @@
    "status": "planned",
    "startDate": null,
    "endDate": "2026-07-20 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202608-FSI-GLIS-Quarterly-update-exUK-EEA",
+   "status": "planned",
+   "startDate": "2026-07-27 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202608-FSI-GLIS-Quarterly-update-UKI",
+   "status": "planned",
+   "startDate": "2026-07-27 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202608-FSI-GLIS-Quarterly-update-UKW",
+   "status": "planned",
+   "startDate": "2026-07-27 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202608-FSSA-Asia-Client-Update-UK-Intermediary-SI-List",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202608-FSSA-Asia-Pacific-Leaders-Webinar-Invite-EMEA",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202608-Igneo-Project-Cineris-EDIF-IV",
+   "status": "planned",
+   "startDate": "2026-08-10 00:00:00+00:00",
+   "endDate": "2029-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "EMEA-202608-Igneo-Project-Cineris-Strategy-all-clients",
+   "status": "planned",
+   "startDate": "2026-08-10 00:00:00+00:00",
+   "endDate": "2029-01-01 00:00:00+00:00"
   },
   {
    "name": "EMEA-FSI-GLIS-Attrax",
@@ -177,10 +291,22 @@
    "endDate": "2026-12-31 00:00:00+00:00"
   },
   {
+   "name": "FSSA-GEMs-campaign-subscriptions",
+   "status": "planned",
+   "startDate": null,
+   "endDate": null
+  },
+  {
    "name": "GLOBAL - FSI GLIS QUARTERLY UPDATES",
    "status": "planned",
    "startDate": null,
    "endDate": null
+  },
+  {
+   "name": "GLOBAL -Sustainable-Investment-Institute-newsletters",
+   "status": "planned",
+   "startDate": "2026-08-04 00:00:00+00:00",
+   "endDate": "2030-08-30 00:00:00+00:00"
   },
   {
    "name": "GLOBAL_GLIS Quarterly Updates_Evergreen",
@@ -207,10 +333,10 @@
    "endDate": "2030-07-31 00:00:00+00:00"
   },
   {
-   "name": "Igneo - July 2026 - North American campaign",
+   "name": "Global-202608-Igneo-GDIF-webinar-replay",
    "status": "planned",
-   "startDate": "2026-07-01 00:00:00+00:00",
-   "endDate": "2027-09-19 00:00:00+00:00"
+   "startDate": "2026-08-21 00:00:00+00:00",
+   "endDate": "2028-03-24 00:00:00+00:00"
   },
   {
    "name": "Igneo Linkedin posts UTMs [2026]",
@@ -235,6 +361,12 @@
    "status": "planned",
    "startDate": null,
    "endDate": null
+  },
+  {
+   "name": "NA-202607-Igneo-North-American-campaign",
+   "status": "in_progress",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2027-09-19 00:00:00+00:00"
   },
   {
    "name": "RQI Linkedin posts UTMs [2026]",
@@ -273,6 +405,30 @@
    "endDate": "2030-01-01 00:00:00+00:00"
   },
   {
+   "name": "UK-202608-Scottish Oriental-Monthly-Factsheet-email-July-Edition",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "UK-202609-Scottish Oriental-Monthly-Client-Update-CTO",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "UK-202609-Scottish Oriental-Monthly-Factsheet-email-August-Edition",
+   "status": "planned",
+   "startDate": "2026-07-01 00:00:00+00:00",
+   "endDate": "2030-01-01 00:00:00+00:00"
+  },
+  {
+   "name": "US-202608-Igneo-Infinity-Aviation-Bolt-on",
+   "status": "planned",
+   "startDate": "2026-08-17 00:00:00+00:00",
+   "endDate": "2030-08-17 00:00:00+00:00"
+  },
+  {
    "name": "YYYYMM-REGION-FSSA-Template-Campaign",
    "status": "planned",
    "startDate": "2026-07-01 00:00:00+00:00",
@@ -284,13 +440,13 @@
    "name": "FSI - News template - FINAL",
    "subject": "FSI - News template",
    "state": "DRAFT",
-   "publishDate": "2026-07-31 07:20:29+00:00"
+   "publishDate": "2026-08-12 07:54:32+00:00"
   },
   {
    "name": "FSSA - Master template - FINAL",
    "subject": "FSSA - Master template",
    "state": "DRAFT",
-   "publishDate": "2026-07-24 05:23:05+00:00"
+   "publishDate": "2026-08-18 05:35:40+00:00"
   },
   {
    "name": "FSI - Master template - FINAL",
@@ -302,31 +458,31 @@
    "name": "FSI - Invitation template - FINAL",
    "subject": "FSI - Invitation template",
    "state": "DRAFT",
-   "publishDate": "2026-07-31 07:22:40+00:00"
+   "publishDate": "2026-08-07 03:11:13+00:00"
   },
   {
    "name": "FSSA - Invitation template - FINAL",
    "subject": "FSSA - Invitation template",
    "state": "DRAFT",
-   "publishDate": "2026-07-29 01:16:58+00:00"
+   "publishDate": "2026-08-20 01:52:01+00:00"
   },
   {
    "name": "Igneo - Master template - FINAL",
    "subject": "Igneo - Master template",
    "state": "DRAFT",
-   "publishDate": "2026-07-24 05:56:26+00:00"
+   "publishDate": "2026-08-17 08:32:51+00:00"
   },
   {
    "name": "FSSA - News template - FINAL",
    "subject": "FSSA - News template",
    "state": "DRAFT",
-   "publishDate": "2026-07-29 01:11:00+00:00"
+   "publishDate": "2026-08-12 04:36:06+00:00"
   },
   {
    "name": "Igneo - News template - FINAL",
    "subject": "Igneo - News template",
    "state": "DRAFT",
-   "publishDate": "2026-07-29 01:28:40+00:00"
+   "publishDate": "2026-08-17 08:34:55+00:00"
   },
   {
    "name": "RQI - Master template - FINAL",
@@ -344,13 +500,13 @@
    "name": "RQI - News template - FINAL",
    "subject": "RQI - News template",
    "state": "DRAFT",
-   "publishDate": "2026-07-21 01:34:41+00:00"
+   "publishDate": "2026-08-19 05:52:50+00:00"
   },
   {
    "name": "FSG - Invitation template - FINAL",
    "subject": "FSG - Invitation template",
    "state": "DRAFT",
-   "publishDate": "2026-07-21 01:22:06+00:00"
+   "publishDate": "2026-08-03 04:53:02+00:00"
   },
   {
    "name": "FSG - News template - FINAL",
@@ -362,7 +518,7 @@
    "name": "Igneo - Invitation template - FINAL",
    "subject": "Igneo Invite you",
    "state": "DRAFT",
-   "publishDate": "2026-07-29 01:31:03+00:00"
+   "publishDate": "2026-08-21 06:31:41+00:00"
   },
   {
    "name": "SOSCOT - Invitation template - FINAL",
@@ -485,12 +641,6 @@
    "publishDate": "2026-07-20 08:58:56+00:00"
   },
   {
-   "name": "Igneo - Invitation template - CT test",
-   "subject": "Igneo - Test invite",
-   "state": "PUBLISHED",
-   "publishDate": "2026-07-21 14:37:03+00:00"
-  },
-  {
    "name": "ASIA-SG-202608-FSSA-Martin-Roundtable-invite",
    "subject": "Invitation to FSSA luncheon | Beyond the AI rally: Finding quality and resilience across Asia",
    "state": "DRAFT",
@@ -519,6 +669,12 @@
    "subject": "Register now: Igneo EDIF IV update webcast",
    "state": "PUBLISHED",
    "publishDate": "2026-07-28 14:14:16+00:00"
+  },
+  {
+   "name": "EMEA - 202607 - Igneo - Bigger isn't always better article",
+   "subject": "Read our latest article: Bigger isn’t always better: The case for North American middle-market infrastructure",
+   "state": "DRAFT",
+   "publishDate": "2026-07-24 09:17:08+00:00"
   }
  ]
 }
